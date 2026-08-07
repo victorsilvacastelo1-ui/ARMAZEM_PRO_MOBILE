@@ -1,0 +1,22 @@
+ARMAZEM PRO MOBILE 3.0 - GITHUB
+
+IMPORTANTE: nao envie apenas o ZIP para dentro do repositorio.
+A estrutura precisa ficar assim na pagina inicial do GitHub:
+
+.github/
+app/
+build.gradle.kts
+gradle.properties
+settings.gradle.kts
+README.md
+
+MODO MAIS FACIL NO WINDOWS:
+1. Extraia o ZIP.
+2. Instale/abra GitHub Desktop.
+3. File > Add local repository (ou Create/Add existing repository).
+4. Selecione a pasta ARMAZEM_PRO_MOBILE_3_0_GITHUB.
+5. Publish repository / Push origin.
+6. No site do GitHub, abra Actions.
+7. Abra Gerar APK Armazem Pro.
+8. Aguarde ficar verde.
+9. Baixe o Artifact ARMAZEM-PRO-MOBILE-APK.
