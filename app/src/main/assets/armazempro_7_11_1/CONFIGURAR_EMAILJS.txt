@@ -1,0 +1,14 @@
+EMAILJS CONFIGURADO
+
+Public Key: VW4rWfC7zfsMxCjZX
+Service ID: service_ysjl1sr
+Template ID: gbi53us
+
+Variáveis que o modelo deve usar:
+{{name}}
+{{email}}
+{{senha}}
+
+O campo "Para enviar por e-mail" deve estar como {{email}}.
+
+IMPORTANTE: esta versão envia por e-mail a senha digitada no cadastro. Isso expõe a senha na caixa de e-mail do cliente.

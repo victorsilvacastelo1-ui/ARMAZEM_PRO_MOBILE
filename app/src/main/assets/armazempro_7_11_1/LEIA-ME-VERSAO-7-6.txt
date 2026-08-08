@@ -1,0 +1,3 @@
+ARMAZÉM PRO 7.6
+
+A auditoria agora mostra a coluna “Quem fez”, exibindo somente o nome do usuário responsável por cada ação.

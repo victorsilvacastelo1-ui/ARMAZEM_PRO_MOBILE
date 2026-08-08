@@ -1,0 +1,7 @@
+ARMAZÉM PRO 7.8
+
+Correção na tela de login:
+- O link abaixo do campo de senha agora mostra “Esqueceu sua senha?”.
+- O link abre o formulário de recuperação de senha.
+- O botão “Entrar no sistema” continua realizando somente o login.
+- Cache do PWA atualizado para evitar carregar a versão anterior.

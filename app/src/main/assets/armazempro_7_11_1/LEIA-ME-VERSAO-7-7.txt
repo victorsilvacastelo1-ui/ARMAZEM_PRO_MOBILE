@@ -1,0 +1,12 @@
+ARMAZÉM PRO 7.7
+
+CORREÇÃO DOS CONVITES
+- O mesmo link pode ser tentado novamente até a entrada ser concluída.
+- O convite só é marcado como aceito depois de criar o membro e o perfil com sucesso.
+- O administrador pode gerar um novo link para o mesmo e-mail quantas vezes precisar.
+- Ao gerar um novo link, o convite pendente anterior do mesmo e-mail é cancelado automaticamente.
+- Continua valendo o limite de 3 convidados ativos ou pendentes.
+
+OBRIGATÓRIO:
+Execute novamente CONFIGURAR_CONVITES_EQUIPE.sql no Supabase > SQL Editor > Run.
+Depois publique a pasta sistema no Netlify.

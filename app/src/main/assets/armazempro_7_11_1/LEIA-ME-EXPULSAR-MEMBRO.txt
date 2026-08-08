@@ -1,0 +1,11 @@
+ARMAZÉM PRO 6.3 — EXPULSAR FUNCIONÁRIO
+
+1. No Supabase, abra SQL Editor > New query.
+2. Cole todo o conteúdo de CONFIGURAR_EXPULSAR_MEMBRO.sql.
+3. Clique em Run.
+4. Publique esta versão no Netlify.
+5. Entre como administrador e abra Equipe.
+6. Clique em Expulsar ao lado do funcionário.
+
+O administrador não pode expulsar a si mesmo nem outro administrador.
+A conta do funcionário não é apagada; apenas perde o acesso ao espaço compartilhado.

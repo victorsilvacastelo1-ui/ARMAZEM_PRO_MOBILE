@@ -1,0 +1,14 @@
+CONFIGURAÇÃO NO SUPABASE
+
+1. Abra Authentication > URL Configuration.
+2. Em Site URL, use:
+   https://armazempro.com.br
+3. Em Redirect URLs, adicione:
+   https://armazempro.com.br/reset-password
+   https://armazempro.com.br/**
+4. Salve.
+5. Publique este ZIP no site armazempro2026 do Netlify.
+6. Depois da publicação, solicite um NOVO e-mail em “Esqueci minha senha”. Links antigos continuam usando a URL antiga.
+
+Fluxo correto:
+Esqueci minha senha > e-mail > /reset-password > nova senha > login.

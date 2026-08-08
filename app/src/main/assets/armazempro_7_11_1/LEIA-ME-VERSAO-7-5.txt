@@ -1,0 +1,10 @@
+ARMAZÉM PRO 7.5
+
+Correções na aba Equipe:
+- Formulário de convite sempre visível para o administrador.
+- Até 3 vagas somando membros ativos e convites pendentes.
+- Lista de convites pendentes.
+- Copiar link, compartilhar por WhatsApp e cancelar convite.
+- Convidados usam a assinatura principal sem nova cobrança.
+
+IMPORTANTE: execute CONFIGURAR_CONVITES_EQUIPE.sql no Supabase SQL Editor antes de usar.

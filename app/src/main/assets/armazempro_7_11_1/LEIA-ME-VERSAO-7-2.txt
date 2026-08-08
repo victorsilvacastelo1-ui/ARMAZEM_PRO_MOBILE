@@ -1,0 +1,12 @@
+ARMAZÉM PRO 7.2 - INTERFACE SIMPLIFICADA
+
+Alterações:
+- Aba Equipe restaurada e visível no menu.
+- Até 3 usuários convidados por assinatura.
+- Idiomas removidos; sistema somente em português.
+- Modo escuro removido.
+- Preferências simplificadas.
+- Cache do PWA atualizado.
+- Elementos ocultos revisados: permanecem ocultos apenas formulários alternativos de autenticação, seletor de arquivo de backup e painel exclusivo do administrador da plataforma.
+
+Para limitar realmente a 3 convidados, execute CONFIGURAR_LIMITE_3_DISPOSITIVOS.sql no SQL Editor do Supabase.

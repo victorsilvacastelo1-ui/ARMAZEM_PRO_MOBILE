@@ -1,0 +1,3 @@
+ARMAZÉM PRO 7.10
+
+O convite continua com o mesmo fluxo anterior. O endereço exibido após gerar o convite agora é um link clicável e abre o próprio sistema com o token do convite.

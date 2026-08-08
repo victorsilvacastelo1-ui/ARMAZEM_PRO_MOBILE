@@ -1,0 +1,13 @@
+ARMAZÉM PRO 7.3 — CORREÇÃO DE CARREGAMENTO
+
+Correções:
+- removidas todas as chamadas antigas para renderPreferences();
+- removida a página Preferências;
+- removidos resíduos de idiomas e modo escuro;
+- aba Equipe mantida visível para o administrador;
+- botão Instalar aplicativo mantido no menu lateral;
+- cache PWA atualizado;
+- JavaScript validado sem erros de sintaxe.
+
+PUBLICAÇÃO:
+Envie esta nova versão ao Netlify. Depois, abra em aba anônima. No celular, remova a instalação antiga e instale novamente.

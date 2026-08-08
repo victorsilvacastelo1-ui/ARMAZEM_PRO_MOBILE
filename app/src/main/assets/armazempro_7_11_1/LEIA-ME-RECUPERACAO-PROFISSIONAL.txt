@@ -1,0 +1,15 @@
+ARMAZÉM PRO 6.3 — RECUPERAÇÃO PROFISSIONAL DE SENHA
+
+Fluxo:
+1. Cliente clica em “Esqueci minha senha”.
+2. Recebe o link do Supabase por e-mail.
+3. Abre a página reset-password.html.
+4. Digita e confirma a nova senha.
+5. O sistema altera a senha, encerra a sessão temporária e volta ao login.
+6. A tela de login confirma que a senha foi alterada.
+
+No Supabase, em Authentication > URL Configuration, mantenha:
+Site URL: https://SEU-SITE.netlify.app
+Redirect URLs: https://SEU-SITE.netlify.app/reset-password
+
+Publique todos os arquivos deste ZIP juntos no Netlify.

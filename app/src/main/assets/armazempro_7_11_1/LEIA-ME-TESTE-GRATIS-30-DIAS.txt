@@ -1,0 +1,25 @@
+ARMAZÉM PRO — TESTE GRÁTIS DE 30 DIAS
+
+1. Abra o painel do Supabase do Armazém Pro.
+2. Entre em SQL Editor.
+3. Clique em New query.
+4. Abra o arquivo ATIVAR_TESTE_GRATIS_30_DIAS.sql.
+5. Copie todo o conteúdo, cole no editor e clique em Run.
+6. Depois publique todo este pacote atualizado no Netlify.
+
+FUNCIONAMENTO
+- Conta nova recebe 30 dias grátis automaticamente.
+- Todas as funções ficam disponíveis no período de teste.
+- O sistema mostra quantos dias faltam.
+- Com 7 dias ou menos, o aviso muda de destaque.
+- Ao vencer, a tela de planos bloqueia o acesso operacional.
+- Os dados permanecem salvos no Supabase.
+- Após pagamento confirmado, o acesso volta normalmente.
+- Usuários convidados utilizam o mesmo teste ou assinatura do espaço principal.
+
+PLANOS ATUALIZADOS
+- Mensal: R$ 20,00
+- Anual: R$ 180,00
+
+IMPORTANTE
+Os valores também precisam estar iguais na função criar-pagamento e nos planos/links do Mercado Pago.

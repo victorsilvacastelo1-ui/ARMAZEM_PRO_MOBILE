@@ -1,0 +1,17 @@
+ARMAZÉM PRO 6.3 — PAINEL DE ASSINANTES CORRIGIDO
+
+PASSO 1 — SUPABASE
+1. Abra o seu projeto no Supabase.
+2. Clique em SQL Editor.
+3. Clique em New query.
+4. Abra o arquivo CONFIGURAR_PAINEL_ASSINANTES.sql.
+5. Copie todo o conteúdo, cole no SQL Editor e clique em Run.
+
+PASSO 2 — NETLIFY
+1. Publique este ZIP no Netlify substituindo a versão anterior.
+2. Abra o sistema e pressione Ctrl + F5.
+3. Entre com a conta principal que criou o projeto Supabase.
+4. A opção “Assinantes” aparecerá no menu e a lista também aparecerá dentro da aba “Assinatura”.
+
+IMPORTANTE
+A configuração escolhe automaticamente como administrador da plataforma o usuário mais antigo do projeto Supabase. Normalmente essa é a conta do proprietário do Armazém Pro.

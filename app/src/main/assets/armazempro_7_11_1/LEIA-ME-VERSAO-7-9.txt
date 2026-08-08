@@ -1,0 +1,4 @@
+ARMAZÉM PRO 7.9
+
+- Os dois botões dos planos na tela de login agora mostram apenas: Assinar.
+- Recuperação de senha e demais correções da versão 7.8 foram mantidas.

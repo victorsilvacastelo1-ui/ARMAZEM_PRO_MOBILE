@@ -1,0 +1,12 @@
+ARMAZÉM PRO 6.3 - PERMISSÕES DE MEMBROS
+
+Ao entrar pelo código de convite como FUNCIONÁRIO, ficam ocultos e bloqueados:
+- Assinatura
+- Administração
+- Equipe/código de convite
+- Resetar tudo
+- Baixar backup
+- Restaurar backup
+
+O administrador continua vendo e usando todas essas funções.
+Publique todo o conteúdo deste ZIP no mesmo projeto oficial do Netlify e atualize com Ctrl+F5.

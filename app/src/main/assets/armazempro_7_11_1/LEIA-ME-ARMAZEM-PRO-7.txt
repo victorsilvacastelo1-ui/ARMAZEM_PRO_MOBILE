@@ -1,0 +1,20 @@
+ARMAZÉM PRO 7.0 — RECURSOS ADICIONADOS
+
+1. Permissões visuais e operacionais para Administrador, Gerente e Operador.
+   Observação: a função atual do Supabase pode continuar retornando "employee"; o sistema exibe esse perfil como Operador. Para usar Gerente no banco, a tabela/função de membros deve aceitar o valor "manager".
+2. Localização de produto: rua, corredor, prateleira e posição.
+3. Controle de lote, quantidade e validade.
+4. Foto do produto e anexos em formato de dados vinculados ao produto.
+5. Idiomas: português, inglês e espanhol para os principais comandos.
+6. Modo claro/escuro.
+7. Painel financeiro com custo, valor potencial de venda, lucro e margem.
+8. Curva ABC automática baseada no valor das saídas.
+9. Transferência entre armazéns, com baixa, entrada e histórico.
+10. PWA instalável no Android, com manifest e service worker.
+
+PUBLICAÇÃO
+Envie toda a pasta para o Netlify. O PWA exige HTTPS, já fornecido pelo Netlify.
+No Android: abra o sistema no Chrome > menu > Instalar aplicativo ou Adicionar à tela inicial.
+
+ATENÇÃO SOBRE FOTOS E ANEXOS
+Os arquivos são armazenados dentro do JSON sincronizado. Para uso intenso, a evolução recomendada é migrar fotos e documentos para o Supabase Storage, evitando aumentar demais o registro workspace_state.

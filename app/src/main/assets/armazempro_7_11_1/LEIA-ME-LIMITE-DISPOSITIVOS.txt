@@ -1,0 +1,7 @@
+LIMITE DE DISPOSITIVOS
+
+1. Publique os arquivos desta pasta no Netlify.
+2. No Supabase, abra SQL Editor.
+3. Execute CONFIGURAR_LIMITE_3_DISPOSITIVOS.sql.
+4. A assinatura permite o administrador e até 3 convidados.
+5. Para liberar uma vaga, remova um convidado na aba Dispositivos.

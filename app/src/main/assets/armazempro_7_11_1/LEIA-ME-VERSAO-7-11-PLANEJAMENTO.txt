@@ -1,0 +1,17 @@
+ARMAZÉM PRO 7.11 — PLANEJAMENTO
+
+Nova aba Planejamento com quadro estilo Kanban/Trello integrado ao estoque.
+
+Recursos:
+- A Fazer, Em andamento, Aguardando material, Aguardando aprovação e Concluído.
+- Arrastar cartões entre colunas no computador.
+- Responsável, obra/local, armazém, prioridade e datas.
+- Checklist, comentários e anexos (foto/PDF).
+- Materiais vinculados aos produtos do estoque.
+- Falta de material move automaticamente para Aguardando material.
+- Quando o estoque volta a ficar suficiente, a tarefa retorna ao status anterior.
+- Ao concluir pela primeira vez, os materiais são baixados automaticamente e registrados no histórico como SAÍDA.
+- Auditoria de criação, edição, status, comentário e exclusão.
+- Dados salvos no mesmo workspace_state do Supabase e sincronizados em tempo real.
+
+Não exige SQL novo: o planejamento é armazenado dentro do JSON já usado pelo sistema.

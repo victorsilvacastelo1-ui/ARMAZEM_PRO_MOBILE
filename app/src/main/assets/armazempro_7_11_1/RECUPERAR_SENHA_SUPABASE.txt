@@ -1,0 +1,21 @@
+RECUPERAÇÃO DE SENHA — ARMAZÉM PRO 6.3
+
+A versão já contém o botão “Esqueci minha senha”.
+
+Depois de publicar no Netlify:
+
+1. Abra o Supabase.
+2. Vá em Authentication > URL Configuration.
+3. Em Site URL, coloque o endereço principal do seu sistema no Netlify.
+4. Em Redirect URLs, adicione o mesmo endereço do sistema, por exemplo:
+   https://SEU-SITE.netlify.app/**
+5. Salve.
+
+COMO O CLIENTE USA
+1. Na tela de login, clica em “Esqueci minha senha”.
+2. Digita o e-mail cadastrado.
+3. Abre o e-mail recebido e clica no link.
+4. O sistema abre a tela para criar uma nova senha.
+5. Depois, o cliente entra normalmente com a nova senha.
+
+Observação: confira também a pasta Spam/Lixo eletrônico.

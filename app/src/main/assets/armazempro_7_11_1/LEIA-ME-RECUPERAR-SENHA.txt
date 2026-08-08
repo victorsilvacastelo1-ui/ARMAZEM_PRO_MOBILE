@@ -1,0 +1,16 @@
+ARMAZÉM PRO 6.3 — RECUPERAÇÃO DE SENHA
+
+A tela de login contém o botão “Esqueci minha senha”.
+
+Funcionamento:
+1. O usuário informa o e-mail cadastrado.
+2. O Supabase envia um link de recuperação.
+3. O link abre /reset-password no mesmo endereço publicado no Netlify.
+4. O usuário cria e confirma uma nova senha.
+
+IMPORTANTE NO SUPABASE:
+Authentication > URL Configuration
+- Site URL: coloque o endereço atual do seu sistema no Netlify.
+- Redirect URLs: adicione https://SEU-SITE.netlify.app/reset-password
+
+A versão usa automaticamente o domínio onde estiver publicada, evitando ficar presa ao endereço antigo.

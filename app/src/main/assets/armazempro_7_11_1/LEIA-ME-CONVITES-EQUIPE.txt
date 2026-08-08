@@ -1,0 +1,23 @@
+ARMAZÉM PRO 7.4 — COMO ATIVAR OS CONVITES
+
+1. Abra seu projeto no Supabase.
+2. Entre em SQL Editor.
+3. Abra o arquivo CONFIGURAR_CONVITES_EQUIPE.sql deste pacote.
+4. Copie tudo, cole no SQL Editor e clique em Run.
+5. Publique a pasta "sistema" no Netlify.
+
+COMO O CLIENTE CONVIDA:
+- Entre como administrador.
+- Abra Equipe.
+- Informe nome, e-mail e perfil.
+- Clique em Gerar convite.
+- Envie o link pelo WhatsApp, e-mail ou copie o link.
+
+COMO O CONVIDADO ENTRA:
+- Abre o link recebido.
+- Cria a conta com exatamente o e-mail do convite.
+- Confirma o e-mail, caso o Supabase solicite.
+- Faz login.
+- O sistema aceita o convite automaticamente e usa a assinatura da empresa.
+
+LIMITE: até 3 convidados além do administrador.

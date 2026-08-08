@@ -1,0 +1,2279 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W88SBBMNKG"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-W88SBBMNKG');
+
+function trackEvent(name, params) {
+  try {
+    if (typeof gtag === 'function') gtag('event', name, params || {});
+  } catch (error) {
+    console.warn('Google Analytics:', error);
+  }
+}
+</script>
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ARMAZÉM PRO 7.11</title>
+<style>
+:root{--bg:#f4f6f9;--card:#fff;--text:#17202a;--muted:#6b7280;--line:#e5e7eb;--primary:#1f5eff;--dark:#111827;--success:#159447;--danger:#d92d20;--warning:#b7791f}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text)}
+.app{display:flex;min-height:100vh}.sidebar{width:255px;background:var(--dark);color:#fff;padding:22px 16px;position:fixed;inset:0 auto 0 0;z-index:5;display:flex;flex-direction:column;overflow:hidden}.brand{font-size:21px;font-weight:800;margin:0 10px 28px}.brand span{color:#79a3ff}.menu{display:grid;gap:7px;overflow-y:auto;overflow-x:hidden;min-height:0;padding-right:4px}
+.sidebar-actions{margin-top:auto;padding-top:12px;border-top:1px solid rgba(255,255,255,.12);display:grid;gap:8px;background:var(--dark)}
+.sidebar-actions button{width:100%;border:0;color:#fff;padding:12px 14px;border-radius:10px;text-align:left;font-size:14px;cursor:pointer}
+.sidebar-actions .logout-btn{background:#a82424}
+.sidebar-actions .utility-btn{background:#293850}
+.sidebar-actions button:hover{filter:brightness(1.08)}
+.menu button{border:0;background:transparent;color:#cbd5e1;padding:13px 14px;border-radius:10px;text-align:left;font-size:14px;cursor:pointer}.menu button:hover,.menu button.active{background:#243247;color:#fff}.main{margin-left:255px;width:calc(100% - 255px);padding:24px 30px}.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:25px}.topbar h1{margin:0;font-size:25px}.topbar p{margin:5px 0 0;color:var(--muted);font-size:14px}.user{background:#fff;border:1px solid var(--line);padding:10px 14px;border-radius:10px;font-size:13px}
+.page{display:none}.page.active{display:block}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:20px}.card,.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:19px;box-shadow:0 3px 12px rgba(16,24,40,.04)}.metric{display:flex;justify-content:space-between;align-items:center}.metric .label{color:var(--muted);font-size:13px}.metric .value{font-size:28px;font-weight:800;margin-top:8px}.icon{width:43px;height:43px;border-radius:12px;display:grid;place-items:center;background:#edf3ff;font-size:20px}.grid2{display:grid;grid-template-columns:1.3fr 1fr;gap:18px}.panel h2{font-size:17px;margin:0 0 16px}.toolbar{display:flex;gap:10px;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap}.search{padding:11px 13px;border:1px solid var(--line);border-radius:9px;min-width:250px}.btn{border:0;border-radius:9px;padding:11px 15px;cursor:pointer;font-weight:700}.btn.primary{background:var(--primary);color:#fff}.btn.secondary{background:#eef2f7;color:#273244}.btn.danger{background:#fee4e2;color:#b42318}.btn.small{padding:7px 10px;font-size:12px}.table-wrap{overflow:auto}.table{width:100%;border-collapse:collapse;min-width:650px}.table th,.table td{padding:12px 10px;border-bottom:1px solid var(--line);text-align:left;font-size:13px}.table th{color:var(--muted);font-weight:700;background:#fafafa}.badge{padding:5px 8px;border-radius:999px;font-size:11px;font-weight:700}.badge.in{background:#dcfce7;color:#166534}.badge.out{background:#fee2e2;color:#991b1b}.badge.return{background:#fef3c7;color:#92400e}.badge.low{background:#fff1d6;color:#9a6700}.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.field{display:grid;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:13px;font-weight:700}.field input,.field select,.field textarea{width:100%;padding:11px;border:1px solid var(--line);border-radius:9px;font:inherit}.field textarea{min-height:90px;resize:vertical}.actions{display:flex;gap:10px;justify-content:flex-end;margin-top:16px}.empty{padding:30px;text-align:center;color:var(--muted)}.alert{display:flex;justify-content:space-between;gap:10px;padding:12px;background:#fff9eb;border:1px solid #f4d78d;border-radius:10px;margin-bottom:12px;font-size:13px}.stock-alert-scroll{max-height:320px;overflow-y:auto;overflow-x:hidden;padding-right:6px;scrollbar-gutter:stable}.stock-alert-scroll .alert:last-child{margin-bottom:0}.modal{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;place-items:center;z-index:10;padding:20px}.modal.show{display:grid}.modal-box{background:#fff;border-radius:14px;width:min(680px,100%);max-height:90vh;overflow:auto;padding:22px}.modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}.close{border:0;background:transparent;font-size:24px;cursor:pointer}.chart{display:flex;align-items:end;gap:10px;height:190px;padding-top:20px;margin-bottom:30px}.bar{flex:1;background:var(--primary);border-radius:6px 6px 0 0;min-height:8px;position:relative}.bar span{position:absolute;bottom:-22px;left:50%;transform:translateX(-50%);font-size:11px;color:var(--muted)}.notice{font-size:13px;color:var(--muted);margin-top:8px}
+@media(max-width:1000px){.cards{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}}@media(max-width:700px){.sidebar{width:72px;padding:18px 8px}.brand{font-size:0;text-align:center}.brand:after{content:"AP";font-size:20px}.menu button{font-size:0;text-align:center}.menu button:first-letter{font-size:20px}.main{margin-left:72px;width:calc(100% - 72px);padding:18px 14px}.cards{grid-template-columns:1fr 1fr}.form-grid{grid-template-columns:1fr}.topbar{align-items:flex-start;gap:10px}.user{display:none}}
+
+.auth-screen{position:fixed;inset:0;background:linear-gradient(135deg,#111827,#1f5eff);display:grid;place-items:center;z-index:100;padding:20px}
+.auth-card{width:min(430px,100%);max-height:calc(100vh - 32px);overflow-y:auto;background:#fff;border-radius:18px;padding:30px;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+.auth-brand{text-align:center;font-size:25px;font-weight:800;margin-bottom:8px}.auth-brand span{color:#1f5eff}
+.auth-sub{text-align:center;color:#6b7280;font-size:14px;margin-bottom:24px}
+
+.auth-renew{
+  margin-top:16px;
+  padding:13px;
+  border:1px solid #dbeafe;
+  border-radius:12px;
+  background:#f8fbff;
+}
+.auth-renew-title{
+  font-size:13px;
+  font-weight:800;
+  color:#1e3a8a;
+  margin-bottom:9px;
+  text-align:center;
+}
+.auth-renew-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+.auth-renew-plan{
+  border:1px solid #bfdbfe;
+  border-radius:10px;
+  background:#fff;
+  padding:10px 8px;
+  text-align:center;
+}
+.auth-renew-plan b{
+  display:block;
+  font-size:12px;
+  color:#334155;
+}
+.auth-renew-plan strong{
+  display:block;
+  margin:3px 0 7px;
+  font-size:18px;
+  color:#1f5eff;
+}
+.auth-renew-plan button{
+  width:100%;
+  border:0;
+  border-radius:8px;
+  padding:8px 6px;
+  background:#eaf1ff;
+  color:#1d4ed8;
+  font-weight:800;
+  font-size:12px;
+  cursor:pointer;
+}
+.auth-renew-help{
+  margin-top:8px;
+  color:#64748b;
+  font-size:11px;
+  line-height:1.35;
+  text-align:center;
+}
+@media(max-width:480px){
+  .auth-card{padding:22px 18px;max-height:calc(100vh - 20px)}
+  .auth-renew-grid{grid-template-columns:1fr}
+}
+
+.auth-tabs{display:flex;background:#f1f5f9;border-radius:10px;padding:4px;margin-bottom:20px}
+.auth-tabs button{flex:1;border:0;background:transparent;padding:10px;border-radius:8px;cursor:pointer;font-weight:700;color:#64748b}
+.auth-tabs button.active{background:#fff;color:#1f5eff;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+.auth-form{display:grid;gap:13px}.auth-form label{font-size:13px;font-weight:700}.auth-form input{padding:12px;border:1px solid #dbe1e8;border-radius:9px;font:inherit}.auth-form .btn{width:100%;margin-top:5px}
+.auth-error{display:none;background:#fee2e2;color:#991b1b;padding:10px;border-radius:8px;font-size:13px}.auth-error.show{display:block}
+.auth-note{text-align:center;color:#6b7280;font-size:12px;margin-top:16px}.auth-link{border:0;background:transparent;color:#1f5eff;font-weight:700;cursor:pointer;padding:2px;text-align:left}.auth-link:hover{text-decoration:underline}.auth-success{display:none;background:#dcfce7;color:#166534;padding:10px;border-radius:8px;font-size:13px}.auth-success.show{display:block}
+.logout{margin-top:25px;width:100%;background:#273247!important;color:#fff!important}
+
+
+
+
+.search-product-wrap{position:relative}
+.product-search-results{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;border:1px solid #ccc;max-height:220px;overflow:auto;z-index:99}
+.product-search-results.show{display:block}
+.product-search-results div{padding:8px;cursor:pointer}
+.product-search-results div:hover{background:#f3f4f6}
+.multi-items{display:grid;gap:10px}
+.multi-item-row{display:grid;grid-template-columns:minmax(220px,1fr) 140px 48px;gap:10px;align-items:end;padding:12px;border:1px solid var(--line);border-radius:10px;background:#fafafa}
+.multi-item-row .field{min-width:0}
+.multi-count{font-size:12px;color:var(--muted);margin-top:8px}
+@media(max-width:700px){.multi-item-row{grid-template-columns:1fr 110px 44px}}
+
+.warehouse-switch{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);padding:7px 10px;border-radius:10px}
+.warehouse-switch label{font-size:12px;font-weight:700;color:var(--muted)}
+.warehouse-switch select{border:0;background:transparent;font-weight:700;max-width:210px}
+.summary-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:16px}
+@media(max-width:700px){.warehouse-switch{width:100%}.warehouse-switch select{max-width:160px}.summary-cards{grid-template-columns:1fr}}
+
+.auth-trial-callout{margin:18px 0 16px;padding:16px;border-radius:14px;border:1px solid #86efac;background:linear-gradient(135deg,#ecfdf5,#eff6ff);display:flex;align-items:flex-start;gap:12px;color:#14532d}.auth-trial-callout .gift{font-size:28px;line-height:1}.auth-trial-callout strong{display:block;font-size:17px;margin-bottom:4px;color:#14532d}.auth-trial-callout span{display:block;font-size:13px;line-height:1.5;color:#365b46}.subscription-gate{position:fixed;inset:0;background:linear-gradient(135deg,#111827,#1f5eff);z-index:90;display:none;place-items:center;padding:20px}
+.subscription-gate.show{display:grid}.subscription-box{width:min(720px,100%);background:#fff;border-radius:18px;padding:28px;box-shadow:0 25px 70px rgba(0,0,0,.3)}
+.subscription-box h2{margin:0 0 8px;font-size:25px}.subscription-box p{color:var(--muted)}.plan-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:20px 0}
+.plan-card{border:1px solid var(--line);border-radius:14px;padding:18px;background:#fff}.plan-card h3{margin:0 0 7px}.plan-price{font-size:27px;font-weight:800;color:var(--primary)}
+.subscription-status{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:12px 0}.admin-only{display:none}.admin-only.visible{display:block}
+.trial-banner{display:none;margin:0 0 16px;padding:13px 16px;border:1px solid #93c5fd;background:#eff6ff;border-radius:14px;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.trial-banner.show{display:flex}.trial-banner.warning{background:#fff7ed;border-color:#fdba74}.trial-banner.urgent{background:#fff1f2;border-color:#fda4af}.trial-banner strong{display:block;margin-bottom:3px}.trial-days{font-size:20px;font-weight:800;color:#1d4ed8}
+.financial-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:18px}.loading-inline{opacity:.65;pointer-events:none}
+@media(max-width:800px){.plan-grid,.financial-cards{grid-template-columns:1fr}.subscription-box{padding:20px}}
+
+</style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<link rel="manifest" href="manifest.json"><meta name="theme-color" content="#0f766e"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default">
+<style>
+:root{--ap-surface:#fff;--ap-text:#172033;--ap-muted:#64748b;--ap-border:#e2e8f0}
+
+
+
+.product-photo{width:46px;height:46px;border-radius:10px;object-fit:cover;background:#e2e8f0;display:block}.mini-doc{display:inline-block;margin:2px 4px 2px 0}.finance-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:18px}.finance-grid .card{padding:18px}.feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.location-text{font-size:12px;color:var(--ap-muted)}.abc-a{background:#dcfce7}.abc-b{background:#fef3c7}.abc-c{background:#fee2e2}.install-app-btn{position:fixed;right:18px;bottom:18px;z-index:40;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+@media(max-width:900px){.finance-grid,.feature-grid{grid-template-columns:1fr}.install-app-btn{right:10px;bottom:10px}.menu{overflow-x:auto}.sidebar{max-width:100%}}
+</style>
+
+<style id="ap-theme-fix">
+:root{--ap-surface:#ffffff;--ap-surface-2:#f8fafc;--ap-text:#17202a;--ap-muted:#64748b;--ap-border:#e5e7eb}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+<!-- Armazem Pro 7.2 interface simplificada em portugues -->
+
+<style>
+/* ===== ARMAZÉM PRO 7.11 — PLANEJAMENTO ===== */
+.planning-toolbar{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:14px}
+.planning-summary{display:grid;grid-template-columns:repeat(5,minmax(120px,1fr));gap:10px;margin:12px 0 16px}
+.planning-summary .card{padding:14px}.planning-summary .value{font-size:24px;font-weight:800;margin-top:4px}
+.kanban-board{display:grid;grid-template-columns:repeat(5,minmax(265px,1fr));gap:14px;overflow-x:auto;padding-bottom:12px;align-items:start}
+.kanban-column{background:#f5f7fa;border:1px solid #e4e8ee;border-radius:14px;min-height:430px;padding:10px}
+.kanban-column.drag-over{outline:3px solid rgba(15,118,110,.25);background:#eefbf8}
+.kanban-head{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:6px 4px 12px;font-weight:800}
+.kanban-count{font-size:12px;background:#fff;border:1px solid #dce2e8;border-radius:999px;padding:3px 8px}
+.kanban-list{display:flex;flex-direction:column;gap:10px;min-height:360px}
+.task-card{background:#fff;border:1px solid #e2e7ec;border-radius:12px;padding:12px;box-shadow:0 2px 8px rgba(0,0,0,.04);cursor:grab}
+.task-card:active{cursor:grabbing}.task-card.overdue{border-left:4px solid #dc2626}.task-card.material-shortage{border-left:4px solid #d97706}
+.task-card-title{font-weight:800;font-size:14px;margin-bottom:7px}.task-meta{display:flex;flex-wrap:wrap;gap:5px;margin:7px 0}
+.task-chip{font-size:11px;background:#f2f4f7;border-radius:999px;padding:3px 7px}.priority-urgent{background:#fee2e2;color:#991b1b}.priority-high{background:#ffedd5;color:#9a3412}.priority-medium{background:#fef3c7;color:#92400e}.priority-low{background:#dcfce7;color:#166534}
+.task-card-actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}.task-card-actions .btn{padding:6px 8px;font-size:11px}
+.task-progress{height:6px;background:#e8edf2;border-radius:999px;overflow:hidden;margin:8px 0}.task-progress>span{display:block;height:100%;background:currentColor}
+.material-row{display:grid;grid-template-columns:minmax(0,2fr) 110px auto;gap:8px;align-items:end;margin-bottom:8px}
+.checklist-editor{min-height:82px}.task-comments{display:grid;gap:7px;margin:8px 0}.task-comment{padding:8px 10px;border-radius:9px;background:#f7f8fa;font-size:12px}.task-files{display:flex;gap:6px;flex-wrap:wrap}
+.planning-empty{padding:28px 10px;text-align:center;color:#6b7280;font-size:13px}
+.completed-planning-panel{margin-top:18px;background:#fff;border:1px solid #e4e8ee;border-radius:14px;padding:14px}
+.completed-planning-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
+.completed-planning-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px}
+.completed-planning-item{border:1px solid #dfe5eb;border-radius:12px;padding:12px;background:#f8fafc}
+.completed-planning-item h4{margin:0 0 6px;font-size:14px}
+.completed-planning-meta{font-size:12px;color:#64748b;margin-bottom:8px}
+
+@media(max-width:1000px){.planning-summary{grid-template-columns:repeat(2,1fr)}.kanban-board{grid-template-columns:repeat(5,280px)}}
+@media(max-width:600px){.planning-summary{grid-template-columns:1fr 1fr}.planning-toolbar .field{width:100%}.kanban-board{grid-template-columns:repeat(5,86vw)}.material-row{grid-template-columns:1fr 90px}.material-row button{grid-column:1/-1}}
+</style>
+</head>
+<body>
+<div class="auth-screen" id="authScreen">
+<div class="auth-card">
+<div class="auth-brand">ARMAZÉM <span>PRO 7.8</span></div>
+<div class="auth-sub">Sistema de controle de estoque</div>
+<div class="auth-trial-callout"><div class="gift">🎁</div><div><strong>30 dias grátis para começar</strong><span>Crie sua conta e use todas as funções sem pagar. A cobrança só será necessária quando o período gratuito terminar.</span></div></div>
+
+<div class="auth-tabs">
+<button type="button" class="active" id="loginTab" onclick="showAuthForm('login')">Entrar</button>
+<button type="button" id="registerTab" onclick="showAuthForm('register')">Criar conta</button>
+</div>
+<div class="auth-error" id="authError"></div>
+<div class="auth-success" id="authSuccess"></div>
+<form class="auth-form" id="loginForm">
+<label>E-mail</label>
+<input id="loginEmail" placeholder="seu@email.com" required="" type="email"/>
+<label>Senha</label>
+<input id="loginPassword" placeholder="Sua senha" required="" type="password"/>
+<button class="auth-link" type="button" onclick="showAuthForm('recovery')">Esqueceu sua senha?</button>
+<button class="btn primary">Entrar no sistema</button>
+</form>
+<form class="auth-form" id="registerForm" style="display:none">
+<label>Nome</label>
+<input id="registerName" placeholder="Seu nome" required=""/>
+<label>E-mail</label>
+<input id="registerEmail" placeholder="seu@email.com" required="" type="email"/>
+<label>Senha</label>
+<input id="registerPassword" minlength="6" placeholder="Mínimo de 6 caracteres" required="" type="password"/>
+<label>Confirmar senha</label>
+<input id="registerConfirm" placeholder="Repita sua senha" required="" type="password"/>
+<button class="btn primary">Criar minha conta</button>
+</form>
+<form class="auth-form" id="recoveryForm" style="display:none">
+<label>E-mail da conta</label>
+<input id="recoveryEmail" placeholder="seu@email.com" required type="email"/>
+<button class="btn primary">Enviar link de recuperação</button>
+<button class="auth-link" type="button" onclick="showAuthForm('login')">← Voltar para entrar</button>
+</form>
+<form class="auth-form" id="updatePasswordForm" style="display:none">
+<label>Nova senha</label>
+<input id="newPassword" minlength="6" placeholder="Mínimo de 6 caracteres" required type="password"/>
+<label>Confirmar nova senha</label>
+<input id="newPasswordConfirm" minlength="6" placeholder="Repita a nova senha" required type="password"/>
+<button class="btn primary">Salvar nova senha</button>
+</form>
+
+<div class="auth-renew" id="authRenewBox">
+  <div class="auth-renew-title">💳 Renovar ou contratar assinatura</div>
+  <div class="auth-renew-grid">
+    <div class="auth-renew-plan">
+      <b>Plano mensal</b>
+      <strong>R$ 20,00</strong>
+      <button type="button" onclick="prepareRenewal('monthly')">Assinar</button>
+    </div>
+    <div class="auth-renew-plan">
+      <b>Plano anual</b>
+      <strong>R$ 180,00</strong>
+      <button type="button" onclick="prepareRenewal('annual')">Assinar</button>
+    </div>
+  </div>
+  <div class="auth-renew-help">
+    Entre com sua conta. Se o plano estiver vencido, o sistema mostrará o pagamento para renovação.
+  </div>
+</div>
+
+<div class="auth-note">Crie sua conta e use todas as funções gratuitamente por 30 dias. O pagamento só será necessário ao final do teste.<br>Dados protegidos e sincronizados pelo Supabase em todos os dispositivos.</div>
+</div>
+</div>
+
+<div class="subscription-gate" id="subscriptionGate">
+ <div class="subscription-box">
+  <h2>🔒 Assinatura do Armazém Pro</h2>
+  <p id="subscriptionGateMessage">Seu teste gratuito terminou. Assine um plano para continuar usando seus dados.</p>
+  <div class="subscription-status" id="subscriptionGateStatus"></div>
+  <div class="plan-grid">
+   <div class="plan-card"><h3>Plano mensal</h3><div class="plan-price">R$ 20,00</div><p>Cobrança mensal após o teste gratuito.</p><button class="btn primary" onclick="startPayment('monthly',this)">Assinar mensal</button></div>
+   <div class="plan-card"><h3>Plano anual</h3><div class="plan-price">R$ 180,00</div><p>12 meses de acesso ao sistema.</p><button class="btn primary" onclick="startPayment('annual',this)">Assinar anual</button></div>
+  </div>
+  <div class="actions"><button class="btn secondary" onclick="checkSubscription(true)">Já paguei — verificar</button><button class="btn danger" onclick="logout()">Sair</button></div>
+ </div>
+</div>
+<div class="app">
+<aside class="sidebar">
+<div class="brand">ARMAZÉM <span>PRO 7.8</span></div>
+<nav class="menu">
+<button class="active" data-page="dashboard">📊 Dashboard</button>
+<button data-page="products">📦 Produtos</button>
+<button data-page="inventory">📋 Inventário</button>
+<button data-page="warehouses">🏬 Armazéns</button>
+<button data-page="entry">➕ Entrada</button>
+<button data-page="exit">➖ Saída</button>
+<button data-page="returns">🔄 Devoluções</button>
+<button data-page="history">🧾 Histórico</button>
+<button data-page="reports">📋 Relatórios</button>
+<button data-page="suppliers">🚚 Fornecedores</button><button data-page="kits">🧰 Kits</button>
+<button data-page="kitSummary">🧮 Soma dos Kits</button>
+<button data-page="abc">📊 Curva ABC</button>
+<button data-page="transfers">🔄 Transferências</button>
+<button data-page="planning">📋 Planejamento</button>
+<button data-page="financial">💰 Painel financeiro</button>
+
+<button id="subscriptionMenuButton" class="workspace-admin-only" data-page="subscription">💳 Assinatura</button>
+<button class="admin-only workspace-admin-only" id="adminMenuButton" data-page="administration">⚙️ Administração</button>
+<button id="teamMenuButton" data-page="team">👥 Equipe</button>
+</nav>
+<div class="sidebar-actions">
+ <button class="logout-btn" onclick="logout()">🚪 Sair</button>
+ <button id="resetSystemButton" class="utility-btn workspace-admin-only" onclick="resetSystem()">🗑️ Resetar tudo</button>
+ <button id="exportBackupButton" class="utility-btn workspace-admin-only" onclick="exportBackup()">💾 Baixar backup</button>
+ <button id="importBackupButton" class="utility-btn workspace-admin-only" onclick="document.getElementById('backupFile').click()">📥 Restaurar backup</button>
+</div>
+<input accept="application/json" hidden id="backupFile" onchange="importBackup(event)" type="file"/>
+</aside>
+<main class="main">
+<header class="topbar">
+<div><h1 id="pageTitle">Dashboard</h1><p id="today"></p></div>
+<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><div class="warehouse-switch"><label>Armazém</label><select id="warehouseSelector" onchange="switchWarehouse(this.value)"></select></div><div class="user">👤 Administrador</div></div>
+</header>
+<div class="trial-banner" id="trialBanner">
+ <div><strong id="trialBannerTitle">🎁 Período de teste gratuito</strong><span id="trialBannerText">Você está usando o Armazém Pro gratuitamente.</span></div>
+ <div class="trial-days" id="trialBannerDays"></div>
+ <button class="btn small primary workspace-admin-only" type="button" onclick="showPage('subscription')">Ver planos</button>
+</div>
+<section class="page active" id="dashboard">
+<div class="cards">
+<div class="card metric"><div><div class="label">Produtos cadastrados</div><div class="value" id="mProducts">0</div></div><div class="icon">📦</div></div>
+<div class="card metric"><div><div class="label">Itens em estoque</div><div class="value" id="mStock">0</div></div><div class="icon">🏷️</div></div>
+<div class="card metric"><div><div class="label">Movimentações hoje</div><div class="value" id="mMoves">0</div></div><div class="icon">🔄</div></div>
+<div class="card metric"><div><div class="label">Estoque baixo</div><div class="value" id="mLow">0</div></div><div class="icon">⚠️</div></div>
+</div>
+<div class="grid2">
+<div class="panel"><h2>Movimentação dos últimos 7 dias</h2><div class="chart" id="chart"></div><div class="notice">Visualização de entradas, saídas e devoluções registradas.</div></div>
+<div class="panel"><h2>Alertas de estoque</h2><div class="stock-alert-scroll" id="alerts"></div></div>
+</div>
+<div class="panel" style="margin-top:18px"><h2>Últimas movimentações</h2><div id="recentMoves"></div></div>
+</section>
+
+<section class="page" id="warehouses">
+<div class="panel">
+<div class="toolbar"><div><h2>Armazéns</h2><div class="notice">Cada armazém possui seus próprios produtos, estoque, movimentações e kits.</div></div><button class="btn primary" onclick="openWarehouseModal()">+ Novo armazém</button></div>
+<div id="warehousesTable"></div>
+</div>
+</section>
+<section class="page" id="products">
+<div class="panel">
+<div class="toolbar"><h2>Produtos</h2><div><input class="search" id="productSearch" oninput="renderProducts()" placeholder="Buscar produto ou código..."/><button class="btn secondary" onclick="scanBarcode()">📷 Ler código</button><button class="btn primary" onclick="openProductModal()">+ Novo produto</button></div></div>
+<div id="productsTable"></div>
+</div>
+</section>
+<section class="page" id="entry">
+<div class="panel">
+<h2>Registrar entrada de materiais</h2>
+<form class="form-grid" id="entryForm">
+<div class="field full">
+<label>Produtos e quantidades</label>
+<div class="multi-items" id="entryItems"></div>
+<div class="multi-count"><span id="entryItemCount">0</span>/10 produtos selecionados</div>
+<button class="btn secondary" onclick="addEntryItemRow()" style="margin-top:10px;width:max-content" type="button">+ Adicionar produto</button>
+</div>
+<div class="field"><label>Fornecedor</label><select id="entrySupplier"></select></div>
+<div class="field"><label>Nota fiscal / documento</label><input id="entryDoc" placeholder="Opcional"/></div>
+<div class="field full"><label>Observação</label><textarea id="entryNote"></textarea></div>
+<div class="actions full"><button class="btn primary">Registrar entrada</button></div>
+</form>
+</div>
+</section>
+<section class="page" id="exit">
+<div class="panel">
+<div class="toolbar"><h2>Saída de materiais</h2></div>
+<form class="form-grid" id="exitForm">
+<div class="field full">
+<label>Produtos e quantidades</label>
+<div class="multi-items" id="exitItems"></div>
+<div class="multi-count"><span id="exitItemCount">0</span>/10 produtos selecionados</div>
+<button class="btn secondary" onclick="addExitItemRow()" style="margin-top:10px;width:max-content" type="button">+ Adicionar produto</button>
+</div>
+<div class="field"><label>Data</label><input id="exitDate" required="" type="date"/></div>
+<div class="field"><label>Responsável</label><input id="exitResponsible" required=""/></div>
+<div class="field"><label>Obra / Destino</label><input id="exitDestination" required=""/></div>
+<div class="field"><label>Observação</label><input id="exitNote"/></div>
+<div class="actions full"><button class="btn primary" type="submit">Registrar saída</button></div>
+</form>
+</div>
+</section>
+<section class="page" id="returns">
+<div class="panel"><h2>Registrar devolução de materiais</h2><form class="form-grid" id="returnForm">
+<div class="field full">
+<label>Produtos e quantidades</label>
+<div class="multi-items" id="returnItems"></div>
+<div class="multi-count"><span id="returnItemCount">0</span>/10 produtos selecionados</div>
+<button class="btn secondary" onclick="addReturnItemRow()" style="margin-top:10px;width:max-content" type="button">+ Adicionar produto</button>
+</div>
+<div class="field"><label>Responsável</label><input id="returnResponsible" required=""/></div>
+<div class="field"><label>Motivo</label><input id="returnReason" required=""/></div>
+<div class="actions full"><button class="btn primary">Registrar devolução</button></div>
+</form></div>
+</section>
+<section class="page" id="history">
+<div class="panel">
+<div class="toolbar">
+<h2>Histórico completo de movimentações</h2>
+<div>
+<input class="search" id="historySearch" oninput="renderHistory()" placeholder="Buscar produto, responsável, destino..."/>
+<select class="search" id="historyType" onchange="renderHistory()" style="min-width:170px">
+<option value="">Todos os tipos</option>
+<option value="ENTRADA">Entradas</option>
+<option value="SAÍDA">Saídas</option>
+<option value="DEVOLUÇÃO">Devoluções</option>
+</select>
+</div>
+</div>
+<div class="notice" style="margin-bottom:14px">Todos os registros ficam salvos automaticamente neste navegador.</div>
+<div id="historyTable"></div>
+</div>
+</section>
+
+<section class="page" id="inventory">
+<div class="panel">
+ <div class="toolbar">
+  <div><h2>Inventário de estoque</h2><div class="notice">Conte os produtos fisicamente, confira divergências e ajuste o estoque com histórico completo.</div></div>
+  <div><button class="btn secondary" onclick="printInventory()">🖨️ Imprimir</button> <button class="btn primary" onclick="startInventory()">+ Novo inventário</button></div>
+ </div>
+ <div id="inventoryActive"></div>
+</div>
+<div class="panel" style="margin-top:18px">
+ <div class="toolbar"><h2>Histórico de inventários</h2><input class="search" id="inventoryHistorySearch" oninput="renderInventoryHistory()" placeholder="Buscar nome, responsável ou data..."></div>
+ <div id="inventoryHistory"></div>
+</div>
+</section>
+<section class="page" id="reports"><div class="panel"><div class="toolbar"><h2>Relatório de produtos</h2><div><button class="btn secondary" onclick="exportProductsCSV()">📊 Exportar Excel/CSV</button> <button class="btn secondary" onclick="printProductsReport()">🖨️ Imprimir/PDF</button></div></div><div id="reportTable"></div></div></section>
+<section class="page" id="suppliers">
+<div class="panel">
+<div class="toolbar"><h2>Fornecedores</h2><button class="btn primary" onclick="openSupplierModal()">+ Novo fornecedor</button></div>
+<div id="suppliersTable"></div>
+</div>
+</section>
+<section class="page" id="kits">
+<div class="panel">
+<div class="toolbar"><h2>Kits de materiais</h2><button class="btn primary" onclick="openKitModal()">+ Novo kit</button></div>
+<div class="notice" style="margin-bottom:16px">Monte kits usando os produtos já cadastrados no estoque.</div>
+<div id="kitsTable"></div>
+</div>
+</section>
+
+<section class="page" id="kitSummary">
+<div class="panel">
+<div class="toolbar"><div><h2>Soma dos produtos dos kits</h2><div class="notice">Soma automática pelo código dos produtos cadastrados nos kits do armazém selecionado.</div></div><div><input class="search" id="kitSummarySearch" oninput="renderKitSummary()" placeholder="Buscar código ou produto..."> <button class="btn secondary" onclick="printKitSummary()">🖨️ Imprimir</button></div></div>
+<div class="summary-cards"><div class="card"><div class="label">Kits cadastrados</div><div class="value" id="ksKits">0</div></div><div class="card"><div class="label">Produtos diferentes</div><div class="value" id="ksProducts">0</div></div><div class="card"><div class="label">Quantidade somada</div><div class="value" id="ksQty">0</div></div></div>
+<div id="kitSummaryTable"></div>
+</div>
+</section>
+<section class="page" id="team">
+<div class="panel">
+<div class="toolbar"><h2>Equipe e compartilhamento</h2><span class="badge in" id="roleBadge">CARREGANDO</span></div>
+<div class="grid2">
+<div class="panel"><h2>Este espaço de trabalho</h2><p class="notice">A assinatura principal permite convidar até 3 pessoas sem cobrança adicional.</p><div class="field"><label>Nome do espaço</label><input id="workspaceName" readonly></div><div class="field" style="margin-top:12px"><label>Código do espaço</label><input id="workspaceCode" readonly></div></div>
+<div id="teamInvitePanel" class="panel workspace-admin-only"><h2>➕ Convidar novo usuário</h2><p class="notice">Informe os dados e gere um link exclusivo. O convidado deverá criar a conta com o mesmo e-mail informado. Ele usará a assinatura principal sem nova cobrança.</p><div class="field"><label>Nome</label><input id="inviteName" placeholder="Nome da pessoa"></div><div class="field" style="margin-top:10px"><label>E-mail</label><input id="inviteEmail" type="email" placeholder="pessoa@email.com"></div><div class="field" style="margin-top:10px"><label>Permissão</label><select id="inviteRole"><option value="operator">Operador</option><option value="manager">Gerente</option></select></div><div class="actions"><button id="createInviteButton" class="btn primary" onclick="createTeamInvite()">🔗 Gerar convite</button></div><div id="inviteResult" style="margin-top:12px"></div></div><div id="pendingInvitesPanel" class="panel workspace-admin-only" style="margin-top:18px"><div class="toolbar"><h2>Convites pendentes</h2><span class="badge in" id="pendingInviteBadge">0 pendentes</span></div><div id="pendingInvitesTable"><div class="empty">Nenhum convite pendente.</div></div></div>
+</div>
+<div class="panel" style="margin-top:18px"><div class="toolbar"><h2>Usuários convidados</h2><span class="badge in" id="deviceLimitBadge">0 de 3 convidados</span></div><p class="notice">O administrador pode usar o sistema e convidar até 3 usuários adicionais com a mesma assinatura.</p><div id="teamTable"></div></div>
+<div class="panel" style="margin-top:18px"><h2>Auditoria recente</h2><div id="auditTable"></div></div>
+</div>
+</section>
+
+<section class="page" id="abc"><div class="toolbar"><div><h2>Curva ABC</h2><div class="notice">Classificação automática conforme o valor movimentado nas saídas.</div></div><button class="btn secondary" onclick="exportABC()">📤 Exportar CSV</button></div><div id="abcSummary" class="summary-cards"></div><div id="abcTable"></div></section>
+<section class="page" id="transfers"><div class="toolbar"><div><h2>Transferência entre armazéns</h2><div class="notice">Transfira até 10 produtos de uma vez. A baixa ocorre na origem e a entrada no destino, com registro no histórico.</div></div></div><form id="transferForm" class="form-grid card"><div class="field"><label>Armazém de origem</label><select id="transferFrom" required></select></div><div class="field"><label>Armazém de destino</label><select id="transferTo" required></select></div><div class="field full"><label>Produtos da transferência</label><div id="transferItems"></div><div class="actions" style="margin-top:10px"><button type="button" class="btn" id="addTransferItem">+ Adicionar produto</button><span id="transferItemCount" class="muted">1 de 10 itens</span></div></div><div class="field full"><label>Observação</label><input id="transferNote" placeholder="Motivo ou referência"></div><div class="actions full"><button class="btn primary">Transferir todos os itens</button></div></form><div id="transferHistory"></div></section>
+
+<section class="page" id="planning">
+  <div class="planning-toolbar">
+    <div><h2>Planejamento de obras e tarefas</h2><div class="notice">Organize a equipe em cartões, vincule materiais do estoque e acompanhe cada atividade.</div></div>
+    <button class="btn primary" onclick="openPlanningTaskModal()">+ Nova tarefa</button>
+  </div>
+  <div class="planning-summary" id="planningSummary"></div>
+  <div class="planning-toolbar">
+    <div class="field" style="min-width:260px"><label>Buscar tarefa</label><input id="planningSearch" placeholder="Título, responsável ou obra..." oninput="renderPlanning()"></div>
+    <div class="field"><label>Filtrar armazém</label><select id="planningWarehouseFilter" onchange="renderPlanning()"></select></div>
+  </div>
+  <div class="kanban-board" id="planningBoard"></div>
+  <div class="completed-planning-panel">
+    <div class="completed-planning-head"><div><b>✅ Planejamentos concluídos</b><div class="notice">Os cartões finalizados ficam disponíveis aqui para consulta.</div></div><span class="kanban-count" id="planningCompletedCount">0</span></div>
+    <div class="completed-planning-list" id="planningCompletedList"></div>
+  </div>
+</section>
+<section class="page" id="financial"><div class="toolbar"><div><h2>Custos de materiais das obras</h2><div class="notice">Acompanhe compras, materiais disponíveis e o custo enviado para cada obra ou destino.</div></div><button class="btn secondary" onclick="printFinancial()">🖨️ Imprimir</button></div><div class="finance-grid"><div class="card"><div class="label">Materiais disponíveis em estoque</div><div class="value" id="finCost">R$ 0,00</div></div><div class="card"><div class="label">Total comprado</div><div class="value" id="finPurchased">R$ 0,00</div></div><div class="card"><div class="label">Materiais enviados às obras</div><div class="value" id="finConsumed">R$ 0,00</div></div><div class="card"><div class="label">Custo enviado neste mês</div><div class="value" id="finMonth">R$ 0,00</div></div></div><div id="financialTable"></div></section>
+
+<section class="page" id="subscription">
+ <div class="panel">
+  <div class="toolbar"><div><h2>Minha assinatura</h2><div class="notice">Gerencie o acesso do espaço de trabalho atual.</div></div><button class="btn secondary" onclick="checkSubscription(true)">🔄 Atualizar status</button></div>
+  <div id="subscriptionDetails"></div>
+  <div class="plan-grid">
+   <div class="plan-card"><h3>Plano mensal</h3><div class="plan-price">R$ 20,00</div><p>Cobrança mensal após o teste gratuito.</p><button class="btn primary" onclick="startPayment('monthly',this)">Pagar plano mensal</button></div>
+   <div class="plan-card"><h3>Plano anual</h3><div class="plan-price">R$ 180,00</div><p>12 meses de acesso.</p><button class="btn primary" onclick="startPayment('annual',this)">Pagar plano anual</button></div>
+  </div>
+ </div>
+
+ <div class="panel" id="subscriptionSubscribersPanel" style="display:none;margin-top:18px">
+  <div class="toolbar">
+   <div>
+    <h2>Assinantes do Armazém Pro</h2>
+    <div class="notice">Lista visível somente para o administrador da plataforma.</div>
+   </div>
+   <button class="btn secondary" onclick="loadAdminClients()">🔄 Atualizar assinantes</button>
+  </div>
+  <div class="toolbar">
+   <input class="search" id="subscriptionSubscribersSearch" oninput="renderSubscriptionSubscribers()" placeholder="Buscar nome, e-mail, empresa ou plano...">
+  </div>
+  <div id="subscriptionSubscribersTable"><div class="empty">Carregando assinantes...</div></div>
+ </div>
+</section>
+<section class="page" id="administration">
+ <div class="panel">
+  <div class="toolbar">
+   <div><h2>Administração da plataforma</h2><div class="notice">Todos os clientes antigos e novos cadastrados no Supabase aparecem aqui.</div></div>
+   <div style="display:flex;gap:8px;flex-wrap:wrap">
+    <button class="btn secondary" onclick="loadAdminClients()">🔄 Atualizar</button>
+    <button class="btn primary" onclick="exportSubscribersCSV()">📄 Exportar assinantes</button>
+   </div>
+  </div>
+  <div class="financial-cards">
+   <div class="card"><div class="label">Total de clientes</div><div class="value" id="adminTotal">0</div></div>
+   <div class="card"><div class="label">Assinantes ativos</div><div class="value" id="adminActive">0</div></div>
+   <div class="card"><div class="label">Pendentes / vencidos</div><div class="value" id="adminPending">0</div></div>
+   <div class="card"><div class="label">Receita mensal estimada</div><div class="value" id="adminMRR">R$ 0,00</div></div>
+   <div class="card"><div class="label">Receita anual contratada</div><div class="value" id="adminAnnual">R$ 0,00</div></div>
+   <div class="card"><div class="label">Total já recebido</div><div class="value" id="adminReceived">R$ 0,00</div></div>
+  </div>
+  <div class="toolbar">
+   <input class="search" id="adminSearch" oninput="renderAdminClients()" placeholder="Buscar nome, e-mail, empresa, plano ou status...">
+   <select id="adminStatusFilter" onchange="renderAdminClients()">
+    <option value="">Todos os status</option>
+    <option value="active">Ativos</option>
+    <option value="pending">Pendentes</option>
+    <option value="expired">Vencidos</option>
+    <option value="blocked">Bloqueados</option>
+    <option value="canceled">Cancelados</option>
+   </select>
+  </div>
+  <div id="adminClientsTable"><div class="empty">Carregando clientes...</div></div>
+ </div>
+</section>
+</main>
+</div>
+<div class="modal" id="modal"><div class="modal-box"><div class="modal-head"><h2 id="modalTitle"></h2><button class="close" onclick="closeModal()">×</button></div><div id="modalBody"></div></div></div>
+<script>
+// CONFIGURAÇÃO DO SUPABASE -------------------------------------------------
+// Cole abaixo a URL do projeto e a chave PUBLICÁVEL (anon/publishable key).
+// Nunca coloque a service_role key neste arquivo.
+// CONFIGURAÇÃO DO EMAILJS — preencha com os dados da sua conta EmailJS.
+const EMAILJS_PUBLIC_KEY='VW4rWfC7zfsMxCjZX';
+const EMAILJS_SERVICE_ID='service_ysjl1sr';
+const EMAILJS_TEMPLATE_ID='template_ai8zrb4';
+const emailJsConfigured=![EMAILJS_PUBLIC_KEY,EMAILJS_SERVICE_ID,EMAILJS_TEMPLATE_ID].some(v=>v.startsWith('COLE_'));
+if(emailJsConfigured&&window.emailjs){window.emailjs.init({publicKey:EMAILJS_PUBLIC_KEY});}
+
+async function enviarSenhaCadastroPorEmail({name,email,password}){
+  if(!emailJsConfigured||!window.emailjs){
+    throw new Error('EmailJS ainda não foi configurado no arquivo index.html.');
+  }
+  return window.emailjs.send(EMAILJS_SERVICE_ID,EMAILJS_TEMPLATE_ID,{
+    // Variáveis usadas no modelo configurado no EmailJS:
+    // {{name}}, {{email}} e {{senha}}
+    name:name||email.split('@')[0],
+    email:email,
+    senha:password,
+
+    // Aliases mantidos para facilitar futuras alterações no modelo.
+    to_email:email,
+    to_name:name||email.split('@')[0],
+    user_email:email,
+    user_password:password,
+    system_url:'https://armazempro.com.br'
+  });
+}
+
+const SUPABASE_URL='https://uaxazgztuwjwrahlqkko.supabase.co';
+const SUPABASE_ANON_KEY='sb_publishable_jesSSaCQcRvhNgmbshbwxA_tsBKjJ4z';
+const sbConfigured=SUPABASE_URL.startsWith('https://') && !SUPABASE_ANON_KEY.startsWith('COLE_');
+const supabaseClient=sbConfigured ? window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY) : null;
+
+let db={products:[],suppliers:[],moves:[],kits:[],warehouses:[],inventories:[],transfers:[],planningTasks:[],settings:{}};
+let activeWarehouseId='';
+let currentUser=null;
+let currentWorkspace=null;
+let currentRole='employee';
+document.documentElement.lang='pt-BR';
+let cloudReady=false;
+let saveTimer=null;
+let realtimeChannel=null;
+let lastCloudUpdatedAt='';
+let currentSubscription=null;
+let subscriptionBlocked=false;
+let isPlatformAdmin=false;
+let adminClients=[];
+
+function normalizeDb(value){
+ const base=value&&typeof value==='object'?value:{};
+ return {
+  products:Array.isArray(base.products)?base.products:[],
+  suppliers:Array.isArray(base.suppliers)?base.suppliers:[],
+  moves:Array.isArray(base.moves)?base.moves:[],
+  kits:Array.isArray(base.kits)?base.kits:[],
+  warehouses:Array.isArray(base.warehouses)?base.warehouses:[],
+  inventories:Array.isArray(base.inventories)?base.inventories:[],
+  transfers:Array.isArray(base.transfers)?base.transfers:[],
+  planningTasks:Array.isArray(base.planningTasks)?base.planningTasks:[],
+  settings:base.settings&&typeof base.settings==='object'?base.settings:{}
+ };
+}
+function ensureWarehouseMigration(){
+ if(!db.warehouses.length)db.warehouses.push({id:'warehouse-main',name:'Armazém Principal',created:Date.now()});
+ const main=db.warehouses[0].id;
+ db.products.forEach(p=>{if(!p.warehouseId)p.warehouseId=main});
+ db.moves.forEach(m=>{if(!m.warehouseId)m.warehouseId=db.products.find(p=>p.id===m.productId)?.warehouseId||main});
+ db.kits.forEach(k=>{if(!k.warehouseId)k.warehouseId=main});
+ db.inventories.forEach(i=>{if(!i.warehouseId)i.warehouseId=main});
+ if(!activeWarehouseId||!db.warehouses.some(w=>w.id===activeWarehouseId))activeWarehouseId=main;
+}
+function currentWarehouse(){return db.warehouses.find(w=>w.id===activeWarehouseId)||db.warehouses[0]}
+function warehouseProducts(){return db.products.filter(p=>p.warehouseId===activeWarehouseId)}
+function warehouseMoves(){return db.moves.filter(m=>m.warehouseId===activeWarehouseId)}
+function warehouseKits(){return db.kits.filter(k=>k.warehouseId===activeWarehouseId)}
+function warehouseInventories(){return db.inventories.filter(i=>i.warehouseId===activeWarehouseId)}
+
+async function ensureProfile(){
+ if(!currentUser)return;
+ await supabaseClient.from('profiles').upsert({user_id:currentUser.id,name:currentUser.user_metadata?.name||currentUser.email.split('@')[0],email:currentUser.email},{onConflict:'user_id'});
+}
+async function ensureWorkspace(){
+ let {data,error}=await supabaseClient.rpc('get_my_workspace');
+ if(error)throw error;
+ let ws=Array.isArray(data)?data[0]:data;
+ if(!ws){
+  const created=await supabaseClient.rpc('create_my_workspace',{p_name:'Armazém de '+(currentUser.user_metadata?.name||currentUser.email.split('@')[0])});
+  if(created.error)throw created.error;
+  data=await supabaseClient.rpc('get_my_workspace');
+  if(data.error)throw data.error;
+  ws=Array.isArray(data.data)?data.data[0]:data.data;
+ }
+ currentWorkspace={id:ws.workspace_id,name:ws.workspace_name,invite_code:ws.invite_code};
+ currentRole=ws.member_role||'employee';
+ // Garante automaticamente 30 dias grátis para um espaço novo, sem alterar planos já pagos.
+ try{
+  const trialResult=await supabaseClient.rpc('ensure_my_trial');
+  if(trialResult.error)console.warn('Teste grátis ainda não configurado no Supabase:',trialResult.error.message);
+ }catch(err){console.warn('Teste grátis:',err?.message||err)}
+}
+async function persistCloud(){
+ if(!cloudReady||!currentUser||!currentWorkspace||!supabaseClient)return;
+ const payload={workspace_id:currentWorkspace.id,data:db,updated_at:new Date().toISOString()};
+ const {data,error}=await supabaseClient.from('workspace_state').upsert(payload,{onConflict:'workspace_id'}).select('updated_at').single();
+ if(error){console.error(error);alert('Não foi possível salvar na nuvem: '+error.message);return}
+ lastCloudUpdatedAt=data?.updated_at||payload.updated_at;
+ setCloudStatus('☁️ Salvo na nuvem');
+}
+function save(){
+ setCloudStatus('☁️ Salvando...');
+ clearTimeout(saveTimer);
+ saveTimer=setTimeout(persistCloud,250);
+}
+function setCloudStatus(text){
+ const el=document.querySelector('.user');
+ if(el&&currentUser)el.textContent=`👤 ${currentUser.user_metadata?.name||currentUser.email} | ${currentRole==='admin'?'Administrador':'Funcionário'} | ${text}`;
+}
+async function recordAudit(action,details=''){
+ if(!currentUser||!currentWorkspace)return;
+ const {error}=await supabaseClient.from('audit_logs').insert({workspace_id:currentWorkspace.id,user_id:currentUser.id,action,details});
+ if(error)console.warn('Auditoria:',error.message);
+ if(document.getElementById('team')?.classList.contains('active'))renderTeam();
+}
+async function loadCloudState(){
+ if(!currentUser||!supabaseClient)return;
+ await ensureProfile();
+ await ensureWorkspace();
+ await detectPlatformAdmin();
+ await checkSubscription(false);
+ if(subscriptionBlocked&&!isPlatformAdmin){setCloudStatus('🔒 Assinatura necessária');return}
+ const {data,error}=await supabaseClient.from('workspace_state').select('data,updated_at').eq('workspace_id',currentWorkspace.id).maybeSingle();
+ if(error)throw error;
+ if(data){db=normalizeDb(data.data);lastCloudUpdatedAt=data.updated_at||''}
+ else{
+  db=normalizeDb(db);
+  const created=await supabaseClient.from('workspace_state').insert({workspace_id:currentWorkspace.id,data:db}).select('updated_at').single();
+  if(created.error)throw created.error;
+  lastCloudUpdatedAt=created.data?.updated_at||'';
+ }
+ db.moves.forEach((m,index)=>{if(!Number.isFinite(Number(m.created)))m.created=index+1});
+ ensureWarehouseMigration();
+ cloudReady=true;
+ refresh();
+ setCloudStatus('☁️ Sincronizado');
+ subscribeRealtime();
+}
+function subscribeRealtime(){
+ if(!supabaseClient||!currentUser||!currentWorkspace)return;
+ if(realtimeChannel)supabaseClient.removeChannel(realtimeChannel);
+ realtimeChannel=supabaseClient.channel('armazem-pro-'+currentWorkspace.id)
+  .on('postgres_changes',{event:'UPDATE',schema:'public',table:'workspace_state',filter:`workspace_id=eq.${currentWorkspace.id}`},payload=>{
+   const incoming=payload.new;
+   if(!incoming||incoming.updated_at===lastCloudUpdatedAt)return;
+   lastCloudUpdatedAt=incoming.updated_at||'';
+   db=normalizeDb(incoming.data);
+   ensureWarehouseMigration();
+   refresh();
+   setCloudStatus('🔄 Atualizado em tempo real');
+  }).subscribe();
+}
+const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,7);
+const today=()=>new Date().toISOString().slice(0,10);
+const fmtDate=d=>new Date(d+'T12:00:00').toLocaleDateString('pt-BR');
+const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
+document.getElementById('today').textContent=new Date().toLocaleDateString('pt-BR',{weekday:'long',day:'2-digit',month:'long',year:'numeric'});
+
+function isWorkspaceAdmin(){return currentRole==='admin'}
+function applyRolePermissions(){
+ const admin=isWorkspaceAdmin();
+ const restrictedIds=['subscriptionMenuButton','adminMenuButton','resetSystemButton','exportBackupButton','importBackupButton'];
+ restrictedIds.forEach(id=>{
+  const el=document.getElementById(id);if(!el)return;
+  const allowed=id==='adminMenuButton' ? (admin&&isPlatformAdmin) : admin;
+  el.hidden=!allowed;
+  el.style.setProperty('display',allowed?'':'none',allowed?'':'important');
+  el.setAttribute('aria-hidden',allowed?'false':'true');
+  if('disabled' in el)el.disabled=!allowed;
+ });
+ // Reforço: qualquer item administrativo marcado com esta classe fica invisível ao funcionário.
+ document.querySelectorAll('.workspace-admin-only').forEach(el=>{
+  const allowed=el.id==='adminMenuButton' ? (admin&&isPlatformAdmin) : admin;
+  el.hidden=!allowed;
+  el.setAttribute('aria-hidden',allowed?'false':'true');
+  if(allowed){
+   el.style.removeProperty('display');
+  }else{
+   el.style.setProperty('display','none','important');
+  }
+ });
+ const subscribersPanel=document.getElementById('subscriptionSubscribersPanel');
+ if(subscribersPanel){subscribersPanel.hidden=!(admin&&isPlatformAdmin);subscribersPanel.style.display=(admin&&isPlatformAdmin)?'block':'none';}
+ // Funcionário nunca permanece em páginas administrativas, mesmo tentando acessá-las diretamente.
+ const active=document.querySelector('.page.active')?.id;
+ if(!admin&&['subscription','administration','team'].includes(active)){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('dashboard')?.classList.add('active');
+  document.querySelectorAll('.menu button').forEach(b=>b.classList.toggle('active',b.dataset.page==='dashboard'));
+  const title=document.getElementById('pageTitle');if(title)title.textContent='Dashboard';
+ }
+}
+document.querySelectorAll('.menu button').forEach(btn=>btn.onclick=()=>showPage(btn.dataset.page));
+function showPage(id){
+ if(['subscription','administration','team'].includes(id)&&!isWorkspaceAdmin()){alert('Acesso permitido somente ao administrador do espaço.');showPage('dashboard');return}
+ if(id==='administration'&&!isPlatformAdmin){alert('Acesso restrito ao administrador da plataforma.');return}
+ document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+ document.querySelectorAll('.menu button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));
+ const titles={dashboard:'Dashboard',products:'Produtos',inventory:'Inventário',warehouses:'Armazéns',entry:'Entrada de material',exit:'Saída de material',returns:'Devoluções',history:'Histórico de movimentações',reports:'Relatórios',suppliers:'Fornecedores',kits:'Kits de materiais',kitSummary:'Soma dos Kits',subscription:'Assinatura',administration:'Administração',team:'Equipe',abc:'Curva ABC',transfers:'Transferências',planning:'Planejamento',financial:'Painel financeiro'};
+ document.getElementById('pageTitle').textContent=titles[id];
+ refresh();
+}
+function refresh(){
+ const tasks=[
+  ['migração de armazéns',ensureWarehouseMigration],['permissões',applyRolePermissions],
+  ['seletor de armazém',renderWarehouseSelector],['dashboard',renderDashboard],
+  ['produtos',renderProducts],['armazéns',renderWarehouses],['fornecedores',renderSuppliers],
+  ['seletores',fillSelects],['relatórios',renderReport],['histórico',renderHistory],
+['kits',renderKits],['soma dos kits',renderKitSummary],
+  ['inventário',renderInventory],['histórico de inventário',renderInventoryHistory],
+  ['curva ABC',renderABC],['transferências',renderTransfers],['planejamento',renderPlanning],['painel financeiro',renderFinancial]
+ ];
+ tasks.forEach(([name,fn])=>{try{fn()}catch(err){console.error('Falha ao atualizar '+name+':',err)}});
+ if(isWorkspaceAdmin()){
+  try{renderSubscriptionDetails()}catch(err){console.error('Falha na assinatura:',err)}
+  try{renderTeam()}catch(err){console.error('Falha na equipe:',err)}
+  if(isPlatformAdmin&&document.getElementById('administration')?.classList.contains('active')){
+   try{loadAdminClients()}catch(err){console.error('Falha na administração:',err)}
+  }
+ }
+}
+function renderDashboard(){
+ const movesToday=warehouseMoves().filter(m=>m.date===today());
+ document.getElementById('mProducts').textContent=warehouseProducts().length;
+ document.getElementById('mStock').textContent=warehouseProducts().reduce((a,p)=>a+Number(p.stock||0),0);
+ document.getElementById('mMoves').textContent=movesToday.length;
+ document.getElementById('mLow').textContent=warehouseProducts().filter(p=>p.stock<=p.min).length;
+ const alerts=document.getElementById('alerts');
+ const low=warehouseProducts().filter(p=>p.stock<=p.min);
+ alerts.innerHTML=low.length?low.map(p=>`<div class="alert"><span>⚠️ <b>${esc(p.name)}</b><br>Estoque atual: ${p.stock} ${esc(p.unit)} | Mínimo: ${p.min}</span><span class="badge low">REPOR</span></div>`).join(''):'<div class="empty">Nenhum alerta de estoque.</div>';
+ // As movimentações são adicionadas ao final da lista. Inverter garante
+ // que a entrada ou saída recém-registrada apareça imediatamente no topo.
+ const recent=[...warehouseMoves()].reverse().slice(0,8);
+ document.getElementById('recentMoves').innerHTML=moveTable(recent);
+ const chart=document.getElementById('chart');let days=[];
+ for(let i=6;i>=0;i--){let d=new Date();d.setDate(d.getDate()-i);let date=d.toISOString().slice(0,10);days.push({date,n:warehouseMoves().filter(m=>m.date===date).length});}
+ const max=Math.max(1,...days.map(x=>x.n));
+ chart.innerHTML=days.map(x=>`<div class="bar" style="height:${Math.max(8,x.n/max*150)}px" title="${x.n} movimentações"><span>${x.date.slice(8,10)}/${x.date.slice(5,7)}</span></div>`).join('');
+}
+function moveTable(list){
+ if(!list.length)return '<div class="empty">Nenhuma movimentação encontrada.</div>';
+ return `<div class="table-wrap"><table class="table"><thead><tr><th>Data</th><th>Tipo</th><th>Produto</th><th>Quantidade</th><th>Responsável / destino</th><th>Observação</th></tr></thead><tbody>${list.map(m=>`<tr><td>${fmtDate(m.date)}</td><td><span class="badge ${m.type==='ENTRADA'?'in':m.type==='SAÍDA'?'out':m.type==='AJUSTE DE INVENTÁRIO'?'low':'return'}">${m.type}</span></td><td>${esc(m.productName||db.products.find(p=>p.id===m.productId)?.name||'Produto não identificado')}</td><td>${m.qty}</td><td>${m.type==='SAÍDA' ? esc((m.responsible||'-') + ' → ' + (m.destination||m.sector||'-')) : esc(m.responsible||m.supplier||m.sector||'-')}</td><td>${esc(m.note||m.reason||'-')}</td></tr>`).join('')}</tbody></table></div>`;
+}
+function renderHistory(){
+ const el=document.getElementById('historyTable'); if(!el)return;
+ const q=(document.getElementById('historySearch')?.value||'').trim().toLowerCase();
+ const type=document.getElementById('historyType')?.value||'';
+ const list=[...warehouseMoves()].reverse().filter(m=>{
+   const product=m.productName||db.products.find(p=>p.id===m.productId)?.name||'Produto não identificado';
+   const text=[product,m.responsible,m.destination,m.sector,m.supplier,m.note,m.reason,m.doc].join(' ').toLowerCase();
+   return (!type||m.type===type)&&(!q||text.includes(q));
+ });
+ el.innerHTML=moveTable(list);
+}
+
+function renderProducts(){
+ let q=(document.getElementById('productSearch')?.value||'').toLowerCase();
+ let arr=warehouseProducts().filter(p=>(p.name+' '+p.code+' '+p.category).toLowerCase().includes(q));
+ document.getElementById('productsTable').innerHTML=arr.length?`<div class="table-wrap"><table class="table"><thead><tr><th>Código</th><th>Produto</th><th>Categoria</th><th>Unidade</th><th>Estoque</th><th>Fornecedor</th><th>Ações</th></tr></thead><tbody>${arr.map(p=>`<tr><td>${esc(p.code)}</td><td><b>${esc(p.name)}</b></td><td>${esc(p.category)}</td><td>${esc(p.unit)}</td><td><b>${p.stock}</b> ${esc(p.unit)} ${p.stock<=p.min?'<span class="badge low">BAIXO</span>':''}</td><td>${esc(db.suppliers.find(s=>s.id===p.supplierId)?.name||'-')}</td><td><button class="btn small secondary" onclick="openEditProductModal('${p.id}')">✏️ Editar</button> <button class="btn small danger" onclick="deleteProduct('${p.id}')">Excluir</button></td></tr>`).join('')}</tbody></table></div>`:'<div class="empty">Nenhum produto cadastrado.</div>';
+}
+function renderSuppliers(){
+ document.getElementById('suppliersTable').innerHTML=db.suppliers.length?`<div class="table-wrap"><table class="table"><thead><tr><th>Empresa</th><th>CNPJ</th><th>Telefone</th><th>E-mail</th><th>Contato</th><th>Ações</th></tr></thead><tbody>${db.suppliers.map(s=>`<tr><td><b>${esc(s.name)}</b></td><td>${esc(s.cnpj||'-')}</td><td>${esc(s.phone||'-')}</td><td>${esc(s.email||'-')}</td><td>${esc(s.contact||'-')}</td><td><button class="btn small danger" onclick="deleteSupplier('${s.id}')">Excluir</button></td></tr>`).join('')}</tbody></table></div>`:'<div class="empty">Nenhum fornecedor cadastrado.</div>';
+}
+function fillSelects(){
+ const opts='<option value="">Selecione...</option>'+db.products.map(p=>`<option value="${p.id}">${esc(p.name)} — estoque: ${p.stock} ${esc(p.unit)}</option>`).join('');
+ document.getElementById('entrySupplier').innerHTML='<option value="">Selecione...</option>'+db.suppliers.map(s=>`<option value="${s.id}">${esc(s.name)}</option>`).join('');
+}
+function addMove(type,productId,qty,extra={}){
+ const p=db.products.find(x=>x.id===productId); if(!p)return;
+ if(type==='SAÍDA'&&p.stock<qty){alert('Estoque insuficiente para esta saída.');return false}
+ p.stock += type==='SAÍDA'?-qty:qty;
+ db.moves.push({id:uid(),warehouseId:p.warehouseId||activeWarehouseId,type,productId,productName:p.name,qty,date:extra.date||today(),created:Date.now(),...extra});
+ save();
+ refresh();
+ return true;
+}
+
+function openProductModal(){
+ document.getElementById('modalTitle').textContent='Novo produto';
+ document.getElementById('modalBody').innerHTML=`<form id="productModalForm" class="form-grid">
+ <div class="field"><label>Código</label><input id="pCode" required></div><div class="field"><label>Nome do produto</label><input id="pName" required></div>
+ <div class="field"><label>Categoria</label><input id="pCategory" placeholder="Ex.: Material básico" required></div><div class="field"><label>Unidade</label><select id="pUnit"><option>UN</option><option>KG</option><option>M</option><option>M²</option><option>M³</option><option>L</option><option>SC</option></select></div>
+ <div class="field"><label>Estoque inicial</label><input id="pStock" type="number" min="0" value="0" required></div><div class="field"><label>Estoque mínimo</label><input id="pMin" type="number" min="0" value="0" required></div>
+ <div class="field full"><label>Fornecedor</label><select id="pSupplier"></select></div><div class="actions full"><button class="btn primary">Cadastrar produto</button></div></form>`;
+ document.getElementById('pSupplier').innerHTML='<option value="">Nenhum</option>'+db.suppliers.map(s=>`<option value="${s.id}">${esc(s.name)}</option>`).join('');
+ document.getElementById('productModalForm').onsubmit=e=>{
+  e.preventDefault();
+  const code=pCode.value.trim();
+  const name=pName.value.trim();
+  const duplicated=db.products.some(x=>String(x.code||'').trim().toLowerCase()===code.toLowerCase());
+  if(duplicated){
+   alert('Este código já está cadastrado em outro produto. Digite um código diferente.');
+   pCode.focus();
+   pCode.select();
+   return;
+  }
+  db.products.push({id:uid(),warehouseId:activeWarehouseId,code,name,category:pCategory.value.trim(),unit:pUnit.value,stock:+pStock.value,min:+pMin.value,supplierId:pSupplier.value});
+  save();
+  recordAudit('PRODUTO_CRIADO',`${name} | Código: ${code}`);
+  closeModal();
+  refresh();
+  alert('Produto cadastrado com sucesso!');
+ };
+ document.getElementById('modal').classList.add('show');
+}
+function openEditProductModal(id){
+ const p=db.products.find(x=>x.id===id);
+ if(!p){alert('Produto não encontrado.');return}
+ document.getElementById('modalTitle').textContent='Editar produto';
+ document.getElementById('modalBody').innerHTML=`<form id="editProductModalForm" class="form-grid">
+ <div class="field"><label>Código</label><input id="epCode" required></div><div class="field"><label>Nome do produto</label><input id="epName" required></div>
+ <div class="field"><label>Categoria</label><input id="epCategory" required></div><div class="field"><label>Unidade</label><select id="epUnit"><option>UN</option><option>KG</option><option>M</option><option>M²</option><option>M³</option><option>L</option><option>SC</option></select></div>
+ <div class="field"><label>Estoque atual</label><input value="${Number(p.stock||0)}" disabled><div class="notice">O estoque não será alterado nesta edição.</div></div><div class="field"><label>Estoque mínimo</label><input id="epMin" type="number" min="0" required></div>
+ <div class="field full"><label>Fornecedor</label><select id="epSupplier"></select></div><div class="actions full"><button class="btn primary">Salvar alterações</button></div></form>`;
+ epCode.value=p.code||'';
+ epName.value=p.name||'';
+ epCategory.value=p.category||'';
+ epUnit.value=p.unit||'UN';
+ epMin.value=Number(p.min||0);
+ epSupplier.innerHTML='<option value="">Nenhum</option>'+db.suppliers.map(s=>`<option value="${s.id}">${esc(s.name)}</option>`).join('');
+ epSupplier.value=p.supplierId||'';
+ document.getElementById('editProductModalForm').onsubmit=e=>{
+  e.preventDefault();
+  const code=epCode.value.trim();
+  const name=epName.value.trim();
+  const duplicated=db.products.some(x=>x.id!==p.id&&String(x.code||'').trim().toLowerCase()===code.toLowerCase());
+  if(duplicated){alert('Já existe outro produto com este código neste armazém.');return}
+  const oldName=p.name;
+  p.code=code;
+  p.name=name;
+  p.category=epCategory.value.trim();
+  p.unit=epUnit.value;
+  p.min=Number(epMin.value||0);
+  p.supplierId=epSupplier.value;
+  db.moves.forEach(m=>{if(m.productId===p.id)m.productName=name});
+  save();
+  recordAudit('PRODUTO_EDITADO',`${oldName} → ${name} | Código: ${code}`);
+  closeModal();
+  refresh();
+  alert('Produto atualizado com sucesso!');
+ };
+ document.getElementById('modal').classList.add('show');
+}
+function openSupplierModal(){
+ document.getElementById('modalTitle').textContent='Novo fornecedor';
+ document.getElementById('modalBody').innerHTML=`<form id="supplierModalForm" class="form-grid">
+ <div class="field full"><label>Nome da empresa</label><input id="sName" required></div><div class="field"><label>CNPJ</label><input id="sCnpj"></div><div class="field"><label>Telefone</label><input id="sPhone"></div><div class="field"><label>E-mail</label><input id="sEmail" type="email"></div><div class="field"><label>Contato</label><input id="sContact"></div><div class="field full"><label>Endereço</label><input id="sAddress"></div><div class="actions full"><button class="btn primary">Cadastrar fornecedor</button></div></form>`;
+ document.getElementById('supplierModalForm').onsubmit=e=>{e.preventDefault();db.suppliers.push({id:uid(),name:sName.value,cnpj:sCnpj.value,phone:sPhone.value,email:sEmail.value,contact:sContact.value,address:sAddress.value});save();recordAudit('FORNECEDOR_CRIADO',sName.value);closeModal();refresh();alert('Fornecedor cadastrado com sucesso!')};
+ document.getElementById('modal').classList.add('show');
+}
+function closeModal(){const v=document.getElementById('barcodeVideo');if(v?.srcObject)v.srcObject.getTracks().forEach(t=>t.stop());document.getElementById('modal').classList.remove('show')}
+function deleteProduct(id){if(confirm('Excluir este produto?')){const p=db.products.find(x=>x.id===id);db.products=db.products.filter(p=>p.id!==id);save();recordAudit('PRODUTO_EXCLUIDO',p?.name||id);refresh()}}
+function deleteSupplier(id){if(confirm('Excluir este fornecedor?')){const s=db.suppliers.find(x=>x.id===id);db.suppliers=db.suppliers.filter(s=>s.id!==id);save();recordAudit('FORNECEDOR_EXCLUIDO',s?.name||id);refresh()}}
+function renderReport(){
+ const list=[...warehouseProducts()].sort((a,b)=>(a.category||'').localeCompare(b.category||'')||a.name.localeCompare(b.name));
+ document.getElementById('reportTable').innerHTML=list.length?`<div class="table-wrap"><table class="table"><thead><tr><th>Código</th><th>Produto</th><th>Categoria</th><th>Unidade</th><th>Estoque</th><th>Mínimo</th><th>Fornecedor</th></tr></thead><tbody>${list.map(p=>`<tr><td>${esc(p.code)}</td><td><b>${esc(p.name)}</b></td><td>${esc(p.category)}</td><td>${esc(p.unit)}</td><td>${p.stock}</td><td>${p.min}</td><td>${esc(db.suppliers.find(s=>s.id===p.supplierId)?.name||'-')}</td></tr>`).join('')}</tbody></table></div>`:'<div class="empty">Nenhum produto cadastrado.</div>';
+}
+
+function printReport(){window.print()}
+try{refresh()}catch(err){console.error('Falha na inicialização visual:',err)}
+
+function showAuthForm(type){
+  const login = type === 'login';
+  const register = type === 'register';
+  const recovery = type === 'recovery';
+  const update = type === 'update';
+
+  const loginForm = document.getElementById('loginForm');
+  const registerForm = document.getElementById('registerForm');
+  const recoveryForm = document.getElementById('recoveryForm');
+  const updatePasswordForm = document.getElementById('updatePasswordForm');
+  const tabs = document.querySelector('.auth-tabs');
+  const renewBox = document.getElementById('authRenewBox');
+
+  if(loginForm) loginForm.style.display = login ? 'grid' : 'none';
+  if(registerForm) registerForm.style.display = register ? 'grid' : 'none';
+  if(recoveryForm) recoveryForm.style.display = recovery ? 'grid' : 'none';
+  if(updatePasswordForm) updatePasswordForm.style.display = update ? 'grid' : 'none';
+  if(tabs) tabs.style.display = (recovery || update) ? 'none' : 'flex';
+
+  // A área de planos só aparece no login, evitando cobrir o cadastro.
+  if(renewBox) renewBox.style.display = login ? 'block' : 'none';
+
+  document.getElementById('loginTab')?.classList.toggle('active', login);
+  document.getElementById('registerTab')?.classList.toggle('active', register);
+  clearAuthMessages();
+
+  // Volta o cartão para o topo ao mudar de tela.
+  document.querySelector('.auth-card')?.scrollTo({top:0, behavior:'smooth'});
+
+  if(register){
+    setTimeout(() => document.getElementById('registerName')?.focus(), 50);
+  }else if(login){
+    setTimeout(() => document.getElementById('loginEmail')?.focus(), 50);
+  }
+}
+function authError(msg){const el=document.getElementById('authError');el.textContent=msg;el.classList.add('show');document.getElementById('authSuccess').classList.remove('show')}
+function authSuccess(msg){const el=document.getElementById('authSuccess');el.textContent=msg;el.classList.add('show');document.getElementById('authError').classList.remove('show')}
+function clearAuthMessages(){document.getElementById('authError').classList.remove('show');document.getElementById('authSuccess').classList.remove('show')}
+function clearAuthError(){clearAuthMessages()}
+async function enterSystem(user){
+  currentUser=user;
+  document.getElementById('authScreen').style.display='none';
+  setCloudStatus('☁️ Conectando...');
+  try{
+   await processPendingTeamInvite();
+   await loadCloudState();
+  }catch(err){
+   console.error(err);
+   document.getElementById('authScreen').style.display='grid';
+   authError('Falha ao carregar os dados online: '+err.message);
+  }
+}
+async function logout(){
+  if(!confirm('Deseja sair do sistema?'))return;
+  cloudReady=false;
+  if(realtimeChannel&&supabaseClient)await supabaseClient.removeChannel(realtimeChannel);
+  if(supabaseClient)await supabaseClient.auth.signOut();
+  currentUser=null;currentWorkspace=null;currentRole='employee';currentSubscription=null;subscriptionBlocked=false;isPlatformAdmin=false;db=normalizeDb({});document.getElementById('subscriptionGate')?.classList.remove('show');document.getElementById('trialBanner')?.classList.remove('show');refresh();
+  document.getElementById('authScreen').style.display='grid';
+  showAuthForm('login');
+}
+document.getElementById('registerForm').onsubmit=async e=>{
+  e.preventDefault();clearAuthError();
+  if(!sbConfigured){authError('Configure SUPABASE_URL e SUPABASE_ANON_KEY no arquivo.');return}
+  const name=document.getElementById('registerName').value.trim(),email=document.getElementById('registerEmail').value.trim().toLowerCase();
+  const password=document.getElementById('registerPassword').value,confirmPass=document.getElementById('registerConfirm').value;
+  if(password!==confirmPass){authError('As senhas não conferem.');return}
+  const submitBtn=e.target.querySelector('button[type="submit"],button');
+  if(submitBtn){submitBtn.disabled=true;submitBtn.textContent='Criando conta...'}
+  try{
+    const {data,error}=await supabaseClient.auth.signUp({email,password,options:{data:{name}}});
+    if(error){authError(error.message);return}
+    trackEvent('sign_up',{method:'email'});
+
+    let emailEnviado=false;
+    try{
+      if(submitBtn)submitBtn.textContent='Enviando e-mail...';
+      await enviarSenhaCadastroPorEmail({name,email,password});
+      emailEnviado=true;
+    }catch(mailError){
+      console.error('Falha no envio pelo EmailJS:',mailError);
+    }
+
+    if(data.session&&data.user){
+      await enterSystem(data.user);
+      if(!emailEnviado)alert('Conta criada, mas o e-mail com a senha não foi enviado. Configure o EmailJS conforme o arquivo CONFIGURAR_EMAILJS.txt.');
+    }else{
+      showAuthForm('login');
+      document.getElementById('loginEmail').value=email;
+      if(emailEnviado){
+        authSuccess('Conta criada. Confirme o cadastro pelo e-mail do Supabase e depois entre. Ao entrar, seu teste gratuito de 30 dias será liberado automaticamente. Verifique também a pasta Spam.');
+      }else{
+        authError('Conta criada, mas não foi possível enviar o e-mail com a senha. Configure o EmailJS conforme o arquivo CONFIGURAR_EMAILJS.txt. O e-mail de confirmação do Supabase ainda pode ter sido enviado.');
+      }
+    }
+  }finally{
+    if(submitBtn){submitBtn.disabled=false;submitBtn.textContent='Criar conta'}
+  }
+};
+document.getElementById('recoveryForm').onsubmit=async e=>{
+  e.preventDefault();clearAuthMessages();
+  if(!sbConfigured){authError('Configuração do Supabase não encontrada.');return}
+  const email=document.getElementById('recoveryEmail').value.trim().toLowerCase();
+  const btn=e.target.querySelector('button[type="submit"],button');
+  if(btn){btn.disabled=true;btn.textContent='Enviando...'}
+  try{
+    const redirectTo='https://armazempro.com.br/reset-password.html';
+    const {error}=await supabaseClient.auth.resetPasswordForEmail(email,{redirectTo});
+    if(error){authError('Não foi possível enviar o link: '+error.message);return}
+    trackEvent('password_reset_requested',{method:'email'});
+    authSuccess('Link enviado. Abra seu e-mail e clique em “Redefinir senha”. O link abrirá a página segura do Armazém Pro para criar uma nova senha. Verifique também a pasta Spam.');
+  }finally{if(btn){btn.disabled=false;btn.textContent='Enviar link de recuperação'}}
+};
+document.getElementById('updatePasswordForm').onsubmit=async e=>{
+  e.preventDefault();clearAuthMessages();
+  const password=document.getElementById('newPassword').value, confirmPassword=document.getElementById('newPasswordConfirm').value;
+  if(password.length<6){authError('A nova senha precisa ter pelo menos 6 caracteres.');return}
+  if(password!==confirmPassword){authError('As senhas não conferem.');return}
+  const btn=e.target.querySelector('button[type="submit"],button');
+  if(btn){btn.disabled=true;btn.textContent='Salvando...'}
+  try{
+    const {error}=await supabaseClient.auth.updateUser({password});
+    if(error){authError('Não foi possível alterar a senha: '+error.message);return}
+    authSuccess('Senha alterada com sucesso. Você já pode entrar com a nova senha.');
+    await supabaseClient.auth.signOut();
+    history.replaceState({},document.title,'/');
+    setTimeout(()=>{showAuthForm('login');document.getElementById('loginPassword').value='';authSuccess('Senha alterada com sucesso. Entre com a nova senha.');},900);
+  }finally{if(btn){btn.disabled=false;btn.textContent='Salvar nova senha'}}
+};
+document.getElementById('loginForm').onsubmit=async e=>{
+  e.preventDefault();clearAuthError();
+  if(!sbConfigured){authError('Configure SUPABASE_URL e SUPABASE_ANON_KEY no arquivo.');return}
+  const email=document.getElementById('loginEmail').value.trim().toLowerCase();
+  const password=document.getElementById('loginPassword').value;
+  const submitBtn=e.target.querySelector('button[type=\"submit\"],button');
+  if(submitBtn){submitBtn.disabled=true;submitBtn.textContent='Entrando...'}
+  try{
+    const {data,error}=await supabaseClient.auth.signInWithPassword({email,password});
+    if(error){
+      const msg=String(error.message||'').toLowerCase();
+      if(msg.includes('email not confirmed')){
+        authError('Seu cadastro existe, mas o e-mail ainda não foi confirmado. Abra sua caixa de entrada e clique no link enviado pelo Supabase.');
+      }else if(msg.includes('invalid login credentials')){
+        authError('E-mail ou senha não conferem. Verifique se está usando o mesmo e-mail do cadastro e se não há espaços.');
+      }else{
+        authError('Não foi possível entrar: '+error.message);
+      }
+      return;
+    }
+    if(!data?.user){authError('Login não concluído. Tente novamente.');return}
+    trackEvent('login',{method:'email'});
+    await enterSystem(data.user);
+  }finally{
+    if(submitBtn){submitBtn.disabled=false;submitBtn.textContent='Entrar no sistema'}
+  }
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  const loginTab = document.getElementById('loginTab');
+  const registerTab = document.getElementById('registerTab');
+
+  loginTab?.addEventListener('click', (event) => {
+    event.preventDefault();
+    showAuthForm('login');
+  });
+
+  registerTab?.addEventListener('click', (event) => {
+    event.preventDefault();
+    showAuthForm('register');
+  });
+});
+
+async function initSupabaseAuth(){
+ if(!sbConfigured){authError('Antes de usar: configure a URL e a chave publicável do Supabase no arquivo.');return}
+ if(new URLSearchParams(window.location.search).get('senha_alterada')==='1'){
+  showAuthForm('login');
+  authSuccess('Senha alterada com sucesso. Entre com seu e-mail e a nova senha.');
+  history.replaceState({},document.title,'/');
+ }
+ let recoveryMode=(new URLSearchParams(window.location.search).get('recovery')==='1')||window.location.hash.includes('type=recovery')||window.location.search.includes('type=recovery')||window.location.hash.includes('access_token=')||window.location.search.includes('code=');
+ // O link de recuperação cria uma sessão temporária. Nunca abra o sistema antes de a senha ser alterada.
+ if(recoveryMode){
+  document.getElementById('authScreen').style.display='grid';
+  showAuthForm('update');
+  authSuccess('Crie uma nova senha para continuar.');
+ }
+ supabaseClient.auth.onAuthStateChange(async(event,session)=>{
+  if(event==='PASSWORD_RECOVERY'){
+   recoveryMode=true;
+   document.getElementById('authScreen').style.display='grid';
+   showAuthForm('update');
+   authSuccess('Digite uma nova senha para sua conta.');
+   return;
+  }
+  if(event==='SIGNED_OUT')document.getElementById('authScreen').style.display='grid';
+  if(event==='SIGNED_IN'&&session?.user){
+   if(recoveryMode){document.getElementById('authScreen').style.display='grid';showAuthForm('update');return;}
+   await enterSystem(session.user);
+  }
+ });
+ const {data:{session}}=await supabaseClient.auth.getSession();
+ if(recoveryMode){
+  document.getElementById('authScreen').style.display='grid';
+  showAuthForm('update');
+  authSuccess('Digite uma nova senha para sua conta.');
+ }else if(session?.user){await enterSystem(session.user)}
+}
+initSupabaseAuth();
+
+
+
+
+
+function prepareRenewal(plan){
+  try{localStorage.setItem('armazem_pro_pending_plan',plan)}catch(e){}
+  showAuthForm('login');
+  const planName=plan==='annual'?'anual de R$ 180,00':'mensal de R$ 20,00';
+  authSuccess('Entre na sua conta para renovar o plano '+planName+'. Se a assinatura estiver vencida, a tela de pagamento será exibida.');
+  document.getElementById('loginEmail')?.focus();
+}
+
+function moneyBRL(value){return Number(value||0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}
+function subscriptionIsValid(sub){
+ if(!sub)return false;
+ if(!['active','trial'].includes(sub.status))return false;
+ if(sub.plan==='lifetime'||sub.plan==='legacy')return true;
+ if(!sub.expires_at)return false;
+ return new Date(sub.expires_at)>new Date();
+}
+function isTrialSubscription(sub=currentSubscription){return !!sub&&(sub.plan==='trial'||sub.status==='trial')}
+function trialDaysRemaining(sub=currentSubscription){
+ if(!sub?.expires_at)return 0;
+ return Math.max(0,Math.ceil((new Date(sub.expires_at)-new Date())/86400000));
+}
+function renderTrialBanner(){
+ const banner=document.getElementById('trialBanner');
+ if(!banner)return;
+ const trial=isTrialSubscription()&&subscriptionIsValid(currentSubscription)&&!isPlatformAdmin;
+ banner.classList.toggle('show',trial);
+ banner.classList.remove('warning','urgent');
+ if(!trial)return;
+ const days=trialDaysRemaining();
+ if(days<=1)banner.classList.add('urgent');else if(days<=7)banner.classList.add('warning');
+ document.getElementById('trialBannerTitle').textContent=days<=1?'⚠️ Seu teste termina em breve':'🎁 Período de teste gratuito';
+ document.getElementById('trialBannerText').textContent=days<=7?'Assine um plano para continuar usando o sistema sem interrupção.':'Todas as funções estão liberadas durante o período de teste.';
+ document.getElementById('trialBannerDays').textContent=days===1?'1 dia restante':`${days} dias restantes`;
+}
+function subscriptionLabel(plan){return ({monthly:'Mensal',annual:'Anual',lifetime:'Vitalício',legacy:'Legado',trial:'Teste'})[plan]||plan||'Não definido'}
+async function detectPlatformAdmin(){
+ isPlatformAdmin=false;
+ try{
+  const {data,error}=await supabaseClient.rpc('is_platform_admin');
+  if(!error&&data===true)isPlatformAdmin=true;
+ }catch{}
+ if(!isPlatformAdmin&&currentUser?.id){
+  try{
+   const {data,error}=await supabaseClient
+    .from('platform_admins')
+    .select('user_id')
+    .eq('user_id',currentUser.id)
+    .maybeSingle();
+   if(!error&&data)isPlatformAdmin=true;
+  }catch{}
+ }
+ const adminBtn=document.getElementById('adminMenuButton');
+ const subscribersBtn=document.getElementById('subscribersMenuButton');
+ if(adminBtn)adminBtn.classList.toggle('visible',isPlatformAdmin);
+ if(subscribersBtn)subscribersBtn.classList.toggle('visible',isPlatformAdmin);
+ const subscribersPanel=document.getElementById('subscriptionSubscribersPanel');
+ if(subscribersPanel)subscribersPanel.style.display=isPlatformAdmin?'block':'none';
+ if(isPlatformAdmin&&isWorkspaceAdmin())await loadAdminClients();
+ applyRolePermissions();
+}
+async function checkSubscription(showMessage=false){
+ if(!currentWorkspace||!supabaseClient)return false;
+ const {data,error}=await supabaseClient.from('subscriptions').select('workspace_id,plan,status,expires_at,updated_at').eq('workspace_id',currentWorkspace.id).maybeSingle();
+ if(error){console.error('Assinatura:',error);if(showMessage)alert('Não foi possível consultar a assinatura: '+error.message);return false}
+ currentSubscription=data||{workspace_id:currentWorkspace.id,plan:'none',status:'pending',expires_at:null};
+ const valid=subscriptionIsValid(currentSubscription)||isPlatformAdmin;
+ subscriptionBlocked=!valid;
+ const gate=document.getElementById('subscriptionGate');
+ if(gate)gate.classList.toggle('show',subscriptionBlocked);
+ renderSubscriptionDetails();
+ renderTrialBanner();
+ if(showMessage)alert(valid?(isTrialSubscription()?'Teste gratuito ativo. O acesso está liberado.':'Assinatura ativa. O acesso está liberado.'):'O teste terminou ou o pagamento ainda não foi confirmado.');
+ return valid;
+}
+function renderSubscriptionDetails(){
+ const el=document.getElementById('subscriptionDetails');
+ const gateStatus=document.getElementById('subscriptionGateStatus');
+ if(!el)return;
+ const s=currentSubscription;
+ if(!s){el.innerHTML='<div class="empty">Assinatura ainda não carregada.</div>';return}
+ const valid=subscriptionIsValid(s)||isPlatformAdmin;
+ const trial=isTrialSubscription(s)&&valid&&!isPlatformAdmin;
+ const expires=s.expires_at?new Date(s.expires_at).toLocaleString('pt-BR'):(s.plan==='lifetime'||s.plan==='legacy'?'Sem vencimento':'Não definido');
+ const accessTitle=valid?(trial?'🎁 Teste gratuito ativo':'✅ Acesso liberado'):'🔒 Acesso bloqueado';
+ const extra=trial?` • ${trialDaysRemaining(s)} dia(s) restante(s)`:'';
+ const html=`<div class="alert" style="background:${valid?'#ecfdf3':'#fff1f1'};border-color:${valid?'#86efac':'#fca5a5'}"><span><b>${accessTitle}</b><br>Plano: ${esc(subscriptionLabel(s.plan))} • Status: ${esc(statusLabel(s.status||'pending'))} • Vencimento: ${esc(expires)}${extra}</span></div>`;
+ el.innerHTML=html;
+ if(gateStatus)gateStatus.innerHTML=`<span class="badge ${valid?'in':'out'}">${valid?(trial?'TESTE ATIVO':'ATIVA'):'TESTE ENCERRADO / VENCIDA'}</span><span>Plano: <b>${esc(subscriptionLabel(s.plan))}</b></span>`;
+ renderTrialBanner();
+}
+const PAYMENT_LINKS={
+ monthly:'https://mpago.la/1UZt5nz',
+ annual:'https://mpago.la/2svqf6w'
+};
+async function startPayment(plan,button){
+ if(!currentUser||!currentWorkspace){alert('Entre no sistema antes de pagar.');return}
+ const checkoutUrl=PAYMENT_LINKS[plan];
+ if(!checkoutUrl){alert('Plano de pagamento inválido.');return}
+ try{
+  localStorage.setItem('armazem_pro_pending_plan',plan);
+  localStorage.setItem('armazem_pro_payment_workspace',currentWorkspace.id);
+ }catch(e){}
+ window.location.href=checkoutUrl;
+}
+async function loadAdminClients(){
+ if(!isPlatformAdmin)return;
+ const el=document.getElementById('adminClientsTable');
+ const subEl=document.getElementById('subscriptionSubscribersTable');
+ if(el)el.innerHTML='<div class="empty">Carregando clientes...</div>';
+ if(subEl)subEl.innerHTML='<div class="empty">Carregando assinantes...</div>';
+ const {data,error}=await supabaseClient.rpc('admin_list_subscriptions');
+ if(error){
+  const msg='Não foi possível carregar os assinantes: '+esc(error.message)+'. Execute o arquivo CONFIGURAR_PAINEL_ASSINANTES.sql no Supabase e depois atualize esta página com Ctrl + F5.';
+  if(el)el.innerHTML='<div class="alert" style="background:#fff1f1;border-color:#fca5a5"><span><b>⚠️ Painel não configurado</b><br>'+msg+'</span></div>';
+  if(subEl)subEl.innerHTML='<div class="alert" style="background:#fff1f1;border-color:#fca5a5"><span><b>⚠️ Painel não configurado</b><br>'+msg+'</span></div>';
+  return;
+ }
+ adminClients=Array.isArray(data)?data:[];
+ renderAdminClients();
+ renderSubscriptionSubscribers();
+}
+function renderAdminClients(){
+ const el=document.getElementById('adminClientsTable');if(!el)return;
+ const q=(document.getElementById('adminSearch')?.value||'').trim().toLowerCase();
+ const statusFilter=document.getElementById('adminStatusFilter')?.value||'';
+ const now=new Date();
+
+ const normalized=adminClients.map(c=>{
+  const expired=!!(c.expires_at&&new Date(c.expires_at)<now);
+  const displayStatus=expired&&c.status==='active'?'expired':(c.status||'pending');
+  return {...c,displayStatus};
+ });
+
+ const rows=normalized.filter(c=>{
+  const matchesText=[c.workspace_name,c.owner_email,c.owner_name,c.plan,c.displayStatus]
+   .join(' ').toLowerCase().includes(q);
+  const matchesStatus=!statusFilter||c.displayStatus===statusFilter;
+  return matchesText&&matchesStatus;
+ });
+
+ const active=normalized.filter(c=>c.displayStatus==='active').length;
+ const pending=normalized.length-active;
+ const monthly=normalized.filter(c=>c.displayStatus==='active'&&c.plan==='monthly').length*20;
+ const annual=normalized.filter(c=>c.displayStatus==='active'&&c.plan==='annual').length*180;
+ const received=normalized.reduce((sum,c)=>sum+Number(c.total_paid||0),0);
+
+ const set=(id,value)=>{const node=document.getElementById(id);if(node)node.textContent=value};
+ set('adminTotal',normalized.length);
+ set('adminActive',active);
+ set('adminPending',pending);
+ set('adminMRR',moneyBRL(monthly));
+ set('adminAnnual',moneyBRL(annual));
+ set('adminReceived',moneyBRL(received));
+
+ if(!rows.length){el.innerHTML='<div class="empty">Nenhum cliente encontrado.</div>';return}
+
+ el.innerHTML=`<div class="table-wrap"><table class="table">
+  <thead><tr>
+   <th>Cliente</th><th>Empresa</th><th>Plano</th><th>Status</th>
+   <th>Vencimento</th><th>Último pagamento</th><th>Total pago</th><th>Ações</th>
+  </tr></thead>
+  <tbody>${rows.map(c=>`<tr>
+   <td><b>${esc(c.owner_name||'Sem nome')}</b><br><small>${esc(c.owner_email||'-')}</small></td>
+   <td>${esc(c.workspace_name||'-')}</td>
+   <td>${esc(subscriptionLabel(c.plan))}</td>
+   <td><span class="badge ${c.displayStatus==='active'?'in':'out'}">${esc(statusLabel(c.displayStatus))}</span></td>
+   <td>${c.expires_at?new Date(c.expires_at).toLocaleDateString('pt-BR'):(c.plan==='legacy'||c.plan==='lifetime'?'Sem vencimento':'-')}</td>
+   <td>${c.last_payment_at?new Date(c.last_payment_at).toLocaleString('pt-BR'):'-'}</td>
+   <td>${moneyBRL(Number(c.total_paid||0))}</td>
+   <td>
+    <button class="btn small primary" onclick="adminChangeSubscription('${c.workspace_id}','monthly','active',30)">+30 dias</button>
+    <button class="btn small secondary" onclick="adminChangeSubscription('${c.workspace_id}','annual','active',365)">+1 ano</button>
+    <button class="btn small danger" onclick="adminChangeSubscription('${c.workspace_id}',null,'blocked',0)">Bloquear</button>
+    <button class="btn small secondary" onclick="adminChangeSubscription('${c.workspace_id}','legacy','active',0)">Liberar</button>
+   </td>
+  </tr>`).join('')}</tbody>
+ </table></div>`;
+}
+
+function statusLabel(status){
+ return ({active:'Ativa',pending:'Pendente',expired:'Vencida',blocked:'Bloqueada',canceled:'Cancelada',trial:'Teste'})[status]||status||'Pendente';
+}
+
+function exportSubscribersCSV(){
+ if(!isPlatformAdmin||!adminClients.length){alert('Não há assinantes para exportar.');return}
+ const headers=['Nome','E-mail','Empresa','Plano','Status','Vencimento','Último pagamento','Total pago'];
+ const lines=[headers,...adminClients.map(c=>[
+  c.owner_name||'',c.owner_email||'',c.workspace_name||'',subscriptionLabel(c.plan),
+  statusLabel(c.expires_at&&new Date(c.expires_at)<new Date()&&c.status==='active'?'expired':c.status),
+  c.expires_at?new Date(c.expires_at).toLocaleDateString('pt-BR'):'',
+  c.last_payment_at?new Date(c.last_payment_at).toLocaleString('pt-BR'):'',
+  Number(c.total_paid||0).toFixed(2).replace('.',',')
+ ])];
+ const csv='\uFEFF'+lines.map(row=>row.map(v=>`"${String(v).replaceAll('"','""')}"`).join(';')).join('\n');
+ const blob=new Blob([csv],{type:'text/csv;charset=utf-8'});
+ const a=document.createElement('a');a.href=URL.createObjectURL(blob);
+ a.download='assinantes-armazem-pro.csv';a.click();URL.revokeObjectURL(a.href);
+}
+
+function openSubscribersPage(){
+ showPage('subscription');
+ setTimeout(()=>{
+  const panel=document.getElementById('subscriptionSubscribersPanel');
+  if(panel){
+   panel.style.display='block';
+   panel.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  loadAdminClients();
+ },120);
+}
+
+function renderSubscriptionSubscribers(){
+ const el=document.getElementById('subscriptionSubscribersTable');
+ if(!el||!isPlatformAdmin)return;
+ const q=(document.getElementById('subscriptionSubscribersSearch')?.value||'').trim().toLowerCase();
+ const rows=adminClients.filter(c=>
+  [c.workspace_name,c.owner_name,c.owner_email,c.plan,c.status]
+   .join(' ').toLowerCase().includes(q)
+ );
+ if(!rows.length){
+  el.innerHTML='<div class="empty">Nenhum assinante encontrado.</div>';
+  return;
+ }
+ el.innerHTML=`<div class="table-wrap"><table class="table">
+  <thead><tr><th>Assinante</th><th>E-mail</th><th>Empresa</th><th>Plano</th><th>Status</th><th>Vencimento</th><th>Último pagamento</th><th>Total pago</th></tr></thead>
+  <tbody>${rows.map(c=>{
+   const active=c.status==='active'&&(!c.expires_at||new Date(c.expires_at)>new Date());
+   return `<tr>
+    <td><b>${esc(c.owner_name||'Sem nome')}</b></td>
+    <td>${esc(c.owner_email||'-')}</td>
+    <td>${esc(c.workspace_name||'-')}</td>
+    <td>${esc(subscriptionLabel(c.plan))}</td>
+    <td><span class="badge ${active?'in':'out'}">${active?'Ativa':esc(c.status||'Pendente')}</span></td>
+    <td>${c.expires_at?new Date(c.expires_at).toLocaleDateString('pt-BR'):(c.plan==='legacy'||c.plan==='lifetime'?'Sem vencimento':'-')}</td>
+    <td>${c.last_payment_at?new Date(c.last_payment_at).toLocaleString('pt-BR'):'-'}</td>
+    <td>${moneyBRL(Number(c.total_paid||0))}</td>
+   </tr>`;
+  }).join('')}</tbody>
+ </table></div>`;
+}
+
+async function adminChangeSubscription(workspaceId,plan,status,days){
+ if(!isPlatformAdmin)return;
+ const {error}=await supabaseClient.rpc('admin_set_subscription',{p_workspace_id:workspaceId,p_plan:plan,p_status:status,p_days:Number(days||0)});
+ if(error){alert('Não foi possível atualizar: '+error.message);return}
+ await loadAdminClients();renderSubscriptionSubscribers();alert('Assinatura atualizada.');
+}
+function handlePaymentReturn(){
+ const p=new URLSearchParams(location.search).get('pagamento');
+ if(!p)return;
+ history.replaceState({},'',location.pathname);
+ setTimeout(()=>{if(p==='sucesso'){alert('Pagamento enviado com sucesso. Aguarde alguns segundos e clique em “Já paguei — verificar”.')}else if(p==='pendente'){alert('Pagamento pendente. O acesso será liberado quando o Mercado Pago confirmar.')}else{alert('O pagamento não foi concluído. Você pode tentar novamente.')}},700);
+}
+window.addEventListener('DOMContentLoaded',handlePaymentReturn);
+
+function printProductsReport(){const rows=warehouseProducts().map(p=>`<tr><td>${esc(p.code)}</td><td>${esc(p.name)}</td><td>${esc(p.category)}</td><td>${esc(p.unit)}</td><td>${p.stock}</td><td>${p.min}</td></tr>`).join('');const w=window.open('','_blank');w.document.write(`<html><head><title>Relatório de Produtos</title><style>body{font-family:Arial;padding:30px}table{width:100%;border-collapse:collapse}th,td{border:1px solid #ccc;padding:8px;text-align:left}
+.search-product-wrap{position:relative}
+.product-search-results{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;border:1px solid #ccc;max-height:220px;overflow:auto;z-index:99}
+.product-search-results.show{display:block}
+.product-search-results div{padding:8px;cursor:pointer}
+.product-search-results div:hover{background:#f3f4f6}
+</style><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#0f766e"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default">
+<style>
+:root{--ap-surface:#fff;--ap-text:#172033;--ap-muted:#64748b;--ap-border:#e2e8f0}
+
+
+
+.product-photo{width:46px;height:46px;border-radius:10px;object-fit:cover;background:#e2e8f0;display:block}.mini-doc{display:inline-block;margin:2px 4px 2px 0}.finance-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:18px}.finance-grid .card{padding:18px}.feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.location-text{font-size:12px;color:var(--ap-muted)}.abc-a{background:#dcfce7}.abc-b{background:#fef3c7}.abc-c{background:#fee2e2}.install-app-btn{position:fixed;right:18px;bottom:18px;z-index:40;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+@media(max-width:900px){.finance-grid,.feature-grid{grid-template-columns:1fr}.install-app-btn{right:10px;bottom:10px}.menu{overflow-x:auto}.sidebar{max-width:100%}}
+</style>
+</head><body><h1>Relatório de Produtos</h1><p>Data: ${new Date().toLocaleDateString('pt-BR')}</p><table><tr><th>Código</th><th>Produto</th><th>Categoria</th><th>Unidade</th><th>Estoque</th><th>Mínimo</th></tr>${rows}</table><script>window.print()<\/script></body></html>`);w.document.close()}
+function openKitModal(editId=''){
+ const editingKit=editId?db.kits.find(k=>k.id===editId&&k.warehouseId===activeWarehouseId):null;
+ if(editId&&!editingKit){alert('Kit não encontrado neste armazém.');return}
+ document.getElementById('modalTitle').textContent=editingKit?'Editar kit':'Novo kit';
+ if(!warehouseProducts().length){document.getElementById('modalBody').innerHTML='<div class="empty">Cadastre pelo menos um produto antes de criar ou editar um kit.</div>';document.getElementById('modal').classList.add('show');return}
+ document.getElementById('modalBody').innerHTML=`<form id="kitForm" class="form-grid">
+ <div class="field full"><label>Nome do kit</label><input id="kitName" placeholder="Ex.: Kit Banheiro" required></div>
+ <div class="field full"><label>Descrição</label><input id="kitDescription" placeholder="Opcional"></div>
+ <div class="field full"><label>Itens do kit</label><div id="kitItems"></div></div>
+ <div class="field full"><button type="button" class="btn secondary" onclick="addKitItemRow()">+ Adicionar produto</button></div>
+ <div class="actions full"><button class="btn primary">${editingKit?'Salvar alterações':'Salvar kit'}</button></div></form>`;
+ if(editingKit){
+  document.getElementById('kitName').value=editingKit.name||'';
+  document.getElementById('kitDescription').value=editingKit.description||'';
+  const validItems=Array.isArray(editingKit.items)?editingKit.items:[];
+  if(validItems.length)validItems.forEach(item=>addKitItemRow(item.productId,item.qty));
+  else addKitItemRow();
+ }else addKitItemRow();
+ document.getElementById('kitForm').onsubmit=e=>{
+  e.preventDefault();
+  const name=kitName.value.trim(),description=kitDescription.value.trim();
+  const items=[...document.querySelectorAll('.kit-item-row')].map(r=>({productId:r.querySelector('.kit-product').value,qty:Number(r.querySelector('.kit-qty').value||0)})).filter(i=>i.productId&&i.qty>0);
+  if(!items.length){alert('Adicione pelo menos um produto ao kit.');return}
+  const merged=[];
+  items.forEach(i=>{const f=merged.find(x=>x.productId===i.productId);if(f)f.qty+=i.qty;else merged.push(i)});
+  if(editingKit){
+   editingKit.name=name;
+   editingKit.description=description;
+   editingKit.items=merged;
+   editingKit.updated=Date.now();
+  }else{
+   db.kits.push({id:uid(),warehouseId:activeWarehouseId,name,description,items:merged,created:Date.now()});
+  }
+  save();closeModal();renderKits();
+  recordAudit(editingKit?'KIT_EDITADO':'KIT_CRIADO',name);
+  alert(editingKit?'Kit atualizado com sucesso!':'Kit salvo com sucesso!');
+ };
+ document.getElementById('modal').classList.add('show');
+}
+function openEditKitModal(id){openKitModal(id)}
+function addKitItemRow(productId='',qty=1){
+ const box=document.getElementById('kitItems');
+ if(!box)return;
+ const row=document.createElement('div');
+ row.className='kit-item-row';
+ row.style.cssText='display:grid;grid-template-columns:1fr 130px 42px;gap:8px;margin-bottom:9px;align-items:end';
+ row.innerHTML=`<div class="field"><label>Produto</label><div class="search-product-wrap kit-search-wrap"><input type="text" class="kit-product-search" placeholder="🔍 Pesquisar material..." autocomplete="off"><input type="hidden" class="kit-product" required><div class="product-search-results kit-product-results"></div></div></div><div class="field"><label>Quantidade</label><input class="kit-qty" type="number" min="0.01" step="0.01" value="${Number(qty)||1}" required></div><button type="button" class="btn danger" onclick="removeKitItemRow(this)">×</button>`;
+ box.appendChild(row);
+ setupKitProductSearch(row);
+ if(productId){
+  const product=db.products.find(p=>p.id===productId);
+  row.querySelector('.kit-product').value=productId;
+  row.querySelector('.kit-product-search').value=product?.name||'Produto excluído';
+ }
+}
+function setupKitProductSearch(row){
+ const inp=row.querySelector('.kit-product-search');
+ const hid=row.querySelector('.kit-product');
+ const results=row.querySelector('.kit-product-results');
+ if(!inp||!hid||!results)return;
+ function render(){
+   const q=inp.value.trim().toLowerCase();
+   const items=warehouseProducts().filter(p=>!q||String(p.name||'').toLowerCase().includes(q)||String(p.code||'').toLowerCase().includes(q)||String(p.category||'').toLowerCase().includes(q));
+   results.innerHTML=items.length?items.map(p=>`<div data-id="${p.id}"><b>${esc(p.name)}</b><br><small>Código: ${esc(p.code||'-')} • ${esc(p.category||'Sem categoria')} • Estoque: ${p.stock} ${esc(p.unit||'')}</small></div>`).join(''):'<div><small>Nenhum material encontrado.</small></div>';
+   results.classList.add('show');
+   results.querySelectorAll('[data-id]').forEach(item=>item.onclick=()=>{
+     const p=db.products.find(x=>x.id===item.dataset.id);
+     if(!p)return;
+     inp.value=p.name;
+     hid.value=p.id;
+     results.classList.remove('show');
+   });
+ }
+ inp.addEventListener('input',()=>{hid.value='';render()});
+ inp.addEventListener('focus',render);
+}
+function removeKitItemRow(btn){const rows=document.querySelectorAll('.kit-item-row');if(rows.length===1){alert('O kit precisa ter pelo menos um item.');return}btn.closest('.kit-item-row').remove()}
+function renderKits(){const el=document.getElementById('kitsTable');if(!el)return;const kits=warehouseKits();if(!kits.length){el.innerHTML='<div class="empty">Nenhum kit cadastrado.</div>';return}el.innerHTML=`<div class="table-wrap"><table class="table"><thead><tr><th>Kit</th><th>Descrição</th><th>Produtos e quantidades</th><th>Ações</th></tr></thead><tbody>${kits.map(k=>`<tr><td><b>${esc(k.name)}</b></td><td>${esc(k.description||'-')}</td><td>${(k.items||[]).map(i=>{const p=db.products.find(x=>x.id===i.productId);return `${i.qty} ${esc(p?.unit||'UN')} × ${esc(p?.name||'Produto excluído')} — Código: ${esc(p?.code||'-')}`}).join('<br>')}</td><td><button class="btn small primary" onclick="baixarKit('${k.id}')">⬇️ Dar baixa</button> <button class="btn small secondary" onclick="openEditKitModal('${k.id}')">✏️ Editar</button> <button class="btn small secondary" onclick="duplicateKit('${k.id}')">Duplicar</button> <button class="btn small danger" onclick="deleteKit('${k.id}')">Excluir</button></td></tr>`).join('')}</tbody></table></div>`}
+function baixarKit(id){
+ const kit=db.kits.find(k=>k.id===id&&k.warehouseId===activeWarehouseId);
+ if(!kit){alert('Kit não encontrado neste armazém.');return}
+ if(!Array.isArray(kit.items)||!kit.items.length){alert('Este kit não possui produtos cadastrados.');return}
+ const resposta=prompt(`Quantos kits "${kit.name}" deseja dar baixa?`,'1');
+ if(resposta===null)return;
+ const quantidadeKits=Number(String(resposta).replace(',','.'));
+ if(!Number.isFinite(quantidadeKits)||quantidadeKits<=0){alert('Informe uma quantidade válida de kits.');return}
+ const itens=[];
+ for(const item of kit.items){
+  const produto=db.products.find(p=>p.id===item.productId&&p.warehouseId===activeWarehouseId);
+  if(!produto){alert('Um produto deste kit foi excluído ou pertence a outro armazém. A baixa foi cancelada.');return}
+  const quantidade=Number(item.qty||0)*quantidadeKits;
+  if(quantidade<=0){alert(`A quantidade do produto ${produto.name} é inválida. A baixa foi cancelada.`);return}
+  itens.push({produto,quantidade});
+ }
+ const insuficientes=itens.filter(i=>Number(i.produto.stock||0)<i.quantidade);
+ if(insuficientes.length){
+  alert('Estoque insuficiente para dar baixa neste kit:\n\n'+insuficientes.map(i=>`${i.produto.name}: disponível ${i.produto.stock} ${i.produto.unit||''}, necessário ${i.quantidade} ${i.produto.unit||''}`).join('\n'));
+  return;
+ }
+ const resumo=itens.map(i=>`${i.produto.name}: ${i.quantidade} ${i.produto.unit||''}`).join('\n');
+ if(!confirm(`Confirmar baixa de ${quantidadeKits} kit(s) "${kit.name}"?\n\n${resumo}`))return;
+ const responsavel=currentUser?.user_metadata?.name||currentUser?.email||'Usuário';
+ itens.forEach(({produto,quantidade})=>{
+  produto.stock=Number(produto.stock||0)-quantidade;
+  db.moves.push({
+   id:uid(),warehouseId:activeWarehouseId,type:'SAÍDA',productId:produto.id,productName:produto.name,qty:quantidade,date:today(),
+   responsible:responsavel,destination:`Baixa do kit: ${kit.name}`,sector:`Kit: ${kit.name}`,note:`Baixa de ${quantidadeKits} kit(s)`,kitId:kit.id,kitName:kit.name,kitQuantity:quantidadeKits,created:Date.now()
+  });
+ });
+ save();
+ refresh();
+ recordAudit('BAIXA_DE_KIT',`${quantidadeKits} kit(s) - ${kit.name}`);
+ alert(`Baixa de ${quantidadeKits} kit(s) realizada com sucesso!`);
+}
+function deleteKit(id){if(confirm('Excluir este kit?')){db.kits=db.kits.filter(k=>k.id!==id);save();renderKits()}}
+function duplicateKit(id){const k=db.kits.find(x=>x.id===id);if(!k)return;db.kits.push({id:uid(),name:k.name+' - Cópia',description:k.description,items:(k.items||[]).map(i=>({...i})),created:Date.now()});save();renderKits()}
+
+async function resetSystem(){
+ if(!isWorkspaceAdmin()){alert('Acesso permitido somente ao administrador.');return}
+ const c=prompt('ATENÇÃO: isso apagará todos os dados deste espaço de trabalho na nuvem. Digite RESETAR para confirmar:');
+ if(c!=='RESETAR'){if(c!==null)alert('Reset cancelado.');return}
+ db=normalizeDb({});
+ await persistCloud();
+ refresh();
+ recordAudit('SISTEMA_RESETADO','Todos os dados foram apagados');alert('Dados deste espaço resetados e sincronizados com a nuvem.');
+}
+function exportBackup(){
+ if(!isWorkspaceAdmin()){alert('Acesso permitido somente ao administrador.');return}
+ const backup={app:'Armazém Pro 2.0',exportedAt:new Date().toISOString(),user:currentUser?.email||'',data:db};
+ const blob=new Blob([JSON.stringify(backup,null,2)],{type:'application/json'});
+ const url=URL.createObjectURL(blob);const a=document.createElement('a');
+ a.href=url;a.download=`armazem-pro-backup-${today()}.json`;a.click();URL.revokeObjectURL(url);
+}
+async function importBackup(event){
+ if(!isWorkspaceAdmin()){event.target.value='';alert('Acesso permitido somente ao administrador.');return}
+ const file=event.target.files?.[0];event.target.value='';if(!file)return;
+ try{
+  const parsed=JSON.parse(await file.text());
+  const imported=parsed.data||parsed;
+  if(!confirm('Restaurar este backup substituirá os dados atuais. Continuar?'))return;
+  db=normalizeDb(imported);await persistCloud();refresh();recordAudit('BACKUP_RESTAURADO',file.name);alert('Backup restaurado com sucesso!');
+ }catch(err){alert('Arquivo de backup inválido: '+err.message)}
+}
+
+
+window.addEventListener('DOMContentLoaded',()=>{refresh();initMultiMovements()});
+
+
+
+
+
+document.addEventListener('click',e=>{if(!e.target.closest('.search-product-wrap'))document.querySelectorAll('.product-search-results.show').forEach(box=>box.classList.remove('show'));});
+
+
+function setupMovementProductSearch(row, type){
+ const inp=row.querySelector('.movement-product-search');
+ const hid=row.querySelector('.movement-product');
+ const box=row.querySelector('.movement-product-results');
+ if(!inp||!hid||!box)return;
+ function render(){
+  const q=inp.value.trim().toLowerCase();
+  const items=warehouseProducts().filter(p=>!q||String(p.name||'').toLowerCase().includes(q)||String(p.code||'').toLowerCase().includes(q)||String(p.category||'').toLowerCase().includes(q));
+  box.innerHTML=items.length?items.map(p=>`<div data-id="${p.id}"><b>${esc(p.name)}</b><br><small>Código: ${esc(p.code||'-')} • ${esc(p.category||'Sem categoria')} • Estoque: ${p.stock} ${esc(p.unit||'')}</small></div>`).join(''):'<div><small>Nenhum produto encontrado.</small></div>';
+  box.classList.add('show');
+  box.querySelectorAll('[data-id]').forEach(item=>item.onclick=()=>{
+    const p=db.products.find(x=>x.id===item.dataset.id);
+    if(!p)return;
+    inp.value=p.name;
+    hid.value=p.id;
+    box.classList.remove('show');
+  });
+ }
+ inp.addEventListener('input',()=>{hid.value='';render()});
+ inp.addEventListener('focus',render);
+}
+
+function updateMovementCount(type){
+ const rows=document.querySelectorAll(`#${type}Items .multi-item-row`);
+ const counter=document.getElementById(`${type}ItemCount`);
+ if(counter)counter.textContent=rows.length;
+}
+
+function addMovementItemRow(type){
+ const box=document.getElementById(`${type}Items`);
+ if(!box)return;
+ const rows=box.querySelectorAll('.multi-item-row');
+ if(rows.length>=10){alert('Você pode selecionar no máximo 10 produtos.');return}
+ const row=document.createElement('div');
+ row.className='multi-item-row';
+ row.innerHTML=`<div class="field"><label>Produto</label><div class="search-product-wrap"><input type="text" class="movement-product-search" placeholder="🔍 Pesquisar produto..." autocomplete="off"><input type="hidden" class="movement-product"><div class="product-search-results movement-product-results"></div></div></div><div class="field"><label>Quantidade</label><input class="movement-qty" type="number" min="0.01" step="0.01" value="1" required></div>${type==='entry'?'<div class="field"><label>Custo unitário da compra (R$)</label><input class="movement-unit-cost" type="number" min="0" step="0.01" value="0" required></div>':''}<button type="button" class="btn danger" title="Remover produto" onclick="removeMovementItemRow(this,'${type}')">×</button>`;
+ box.appendChild(row);
+ setupMovementProductSearch(row,type);
+ updateMovementCount(type);
+}
+
+function addEntryItemRow(){addMovementItemRow('entry')}
+function addExitItemRow(){addMovementItemRow('exit')}
+function addReturnItemRow(){addMovementItemRow('return')}
+
+function removeMovementItemRow(btn,type){
+ const box=document.getElementById(`${type}Items`);
+ if(!box)return;
+ const rows=box.querySelectorAll('.multi-item-row');
+ if(rows.length===1){alert('Mantenha pelo menos uma linha de produto.');return}
+ btn.closest('.multi-item-row')?.remove();
+ updateMovementCount(type);
+}
+
+function collectMovementItems(type){
+ const rows=[...document.querySelectorAll(`#${type}Items .multi-item-row`)];
+ const items=rows.map((row,index)=>({
+  row:index+1,
+  productId:row.querySelector('.movement-product')?.value||'',
+  qty:Number(row.querySelector('.movement-qty')?.value||0),
+  unitCost:Number(row.querySelector('.movement-unit-cost')?.value||0)
+ }));
+ return items;
+}
+
+function resetMovementRows(type){
+ const box=document.getElementById(`${type}Items`);
+ if(!box)return;
+ box.innerHTML='';
+ addMovementItemRow(type);
+}
+
+function initMultiMovements(){
+ if(!document.querySelector('#entryItems .multi-item-row'))addEntryItemRow();
+ if(!document.querySelector('#exitItems .multi-item-row'))addExitItemRow();
+ if(!document.querySelector('#returnItems .multi-item-row'))addReturnItemRow();
+ const d=document.getElementById('exitDate');
+ if(d&&!d.value)d.value=today();
+}
+
+document.getElementById('entryForm').onsubmit=e=>{
+ e.preventDefault();
+ const items=collectMovementItems('entry');
+ if(!items.length){alert('Adicione pelo menos um produto.');return}
+ for(const item of items){
+  if(!item.productId){alert(`Selecione o produto da linha ${item.row}.`);return}
+  if(item.qty<=0){alert(`Informe uma quantidade válida na linha ${item.row}.`);return}
+ }
+ const merged=[];
+ items.forEach(item=>{
+  const found=merged.find(x=>x.productId===item.productId);
+  if(found){const total=(found.qty*found.unitCost)+(item.qty*item.unitCost);found.qty+=item.qty;found.unitCost=found.qty?total/found.qty:0}else merged.push({productId:item.productId,qty:item.qty,unitCost:item.unitCost});
+ });
+ const supplierText=entrySupplier.options[entrySupplier.selectedIndex]?.text||'';
+ merged.forEach(item=>{
+  const p=db.products.find(x=>x.id===item.productId);
+  if(!p)return;
+  const oldStock=Number(p.stock||0), oldCost=Number(p.cost||0), purchaseCost=Number(item.unitCost||0);
+  const newStock=oldStock+item.qty;
+  p.cost=newStock?((oldStock*oldCost)+(item.qty*purchaseCost))/newStock:purchaseCost;
+  p.stock=newStock;
+  db.moves.push({
+   id:uid(),warehouseId:activeWarehouseId,type:'ENTRADA',productId:p.id,productName:p.name,qty:item.qty,date:today(),
+   unitCost:purchaseCost,totalCost:item.qty*purchaseCost,supplier:supplierText,note:entryNote.value,doc:entryDoc.value,created:Date.now()
+  });
+ });
+ save();
+ refresh();
+ e.target.reset();
+ resetMovementRows('entry');
+ recordAudit('ENTRADA_REGISTRADA',`${merged.length} produto(s)`);alert(`${merged.length} produto(s) registrado(s) na entrada com sucesso!`);
+};
+
+document.getElementById('exitForm').onsubmit=e=>{
+ e.preventDefault();
+ const items=collectMovementItems('exit');
+ const date=document.getElementById('exitDate').value||today();
+ const responsible=document.getElementById('exitResponsible').value.trim();
+ const destination=document.getElementById('exitDestination').value.trim();
+ const note=document.getElementById('exitNote').value.trim();
+
+ if(!items.length){alert('Adicione pelo menos um produto.');return}
+ if(!responsible){alert('Informe o responsável.');return}
+ if(!destination){alert('Informe a obra ou destino.');return}
+
+ for(const item of items){
+  if(!item.productId){alert(`Selecione o produto da linha ${item.row}.`);return}
+  if(item.qty<=0){alert(`Informe uma quantidade válida na linha ${item.row}.`);return}
+ }
+
+ const merged=[];
+ items.forEach(item=>{
+  const found=merged.find(x=>x.productId===item.productId);
+  if(found)found.qty+=item.qty;else merged.push({productId:item.productId,qty:item.qty});
+ });
+
+ for(const item of merged){
+  const p=db.products.find(x=>x.id===item.productId);
+  if(!p){alert('Um dos produtos selecionados não foi encontrado.');return}
+  if(item.qty>Number(p.stock)){
+   alert(`Estoque insuficiente para ${p.name}. Disponível: ${p.stock} ${p.unit||''}. Solicitado: ${item.qty}.`);
+   return;
+  }
+ }
+
+ merged.forEach(item=>{
+  const p=db.products.find(x=>x.id===item.productId);
+  p.stock=Number(p.stock)-item.qty;
+  db.moves.push({
+   id:uid(),warehouseId:activeWarehouseId,type:'SAÍDA',productId:p.id,productName:p.name,qty:item.qty,date,
+   responsible,destination,sector:destination,unitCost:Number(p.cost||0),totalCost:item.qty*Number(p.cost||0),note,created:Date.now()
+  });
+ });
+ save();
+ refresh();
+ e.target.reset();
+ resetMovementRows('exit');
+ document.getElementById('exitDate').value=today();
+ recordAudit('SAIDA_REGISTRADA',`${merged.length} produto(s) para ${destination}`);alert(`${merged.length} produto(s) registrado(s) na saída com sucesso!`);
+};
+
+
+document.getElementById('returnForm').onsubmit=e=>{
+ e.preventDefault();
+ const items=collectMovementItems('return');
+ const responsible=document.getElementById('returnResponsible').value.trim();
+ const reason=document.getElementById('returnReason').value.trim();
+
+ if(!items.length){alert('Adicione pelo menos um produto.');return}
+ if(!responsible){alert('Informe o responsável.');return}
+ if(!reason){alert('Informe o motivo da devolução.');return}
+
+ for(const item of items){
+  if(!item.productId){alert(`Selecione o produto da linha ${item.row}.`);return}
+  if(item.qty<=0){alert(`Informe uma quantidade válida na linha ${item.row}.`);return}
+ }
+
+ const merged=[];
+ items.forEach(item=>{
+  const found=merged.find(x=>x.productId===item.productId);
+  if(found)found.qty+=item.qty;else merged.push({productId:item.productId,qty:item.qty});
+ });
+
+ for(const item of merged){
+  const p=db.products.find(x=>x.id===item.productId);
+  if(!p){alert('Um dos produtos selecionados não foi encontrado.');return}
+ }
+
+ merged.forEach(item=>{
+  const p=db.products.find(x=>x.id===item.productId);
+  p.stock=Number(p.stock)+item.qty;
+  db.moves.push({
+   id:uid(),warehouseId:activeWarehouseId,type:'DEVOLUÇÃO',productId:p.id,productName:p.name,qty:item.qty,date:today(),
+   responsible,reason,note:reason,created:Date.now()
+  });
+ });
+ save();
+ refresh();
+ e.target.reset();
+ resetMovementRows('return');
+ recordAudit('DEVOLUCAO_REGISTRADA',`${merged.length} produto(s)`);
+ alert(`${merged.length} produto(s) registrado(s) na devolução com sucesso!`);
+};
+
+document.addEventListener('click',e=>{
+ if(!e.target.closest('.search-product-wrap')){
+  document.querySelectorAll('.product-search-results.show').forEach(box=>box.classList.remove('show'));
+ }
+});
+
+
+
+function currentOpenInventory(){return warehouseInventories().find(i=>i.status==='OPEN')||null}
+function startInventory(){
+ if(currentOpenInventory()){alert('Já existe um inventário em andamento neste armazém. Finalize ou cancele antes de criar outro.');showPage('inventory');return}
+ if(!warehouseProducts().length){alert('Cadastre produtos neste armazém antes de iniciar o inventário.');return}
+ const name=prompt('Nome do inventário:','Inventário '+new Date().toLocaleDateString('pt-BR'));
+ if(name===null)return;
+ const responsible=prompt('Nome do responsável:',currentUser?.user_metadata?.name||currentUser?.email||'');
+ if(responsible===null)return;
+ const inv={id:uid(),warehouseId:activeWarehouseId,name:name.trim()||'Inventário',responsible:responsible.trim()||'-',date:today(),created:Date.now(),status:'OPEN',items:warehouseProducts().map(p=>({productId:p.id,code:p.code,name:p.name,unit:p.unit,systemQty:Number(p.stock||0),countedQty:null}))};
+ db.inventories.push(inv);save();recordAudit('INVENTARIO_INICIADO',inv.name);renderInventory();renderInventoryHistory();renderABC();renderTransfers();renderFinancial();
+}
+function inventoryDifference(item){return item.countedQty===null||item.countedQty===''?null:Number(item.countedQty)-Number(item.systemQty||0)}
+function updateInventoryCount(productId,value){
+ const inv=currentOpenInventory();if(!inv)return;
+ const item=inv.items.find(x=>x.productId===productId);if(!item)return;
+ item.countedQty=value===''?null:Math.max(0,Number(value));save();renderInventorySummary(inv);
+}
+function renderInventorySummary(inv){
+ const total=inv.items.length, counted=inv.items.filter(i=>i.countedQty!==null&&i.countedQty!=='').length;
+ const divergences=inv.items.filter(i=>{const d=inventoryDifference(i);return d!==null&&d!==0}).length;
+ const el=document.getElementById('inventorySummary');if(el)el.innerHTML=`<div class="summary-cards"><div class="card"><div class="label">Produtos</div><div class="value">${total}</div></div><div class="card"><div class="label">Contados</div><div class="value">${counted}</div></div><div class="card"><div class="label">Divergências</div><div class="value">${divergences}</div></div></div>`;
+}
+function renderInventory(){
+ const el=document.getElementById('inventoryActive');if(!el)return;
+ const inv=currentOpenInventory();
+ if(!inv){el.innerHTML='<div class="empty" style="margin-top:18px">Nenhum inventário em andamento neste armazém.</div>';return}
+ el.innerHTML=`<div style="margin-top:18px"><div class="toolbar"><div><h3>${esc(inv.name)}</h3><div class="notice">Data: ${fmtDate(inv.date)} • Responsável: ${esc(inv.responsible)}</div></div><div><input class="search" id="inventorySearch" oninput="renderInventoryItems()" placeholder="Buscar produto ou código..."> <button class="btn danger" onclick="cancelInventory()">Cancelar</button> <button class="btn primary" onclick="finishInventory()">✅ Finalizar e ajustar</button></div></div><div id="inventorySummary"></div><div id="inventoryItems"></div></div>`;
+ renderInventorySummary(inv);renderInventoryItems();
+}
+function renderInventoryItems(){
+ const inv=currentOpenInventory();const el=document.getElementById('inventoryItems');if(!inv||!el)return;
+ const q=(document.getElementById('inventorySearch')?.value||'').toLowerCase();
+ const rows=inv.items.filter(i=>(i.name+' '+i.code).toLowerCase().includes(q));
+ el.innerHTML=rows.length?`<div class="table-wrap"><table class="table"><thead><tr><th>Código</th><th>Produto</th><th>Unidade</th><th>No sistema</th><th>Contagem física</th><th>Diferença</th></tr></thead><tbody>${rows.map(i=>{const d=inventoryDifference(i);return `<tr><td>${esc(i.code||'-')}</td><td><b>${esc(i.name)}</b></td><td>${esc(i.unit||'UN')}</td><td>${i.systemQty}</td><td><input type="number" min="0" step="any" value="${i.countedQty??''}" oninput="updateInventoryCount('${i.productId}',this.value)" style="width:130px"></td><td>${d===null?'<span class="badge">PENDENTE</span>':d===0?'<span class="badge in">OK</span>':d>0?`<span class="badge return">SOBRA +${d}</span>`:`<span class="badge low">FALTA ${Math.abs(d)}</span>`}</td></tr>`}).join('')}</tbody></table></div>`:'<div class="empty">Nenhum produto encontrado.</div>';
+}
+function finishInventory(){
+ const inv=currentOpenInventory();if(!inv)return;
+ const pending=inv.items.filter(i=>i.countedQty===null||i.countedQty==='');
+ if(pending.length){alert(`Ainda existem ${pending.length} produto(s) sem contagem.`);return}
+ const divergent=inv.items.filter(i=>inventoryDifference(i)!==0);
+ const message=divergent.length?`Foram encontradas ${divergent.length} divergência(s). Ao confirmar, o estoque será ajustado para as quantidades contadas.`:'Todas as quantidades conferem. Finalizar inventário?';
+ if(!confirm(message))return;
+ inv.items.forEach(item=>{
+  const p=db.products.find(x=>x.id===item.productId);if(!p)return;
+  const old=Number(p.stock||0), next=Number(item.countedQty||0), diff=next-old;
+  if(diff!==0){p.stock=next;db.moves.push({id:uid(),warehouseId:activeWarehouseId,type:'AJUSTE DE INVENTÁRIO',productId:p.id,productName:p.name,qty:Math.abs(diff),adjustment:diff,previousStock:old,newStock:next,date:today(),responsible:inv.responsible,note:`Ajuste pelo inventário: ${inv.name}`,created:Date.now()})}
+ });
+ inv.status='FINISHED';inv.finishedAt=new Date().toISOString();inv.divergences=divergent.length;
+ save();refresh();recordAudit('INVENTARIO_FINALIZADO',`${inv.name} | ${divergent.length} divergência(s)`);alert('Inventário finalizado e estoque atualizado com sucesso!');
+}
+function cancelInventory(){
+ const inv=currentOpenInventory();if(!inv||!confirm('Cancelar este inventário? As contagens serão mantidas no histórico como canceladas.'))return;
+ inv.status='CANCELLED';inv.finishedAt=new Date().toISOString();save();renderInventory();renderInventoryHistory();renderABC();renderTransfers();renderFinancial();recordAudit('INVENTARIO_CANCELADO',inv.name);
+}
+function renderInventoryHistory(){
+ const el=document.getElementById('inventoryHistory');if(!el)return;
+ const q=(document.getElementById('inventoryHistorySearch')?.value||'').toLowerCase();
+ const list=[...warehouseInventories()].reverse().filter(i=>(i.name+' '+i.responsible+' '+i.date).toLowerCase().includes(q));
+ el.innerHTML=list.length?`<div class="table-wrap"><table class="table"><thead><tr><th>Data</th><th>Inventário</th><th>Responsável</th><th>Produtos</th><th>Divergências</th><th>Status</th><th>Ações</th></tr></thead><tbody>${list.map(i=>`<tr><td>${fmtDate(i.date)}</td><td><b>${esc(i.name)}</b></td><td>${esc(i.responsible)}</td><td>${i.items?.length||0}</td><td>${i.status==='FINISHED'?(i.divergences??i.items.filter(x=>inventoryDifference(x)!==0).length):'-'}</td><td>${i.status==='OPEN'?'<span class="badge return">EM ANDAMENTO</span>':i.status==='FINISHED'?'<span class="badge in">FINALIZADO</span>':'<span class="badge low">CANCELADO</span>'}</td><td><button class="btn small secondary" onclick="printInventory('${i.id}')">🖨️ Imprimir</button>${i.status!=='OPEN'?` <button class="btn small danger" onclick="deleteInventory('${i.id}')">Excluir</button>`:''}</td></tr>`).join('')}</tbody></table></div>`:'<div class="empty">Nenhum inventário registrado.</div>';
+}
+function deleteInventory(id){if(confirm('Excluir este inventário do histórico?')){db.inventories=db.inventories.filter(i=>i.id!==id);save();renderInventoryHistory()}}
+function printInventory(id=''){
+ const inv=id?db.inventories.find(i=>i.id===id):currentOpenInventory()||[...warehouseInventories()].reverse()[0];if(!inv){alert('Nenhum inventário disponível para imprimir.');return}
+ const wh=db.warehouses.find(w=>w.id===inv.warehouseId)?.name||'Armazém';
+ const rows=(inv.items||[]).map(i=>{const d=inventoryDifference(i);return `<tr><td>${esc(i.code||'-')}</td><td>${esc(i.name)}</td><td>${esc(i.unit||'UN')}</td><td>${i.systemQty}</td><td>${i.countedQty??'-'}</td><td>${d===null?'-':d}</td></tr>`}).join('');
+ const w=window.open('','_blank');w.document.write(`<html><head><title>${esc(inv.name)}</title><style>body{font-family:Arial;padding:30px}table{width:100%;border-collapse:collapse}th,td{border:1px solid #bbb;padding:8px;text-align:left}h1{margin-bottom:5px}</style><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#0f766e"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default">
+<style>
+:root{--ap-surface:#fff;--ap-text:#172033;--ap-muted:#64748b;--ap-border:#e2e8f0}
+
+
+
+.product-photo{width:46px;height:46px;border-radius:10px;object-fit:cover;background:#e2e8f0;display:block}.mini-doc{display:inline-block;margin:2px 4px 2px 0}.finance-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:18px}.finance-grid .card{padding:18px}.feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.location-text{font-size:12px;color:var(--ap-muted)}.abc-a{background:#dcfce7}.abc-b{background:#fef3c7}.abc-c{background:#fee2e2}.install-app-btn{position:fixed;right:18px;bottom:18px;z-index:40;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+@media(max-width:900px){.finance-grid,.feature-grid{grid-template-columns:1fr}.install-app-btn{right:10px;bottom:10px}.menu{overflow-x:auto}.sidebar{max-width:100%}}
+</style>
+</head><body><h1>${esc(inv.name)}</h1><p><b>Armazém:</b> ${esc(wh)} | <b>Data:</b> ${fmtDate(inv.date)} | <b>Responsável:</b> ${esc(inv.responsible)} | <b>Status:</b> ${inv.status}</p><table><tr><th>Código</th><th>Produto</th><th>Unidade</th><th>Sistema</th><th>Contado</th><th>Diferença</th></tr>${rows}</table><script>window.print()<\/script></body></html>`);w.document.close();
+}
+
+function exportProductsCSV(){
+ const header=['Código','Produto','Categoria','Unidade','Estoque','Mínimo','Fornecedor'];
+ const rows=warehouseProducts().map(p=>[p.code,p.name,p.category,p.unit,p.stock,p.min,db.suppliers.find(s=>s.id===p.supplierId)?.name||'']);
+ const csv='\uFEFF'+[header,...rows].map(r=>r.map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(';')).join('\n');
+ const blob=new Blob([csv],{type:'text/csv;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=`relatorio-produtos-${today()}.csv`;a.click();URL.revokeObjectURL(url);recordAudit('RELATORIO_EXPORTADO','Produtos em CSV');
+}
+
+function teamInviteBaseUrl(){
+ const url=new URL(window.location.href);
+ url.hash='';url.search='';
+ return url.toString();
+}
+async function createTeamInvite(){
+ if(!isWorkspaceAdmin()){alert('Somente o administrador pode gerar convites.');return}
+ const name=(document.getElementById('inviteName')?.value||'').trim();
+ const email=(document.getElementById('inviteEmail')?.value||'').trim().toLowerCase();
+ const role=document.getElementById('inviteRole')?.value||'operator';
+ if(!name||!email){alert('Informe o nome e o e-mail do convidado.');return}
+ const result=document.getElementById('inviteResult');
+ if(result)result.innerHTML='<div class="notice">Gerando convite...</div>';
+ const {data,error}=await supabaseClient.rpc('create_workspace_invite',{p_email:email,p_name:name,p_role:role});
+ if(error){
+  const msg=String(error.message||'');
+  alert(msg.toLowerCase().includes('limite')?'O limite de 3 convidados já foi atingido. Remova um usuário para liberar uma vaga.':'Não foi possível gerar o convite: '+msg+'\n\nExecute CONFIGURAR_CONVITES_EQUIPE.sql no Supabase.');
+  if(result)result.innerHTML='';return;
+ }
+ const token=(typeof data==='string'?data:(data?.token||data?.invite_token||''));
+ const link=teamInviteBaseUrl()+'?convite='+encodeURIComponent(token);
+ const subject='Convite para usar o Armazém Pro';
+ const body=`Olá ${name},\n\nVocê foi convidado para usar o Armazém Pro sem precisar contratar outra assinatura.\n\nAbra este link e crie sua conta usando o e-mail ${email}:\n${link}\n\nPerfil: ${role==='manager'?'Gerente':'Operador'}`;
+ const mail='mailto:'+encodeURIComponent(email)+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+ const whatsapp='https://wa.me/?text='+encodeURIComponent(body);
+ if(result)result.innerHTML=`<div class="alert"><span><b>✅ Convite criado</b><br>Envie o link abaixo para <b>${esc(email)}</b>.</span></div><div class="field"><a id="generatedInviteLinkClick" href="${esc(link)}" target="_blank" rel="noopener" style="display:block;overflow-wrap:anywhere;font-weight:700;text-decoration:underline;padding:10px 0">${esc(link)}</a><input id="generatedInviteLink" type="hidden" value="${esc(link)}"></div><div class="actions"><button class="btn secondary" onclick="copyGeneratedInvite()">📋 Copiar link</button><a class="btn secondary" href="${mail}">✉️ Enviar por e-mail</a><a class="btn primary" href="${whatsapp}" target="_blank" rel="noopener">📱 Enviar pelo WhatsApp</a></div>`;
+ await recordAudit('CONVITE_CRIADO',`${name} | ${email} | ${role}`);
+}
+function copyGeneratedInvite(){
+ const input=document.getElementById('generatedInviteLink');if(!input)return;
+ navigator.clipboard.writeText(input.value).then(()=>alert('Link de convite copiado!')).catch(()=>{input.select();document.execCommand('copy');alert('Link de convite copiado!')});
+}
+async function processPendingTeamInvite(){
+ const params=new URLSearchParams(window.location.search);
+ const urlToken=params.get('convite');
+ if(urlToken)localStorage.setItem('armazem_team_invite',urlToken);
+ const token=localStorage.getItem('armazem_team_invite');
+ if(!token||!currentUser||!supabaseClient)return;
+ const {data,error}=await supabaseClient.rpc('accept_workspace_invite',{p_token:token});
+ if(error){
+  const msg=String(error.message||'');
+  const lower=msg.toLowerCase();
+  if(lower.includes('cancelado')||lower.includes('expirou')||lower.includes('inválido')){
+   localStorage.removeItem('armazem_team_invite');
+   const clean=new URL(window.location.href);clean.searchParams.delete('convite');history.replaceState({},'',clean.pathname+clean.search+clean.hash);
+  }
+  if(!lower.includes('já é membro'))throw new Error('Não foi possível aceitar o convite: '+msg);
+ }
+ localStorage.removeItem('armazem_team_invite');
+ const clean=new URL(window.location.href);clean.searchParams.delete('convite');history.replaceState({},'',clean.pathname+clean.search+clean.hash);
+}
+function prepareInviteRegistration(){
+ const params=new URLSearchParams(window.location.search);const token=params.get('convite');
+ if(!token)return;
+ localStorage.setItem('armazem_team_invite',token);
+ showAuthForm('register');
+ authSuccess('Você recebeu um convite para usar a assinatura da empresa. Crie sua conta com o e-mail convidado.');
+}
+
+async function renderTeam(){
+ if(!isWorkspaceAdmin())return;
+ const team=document.getElementById('teamTable');if(!team||!currentWorkspace)return;
+ document.getElementById('workspaceName').value=currentWorkspace.name||'';
+ document.getElementById('workspaceCode').value=currentWorkspace.invite_code||'';
+ document.getElementById('roleBadge').textContent=currentRole==='admin'?'ADMINISTRADOR':'FUNCIONÁRIO';
+ const membersRes=await supabaseClient.from('workspace_members').select('user_id,role,created_at').eq('workspace_id',currentWorkspace.id).order('created_at');
+ if(membersRes.error){team.innerHTML='<div class="empty">Não foi possível carregar a equipe.</div>';return}
+ const ids=membersRes.data.map(m=>m.user_id);
+ const profilesRes=ids.length?await supabaseClient.from('profiles').select('user_id,name,email').in('user_id',ids):{data:[]};
+ const profiles=profilesRes.data||[];
+ const invitedCount=membersRes.data.filter(m=>m.role!=='admin').length;
+ let pendingInvites=[];
+ try{
+  const pendingRes=await supabaseClient.rpc('list_workspace_invites');
+  if(!pendingRes.error&&Array.isArray(pendingRes.data))pendingInvites=pendingRes.data;
+ }catch(err){console.warn('Convites pendentes indisponíveis:',err)}
+ const usedSlots=invitedCount+pendingInvites.length;
+ const limitBadge=document.getElementById('deviceLimitBadge');if(limitBadge){limitBadge.textContent=`${usedSlots} de 3 vagas utilizadas`;limitBadge.className='badge '+(usedSlots>=3?'low':'in')}
+ const inviteBtn=document.getElementById('createInviteButton');if(inviteBtn){inviteBtn.disabled=usedSlots>=3;inviteBtn.textContent=usedSlots>=3?'Limite de 3 convidados atingido':'🔗 Gerar convite'}
+ renderPendingInvites(pendingInvites);
+ team.innerHTML=membersRes.data.length?`<div class="table-wrap"><table class="table"><thead><tr><th>Usuário</th><th>E-mail</th><th>Perfil</th><th>Desde</th><th>Ação</th></tr></thead><tbody>${membersRes.data.map(m=>{const p=profiles.find(x=>x.user_id===m.user_id)||{};const canRemove=m.role!=='admin'&&m.user_id!==currentUser?.id;return `<tr><td><b>${esc(p.name||'Usuário')}</b></td><td>${esc(p.email||'-')}</td><td><span class="badge ${m.role==='admin'?'in':'low'}">${m.role==='admin'?'ADMINISTRADOR':'FUNCIONÁRIO'}</span></td><td>${new Date(m.created_at).toLocaleDateString('pt-BR')}</td><td>${canRemove?`<button class="btn small danger" onclick="removeWorkspaceMember('${m.user_id}','${esc((p.name||p.email||'este funcionário').replace(/'/g,'&#39;'))}')">Expulsar</button>`:'—'}</td></tr>`}).join('')}</tbody></table></div>`:'<div class="empty">Nenhum membro.</div>';
+ const logs=await supabaseClient.from('audit_logs').select('action,details,created_at,user_id').eq('workspace_id',currentWorkspace.id).order('created_at',{ascending:false}).limit(20);
+ const auditUserIds=[...new Set((logs.data||[]).map(l=>l.user_id).filter(Boolean))];
+ const auditProfilesRes=auditUserIds.length?await supabaseClient.from('profiles').select('user_id,name').in('user_id',auditUserIds):{data:[]};
+ const auditProfiles=auditProfilesRes.data||[];
+ const audit=document.getElementById('auditTable');
+ audit.innerHTML=logs.data?.length?`<div class="table-wrap"><table class="table"><thead><tr><th>Data/hora</th><th>Quem fez</th><th>Ação</th><th>Detalhes</th></tr></thead><tbody>${logs.data.map(l=>{const actor=auditProfiles.find(p=>p.user_id===l.user_id);return `<tr><td>${new Date(l.created_at).toLocaleString('pt-BR')}</td><td><b>${esc(actor?.name||'Usuário')}</b></td><td><b>${esc(l.action)}</b></td><td>${esc(l.details||'-')}</td></tr>`}).join('')}</tbody></table></div>`:'<div class="empty">Nenhum registro de auditoria.</div>';
+}
+function renderPendingInvites(invites){
+ const box=document.getElementById('pendingInvitesTable');
+ const badge=document.getElementById('pendingInviteBadge');
+ if(badge)badge.textContent=`${invites.length} ${invites.length===1?'pendente':'pendentes'}`;
+ if(!box)return;
+ if(!invites.length){box.innerHTML='<div class="empty">Nenhum convite pendente.</div>';return}
+ box.innerHTML=`<div class="table-wrap"><table class="table"><thead><tr><th>Nome</th><th>E-mail</th><th>Perfil</th><th>Validade</th><th>Ações</th></tr></thead><tbody>${invites.map(i=>{
+  const token=i.token||i.invite_token||'';
+  const link=teamInviteBaseUrl()+'?convite='+encodeURIComponent(token);
+  const body=`Olá ${i.name||''}, você foi convidado para usar o Armazém Pro sem nova assinatura. Abra: ${link}`;
+  return `<tr><td><b>${esc(i.name||'-')}</b></td><td>${esc(i.email||'-')}</td><td>${i.role==='manager'?'Gerente':'Operador'}</td><td>${new Date(i.expires_at).toLocaleString('pt-BR')}</td><td><button class="btn small secondary" onclick="copyTextValue('${encodeURIComponent(link)}')">📋 Copiar</button> <a class="btn small primary" target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent(body)}">WhatsApp</a> <button class="btn small danger" onclick="cancelTeamInvite('${i.id}')">Cancelar</button></td></tr>`
+ }).join('')}</tbody></table></div>`;
+}
+function copyTextValue(encoded){
+ const value=decodeURIComponent(encoded);
+ navigator.clipboard.writeText(value).then(()=>alert('Link copiado!')).catch(()=>prompt('Copie o link:',value));
+}
+async function cancelTeamInvite(inviteId){
+ if(!confirm('Cancelar este convite?'))return;
+ const {error}=await supabaseClient.rpc('cancel_workspace_invite',{p_invite_id:inviteId});
+ if(error){alert('Não foi possível cancelar o convite: '+error.message+'\nExecute novamente CONFIGURAR_CONVITES_EQUIPE.sql no Supabase.');return}
+ await recordAudit('CONVITE_CANCELADO',inviteId);
+ await renderTeam();
+}
+async function removeWorkspaceMember(userId,memberName){
+ if(!isWorkspaceAdmin()){alert('Acesso permitido somente ao administrador.');return}
+ if(!userId||userId===currentUser?.id){alert('Você não pode remover sua própria conta.');return}
+ if(!confirm(`Tem certeza que deseja expulsar ${memberName||'este funcionário'} da equipe?`))return;
+ const {error}=await supabaseClient.rpc('remove_workspace_member',{p_user_id:userId});
+ if(error){
+  alert('Não foi possível expulsar o funcionário: '+error.message+'\n\nExecute o arquivo CONFIGURAR_EXPULSAR_MEMBRO.sql no Supabase.');
+  return;
+ }
+ await recordAudit('MEMBRO_REMOVIDO',`Funcionário removido: ${memberName||userId}`);
+ alert('Funcionário expulso da equipe com sucesso.');
+ await renderTeam();
+}
+function copyInviteCode(){if(!isWorkspaceAdmin()){alert('Acesso permitido somente ao administrador.');return}navigator.clipboard.writeText(currentWorkspace?.invite_code||'');alert('Código de convite copiado!')}
+async function joinWorkspace(){
+ const code=document.getElementById('joinCode').value.trim().toUpperCase();if(!code){alert('Digite o código.');return}
+ const {data,error}=await supabaseClient.rpc('join_workspace_by_code',{p_code:code});
+ if(error){const msg=String(error.message||'');alert(msg.toLowerCase().includes('limite')?'Este espaço já atingiu o limite de 3 dispositivos convidados. Remova um dispositivo antes de adicionar outro.':'Não foi possível entrar: '+msg);return}
+ cloudReady=false;if(realtimeChannel)await supabaseClient.removeChannel(realtimeChannel);currentWorkspace=null;await loadCloudState();recordAudit('MEMBRO_ENTROU','Entrada por código de convite');alert('Você entrou no espaço compartilhado!');showPage('dashboard');
+}
+async function scanBarcode(){
+ if(!('BarcodeDetector' in window)){alert('Este navegador não possui leitura de código pela câmera. Use o Chrome/Edge atualizado ou digite o código no campo de busca.');return}
+ document.getElementById('modalTitle').textContent='Ler código de barras';
+ document.getElementById('modalBody').innerHTML='<video id="barcodeVideo" autoplay playsinline style="width:100%;border-radius:12px;background:#000"></video><p class="notice">Aponte a câmera para o código do produto.</p>';
+ document.getElementById('modal').classList.add('show');
+ try{
+  const stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:'environment'}});const video=document.getElementById('barcodeVideo');video.srcObject=stream;const detector=new BarcodeDetector({formats:['ean_13','ean_8','code_128','qr_code','upc_a','upc_e']});
+  const timer=setInterval(async()=>{if(!document.getElementById('modal').classList.contains('show')){clearInterval(timer);stream.getTracks().forEach(t=>t.stop());return}try{const codes=await detector.detect(video);if(codes.length){document.getElementById('productSearch').value=codes[0].rawValue;renderProducts();clearInterval(timer);stream.getTracks().forEach(t=>t.stop());closeModal();showPage('products')}}catch{}},500);
+ }catch(err){alert('Não foi possível abrir a câmera: '+err.message);closeModal()}
+}
+
+function renderWarehouseSelector(){
+ const sel=document.getElementById('warehouseSelector');if(!sel)return;
+ sel.innerHTML=db.warehouses.map(w=>`<option value="${w.id}">${esc(w.name)}</option>`).join('');
+ sel.value=activeWarehouseId;
+}
+function switchWarehouse(id){
+ if(!db.warehouses.some(w=>w.id===id))return;
+ activeWarehouseId=id;
+ resetMovementRows('entry');resetMovementRows('exit');resetMovementRows('return');
+ refresh();
+}
+function openWarehouseModal(){
+ document.getElementById('modalTitle').textContent='Novo armazém';
+ document.getElementById('modalBody').innerHTML=`<form id="warehouseForm" class="form-grid"><div class="field full"><label>Nome do armazém</label><input id="warehouseName" placeholder="Ex.: Armazém Obra A" required></div><div class="actions full"><button class="btn primary">Cadastrar armazém</button></div></form>`;
+ document.getElementById('warehouseForm').onsubmit=e=>{e.preventDefault();const name=warehouseName.value.trim();if(!name)return;const w={id:uid(),name,created:Date.now()};db.warehouses.push(w);activeWarehouseId=w.id;save();recordAudit('ARMAZEM_CRIADO',name);closeModal();refresh();alert('Armazém cadastrado com sucesso!')};
+ document.getElementById('modal').classList.add('show');
+}
+function renderWarehouses(){
+ const el=document.getElementById('warehousesTable');if(!el)return;
+ el.innerHTML=`<div class="table-wrap"><table class="table"><thead><tr><th>Armazém</th><th>Produtos</th><th>Itens em estoque</th><th>Movimentações</th><th>Ações</th></tr></thead><tbody>${db.warehouses.map(w=>{const products=db.products.filter(p=>p.warehouseId===w.id);const moves=db.moves.filter(m=>m.warehouseId===w.id);return `<tr><td><b>${esc(w.name)}</b>${w.id===activeWarehouseId?' <span class="badge in">ATUAL</span>':''}</td><td>${products.length}</td><td>${products.reduce((a,p)=>a+Number(p.stock||0),0)}</td><td>${moves.length}</td><td><button class="btn small secondary" onclick="switchWarehouse('${w.id}')">Abrir</button> <button class="btn small danger" onclick="deleteWarehouse('${w.id}')">Excluir</button></td></tr>`}).join('')}</tbody></table></div>`;
+}
+function deleteWarehouse(id){
+ const w=db.warehouses.find(x=>x.id===id);if(!w)return;
+ if(db.warehouses.length===1){alert('É necessário manter pelo menos um armazém.');return}
+ const hasData=db.products.some(p=>p.warehouseId===id)||db.moves.some(m=>m.warehouseId===id)||db.kits.some(k=>k.warehouseId===id);
+ if(hasData){alert('Este armazém possui produtos, movimentações ou kits. Transfira ou exclua esses dados antes de apagar o armazém.');return}
+ if(!confirm(`Excluir o armazém ${w.name}?`))return;
+ db.warehouses=db.warehouses.filter(x=>x.id!==id);if(activeWarehouseId===id)activeWarehouseId=db.warehouses[0].id;save();recordAudit('ARMAZEM_EXCLUIDO',w.name);refresh();
+}
+function buildKitSummary(){
+ const grouped=new Map();
+ warehouseKits().forEach(k=>(k.items||[]).forEach(i=>{
+  const p=db.products.find(x=>x.id===i.productId);if(!p||p.warehouseId!==activeWarehouseId)return;
+  const key=String(p.code||p.id).trim().toLowerCase();
+  if(!grouped.has(key))grouped.set(key,{code:p.code||'-',name:p.name,unit:p.unit||'UN',stock:Number(p.stock||0),qty:0,kits:[]});
+  const row=grouped.get(key);row.qty+=Number(i.qty||0);row.kits.push(`${k.name}: ${i.qty}`);
+ }));
+ return [...grouped.values()].sort((a,b)=>String(a.code).localeCompare(String(b.code)));
+}
+function renderKitSummary(){
+ const el=document.getElementById('kitSummaryTable');if(!el)return;
+ const q=(document.getElementById('kitSummarySearch')?.value||'').trim().toLowerCase();
+ let rows=buildKitSummary().filter(r=>!q||`${r.code} ${r.name}`.toLowerCase().includes(q));
+ document.getElementById('ksKits').textContent=warehouseKits().length;
+ document.getElementById('ksProducts').textContent=rows.length;
+ document.getElementById('ksQty').textContent=rows.reduce((a,r)=>a+r.qty,0);
+ el.innerHTML=rows.length?`<div class="table-wrap"><table class="table"><thead><tr><th>Código</th><th>Produto</th><th>Quantidade somada</th><th>Estoque atual</th><th>Falta</th><th>Onde aparece</th></tr></thead><tbody>${rows.map(r=>`<tr><td><b>${esc(r.code)}</b></td><td>${esc(r.name)}</td><td><b>${r.qty} ${esc(r.unit)}</b></td><td>${r.stock} ${esc(r.unit)}</td><td>${Math.max(0,r.qty-r.stock)>0?`<span class="badge low">${Math.max(0,r.qty-r.stock)} ${esc(r.unit)}</span>`:'<span class="badge in">OK</span>'}</td><td>${r.kits.map(esc).join('<br>')}</td></tr>`).join('')}</tbody></table></div>`:'<div class="empty">Nenhum produto encontrado nos kits deste armazém.</div>';
+}
+function printKitSummary(){
+ const rows=buildKitSummary();const warehouse=currentWarehouse()?.name||'Armazém';
+ const body=rows.map(r=>`<tr><td>${esc(r.code)}</td><td>${esc(r.name)}</td><td>${r.qty} ${esc(r.unit)}</td><td>${r.stock} ${esc(r.unit)}</td><td>${Math.max(0,r.qty-r.stock)} ${esc(r.unit)}</td><td>${r.kits.map(esc).join('<br>')}</td></tr>`).join('');
+ const w=window.open('','_blank');w.document.write(`<html><head><title>Soma dos Kits</title><style>body{font-family:Arial;padding:30px}table{width:100%;border-collapse:collapse}th,td{border:1px solid #ccc;padding:8px;text-align:left}</style><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#0f766e"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default">
+<style>
+:root{--ap-surface:#fff;--ap-text:#172033;--ap-muted:#64748b;--ap-border:#e2e8f0}
+
+
+
+.product-photo{width:46px;height:46px;border-radius:10px;object-fit:cover;background:#e2e8f0;display:block}.mini-doc{display:inline-block;margin:2px 4px 2px 0}.finance-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:18px}.finance-grid .card{padding:18px}.feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.location-text{font-size:12px;color:var(--ap-muted)}.abc-a{background:#dcfce7}.abc-b{background:#fef3c7}.abc-c{background:#fee2e2}.install-app-btn{position:fixed;right:18px;bottom:18px;z-index:40;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+@media(max-width:900px){.finance-grid,.feature-grid{grid-template-columns:1fr}.install-app-btn{right:10px;bottom:10px}.menu{overflow-x:auto}.sidebar{max-width:100%}}
+</style>
+</head><body><h1>Soma dos Kits</h1><p><b>Armazém:</b> ${esc(warehouse)} | <b>Data:</b> ${new Date().toLocaleDateString('pt-BR')}</p><table><tr><th>Código</th><th>Produto</th><th>Total</th><th>Estoque</th><th>Falta</th><th>Kits</th></tr>${body}</table><script>window.print()<\/script></body></html>`);w.document.close();
+}
+
+
+// ===== ARMAZÉM PRO 7.0: recursos de mercado =====
+const money=v=>Number(v||0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+function fileToDataUrl(file){return new Promise((resolve,reject)=>{if(!file){resolve('');return}const r=new FileReader();r.onload=()=>resolve(r.result);r.onerror=reject;r.readAsDataURL(file)})}
+function productLocation(p){return [p.street&&`Rua ${p.street}`,p.aisle&&`Corredor ${p.aisle}`,p.shelf&&`Prateleira ${p.shelf}`,p.position&&`Posição ${p.position}`].filter(Boolean).join(' • ')||'-'}
+function productLots(p){return Array.isArray(p.lots)?p.lots:[]}
+function lotStatus(l){if(!l.expiry)return '';const days=Math.ceil((new Date(l.expiry+'T12:00:00')-new Date())/86400000);return days<0?'VENCIDO':days<=30?'VENCE EM BREVE':'OK'}
+
+function canManageProducts(){return currentRole==='admin'||currentRole==='manager'||currentRole==='employee'}
+function canDeleteRecords(){return currentRole==='admin'||currentRole==='manager'}
+function roleLabel(){return currentRole==='admin'?'Administrador':currentRole==='manager'?'Gerente':'Operador'}
+const originalSetCloudStatus=setCloudStatus;
+setCloudStatus=function(text){const el=document.querySelector('.user');if(el&&currentUser)el.textContent=`👤 ${currentUser.user_metadata?.name||currentUser.email} | ${roleLabel()} | ${text}`}
+
+openProductModal=function(){
+ if(!canManageProducts()){alert('Seu perfil não permite cadastrar produtos.');return}
+ document.getElementById('modalTitle').textContent='Novo produto completo';
+ document.getElementById('modalBody').innerHTML=`<form id="productModalForm" class="form-grid">
+ <div class="field"><label>Código</label><input id="pCode" required></div><div class="field"><label>Nome do produto</label><input id="pName" required></div>
+ <div class="field"><label>Categoria</label><input id="pCategory" required></div><div class="field"><label>Unidade</label><select id="pUnit"><option>UN</option><option>KG</option><option>M</option><option>M²</option><option>M³</option><option>L</option><option>SC</option></select></div>
+ <div class="field"><label>Estoque inicial</label><input id="pStock" type="number" min="0" step="0.01" value="0" required></div><div class="field"><label>Estoque mínimo</label><input id="pMin" type="number" min="0" step="0.01" value="0" required></div>
+ <div class="field"><label>Custo médio unitário (R$)</label><input id="pCost" type="number" min="0" step="0.01" value="0"></div>
+ <div class="field"><label>Rua</label><input id="pStreet"></div><div class="field"><label>Corredor</label><input id="pAisle"></div><div class="field"><label>Prateleira</label><input id="pShelf"></div><div class="field"><label>Posição</label><input id="pPosition"></div>
+ <div class="field"><label>Foto do produto</label><input id="pPhoto" type="file" accept="image/*"></div><div class="field"><label>Anexos</label><input id="pAttachments" type="file" multiple accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"></div>
+ <div class="field full"><label>Fornecedor</label><select id="pSupplier"></select></div><div class="actions full"><button class="btn primary">Cadastrar produto</button></div></form>`;
+ pSupplier.innerHTML='<option value="">Nenhum</option>'+db.suppliers.map(s=>`<option value="${s.id}">${esc(s.name)}</option>`).join('');
+ productModalForm.onsubmit=async e=>{e.preventDefault();const code=pCode.value.trim(),name=pName.value.trim();if(db.products.some(x=>String(x.code||'').trim().toLowerCase()===code.toLowerCase())){alert('Este código já está cadastrado.');return}
+ const photo=await fileToDataUrl(pPhoto.files[0]);const attachments=[];for(const f of [...pAttachments.files])attachments.push({id:uid(),name:f.name,type:f.type,data:await fileToDataUrl(f)});
+ const stock=+pStock.value;db.products.push({id:uid(),warehouseId:activeWarehouseId,code,name,category:pCategory.value.trim(),unit:pUnit.value,stock,min:+pMin.value,cost:+pCost.value,price:0,street:pStreet.value.trim(),aisle:pAisle.value.trim(),shelf:pShelf.value.trim(),position:pPosition.value.trim(),photo,attachments,lots:[],supplierId:pSupplier.value});save();recordAudit('PRODUTO_CRIADO',`${name} | Código: ${code}`);closeModal();refresh();alert('Produto cadastrado com sucesso!')};modal.classList.add('show')}
+
+openEditProductModal=function(id){const p=db.products.find(x=>x.id===id);if(!p)return;document.getElementById('modalTitle').textContent='Editar produto completo';document.getElementById('modalBody').innerHTML=`<form id="editFullProduct" class="form-grid">
+<div class="field"><label>Código</label><input id="epCode" required value="${esc(p.code)}"></div><div class="field"><label>Nome</label><input id="epName" required value="${esc(p.name)}"></div><div class="field"><label>Categoria</label><input id="epCategory" required value="${esc(p.category)}"></div><div class="field"><label>Unidade</label><input id="epUnit" value="${esc(p.unit)}"></div>
+<div class="field"><label>Estoque mínimo</label><input id="epMin" type="number" value="${Number(p.min||0)}"></div><div class="field"><label>Custo médio unitário</label><input id="epCost" type="number" step="0.01" value="${Number(p.cost||0)}"></div><div class="field"><label>Fornecedor</label><select id="epSupplier"></select></div>
+<div class="field"><label>Rua</label><input id="epStreet" value="${esc(p.street||'')}"></div><div class="field"><label>Corredor</label><input id="epAisle" value="${esc(p.aisle||'')}"></div><div class="field"><label>Prateleira</label><input id="epShelf" value="${esc(p.shelf||'')}"></div><div class="field"><label>Posição</label><input id="epPosition" value="${esc(p.position||'')}"></div>
+<div class="field"><label>Nova foto</label><input id="epPhoto" type="file" accept="image/*"></div><div class="field"><label>Novos anexos</label><input id="epAttachments" type="file" multiple></div>
+<div class="actions full"><button class="btn primary">Salvar alterações</button></div></form>`;epSupplier.innerHTML='<option value="">Nenhum</option>'+db.suppliers.map(s=>`<option value="${s.id}">${esc(s.name)}</option>`).join('');epSupplier.value=p.supplierId||'';
+editFullProduct.onsubmit=async e=>{e.preventDefault();const code=epCode.value.trim();if(db.products.some(x=>x.id!==p.id&&String(x.code).toLowerCase()===code.toLowerCase())){alert('Código duplicado.');return}Object.assign(p,{code,name:epName.value.trim(),category:epCategory.value.trim(),unit:epUnit.value.trim(),min:+epMin.value,cost:+epCost.value,price:0,supplierId:epSupplier.value,street:epStreet.value.trim(),aisle:epAisle.value.trim(),shelf:epShelf.value.trim(),position:epPosition.value.trim()});if(epPhoto.files[0])p.photo=await fileToDataUrl(epPhoto.files[0]);p.attachments=Array.isArray(p.attachments)?p.attachments:[];for(const f of [...epAttachments.files])p.attachments.push({id:uid(),name:f.name,type:f.type,data:await fileToDataUrl(f)});save();recordAudit('PRODUTO_EDITADO',p.name);closeModal();refresh()};modal.classList.add('show')}
+function viewProductFiles(id){const p=db.products.find(x=>x.id===id);if(!p)return;document.getElementById('modalTitle').textContent='Documentos do produto';document.getElementById('modalBody').innerHTML=`<h3>${esc(p.name)}</h3><p><b>Localização:</b> ${esc(productLocation(p))}</p><h4>Anexos</h4>${(p.attachments||[]).map(a=>`<a class="btn small secondary mini-doc" href="${a.data}" download="${esc(a.name)}">📎 ${esc(a.name)}</a>`).join('')||'<div class="empty">Nenhum anexo.</div>'}`;modal.classList.add('show')}
+
+renderProducts=function(){let q=(document.getElementById('productSearch')?.value||'').toLowerCase();let arr=warehouseProducts().filter(p=>(`${p.name} ${p.code} ${p.category} ${productLocation(p)}`).toLowerCase().includes(q));productsTable.innerHTML=arr.length?`<div class="table-wrap"><table class="table"><thead><tr><th>Foto</th><th>Código / Produto</th><th>Localização</th><th>Estoque</th><th>Custo médio</th><th>Ações</th></tr></thead><tbody>${arr.map(p=>`<tr><td>${p.photo?`<img class="product-photo" src="${p.photo}">`:'📦'}</td><td><b>${esc(p.code)} — ${esc(p.name)}</b><br><small>${esc(p.category)} • ${esc(p.unit)}</small></td><td><span class="location-text">${esc(productLocation(p))}</span></td><td><b>${p.stock}</b> ${esc(p.unit)} ${p.stock<=p.min?'<span class="badge low">BAIXO</span>':''}</td><td>${money(p.cost)}<br><small>por ${esc(p.unit||'UN')}</small></td><td><button class="btn small secondary" onclick="openEditProductModal('${p.id}')">✏️ Editar</button> <button class="btn small secondary" onclick="viewProductFiles('${p.id}')">📑 Detalhes</button> ${canDeleteRecords()?`<button class="btn small danger" onclick="deleteProduct('${p.id}')">Excluir</button>`:''}</td></tr>`).join('')}</tbody></table></div>`:'<div class="empty">Nenhum produto cadastrado.</div>'}
+
+function renderABC(){const el=document.getElementById('abcTable');if(!el)return;const sales={};warehouseMoves().filter(m=>m.type==='SAÍDA').forEach(m=>{const p=db.products.find(x=>x.id===m.productId);if(!p)return;sales[p.id]=(sales[p.id]||0)+Number(m.qty||0)*Number(p.cost||p.price||1)});let rows=warehouseProducts().map(p=>({p,value:sales[p.id]||0})).sort((a,b)=>b.value-a.value);const total=rows.reduce((a,r)=>a+r.value,0)||1;let acc=0;rows.forEach(r=>{acc+=r.value;r.percent=r.value/total*100;r.acc=acc/total*100;r.cls=r.acc<=80?'A':r.acc<=95?'B':'C'});abcSummary.innerHTML=['A','B','C'].map(c=>`<div class="card"><div class="label">Classe ${c}</div><div class="value">${rows.filter(r=>r.cls===c).length}</div></div>`).join('');el.innerHTML=rows.length?`<div class="table-wrap"><table class="table"><tr><th>Classe</th><th>Produto</th><th>Valor movimentado</th><th>%</th><th>% acumulado</th></tr>${rows.map(r=>`<tr class="abc-${r.cls.toLowerCase()}"><td><b>${r.cls}</b></td><td>${esc(r.p.code)} — ${esc(r.p.name)}</td><td>${money(r.value)}</td><td>${r.percent.toFixed(1)}%</td><td>${r.acc.toFixed(1)}%</td></tr>`).join('')}</table></div>`:'<div class="empty">Sem dados para classificar.</div>';window.__abcRows=rows}
+function exportABC(){const rows=window.__abcRows||[];const csv='Classe;Codigo;Produto;Valor;Percentual\n'+rows.map(r=>`${r.cls};${r.p.code};${r.p.name};${r.value.toFixed(2)};${r.percent.toFixed(2)}%`).join('\n');downloadText(csv,`curva-abc-${today()}.csv`,'text/csv')}
+function downloadText(content,name,type='text/plain'){const b=new Blob(['\ufeff'+content],{type});const u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download=name;a.click();URL.revokeObjectURL(u)}
+
+function transferProductOptions(selected=''){const from=document.getElementById('transferFrom')?.value||activeWarehouseId;return '<option value="">Selecione um produto...</option>'+db.products.filter(p=>p.warehouseId===from).map(p=>`<option value="${p.id}" ${p.id===selected?'selected':''}>${esc(p.name)} — estoque: ${p.stock} ${esc(p.unit)}</option>`).join('')}
+function updateTransferItemCount(){const rows=document.querySelectorAll('#transferItems .transfer-item-row');const count=document.getElementById('transferItemCount');const add=document.getElementById('addTransferItem');if(count)count.textContent=`${rows.length} de 10 itens`;if(add)add.disabled=rows.length>=10}
+function addTransferItemRow(productId='',qty=''){const box=document.getElementById('transferItems');if(!box||box.querySelectorAll('.transfer-item-row').length>=10)return;const row=document.createElement('div');row.className='transfer-item-row';row.style.cssText='display:grid;grid-template-columns:minmax(220px,1fr) 150px auto;gap:10px;align-items:end;margin-bottom:10px';row.innerHTML=`<div class="field"><label>Produto</label><select class="transfer-product" required>${transferProductOptions(productId)}</select></div><div class="field"><label>Quantidade</label><input class="transfer-qty" type="number" min="0.01" step="0.01" value="${qty}" required></div><button type="button" class="btn transfer-remove" title="Remover item">Remover</button>`;box.appendChild(row);updateTransferItemCount()}
+function resetTransferItems(){const box=document.getElementById('transferItems');if(!box)return;box.innerHTML='';addTransferItemRow()}
+function renderTransfers(){const fromEl=document.getElementById('transferFrom'),toEl=document.getElementById('transferTo'),history=document.getElementById('transferHistory');if(!fromEl||!toEl)return;const oldFrom=fromEl.value||activeWarehouseId,oldTo=toEl.value;const wopts=db.warehouses.map(w=>`<option value="${w.id}">${esc(w.name)}</option>`).join('');fromEl.innerHTML=wopts;toEl.innerHTML=wopts;fromEl.value=db.warehouses.some(w=>w.id===oldFrom)?oldFrom:activeWarehouseId;toEl.value=db.warehouses.some(w=>w.id===oldTo)?oldTo:(db.warehouses.find(w=>w.id!==fromEl.value)?.id||fromEl.value);if(toEl.value===fromEl.value)toEl.value=db.warehouses.find(w=>w.id!==fromEl.value)?.id||fromEl.value;const rows=[...document.querySelectorAll('#transferItems .transfer-item-row')];if(!rows.length)resetTransferItems();else rows.forEach(row=>{const select=row.querySelector('.transfer-product'),selected=select.value;select.innerHTML=transferProductOptions(selected);if(!select.value)select.value=''});if(history)history.innerHTML=(db.transfers||[]).slice().reverse().slice(0,30).map(t=>`<div class="alert"><span><b>${esc(t.productName)}</b> — ${t.qty} ${esc(t.unit)}<br>${esc(t.fromName)} → ${esc(t.toName)} • ${fmtDate(t.date)}</span></div>`).join('')||'<div class="empty">Nenhuma transferência.</div>';updateTransferItemCount()}
+document.addEventListener('click',e=>{if(e.target?.id==='addTransferItem'){addTransferItemRow();return}if(e.target?.classList?.contains('transfer-remove')){const rows=document.querySelectorAll('#transferItems .transfer-item-row');if(rows.length<=1){alert('A transferência precisa ter pelo menos um item.');return}e.target.closest('.transfer-item-row')?.remove();updateTransferItemCount()}});
+document.addEventListener('change',e=>{if(e.target?.id==='transferFrom'){resetTransferItems();renderTransfers()}});
+document.addEventListener('submit',e=>{if(e.target?.id!=='transferForm')return;e.preventDefault();const from=document.getElementById('transferFrom').value,to=document.getElementById('transferTo').value,note=document.getElementById('transferNote').value.trim();if(from===to){alert('Escolha armazéns diferentes.');return}const rows=[...document.querySelectorAll('#transferItems .transfer-item-row')];if(!rows.length||rows.length>10){alert('Selecione de 1 a 10 produtos.');return}const items=rows.map(row=>({p:db.products.find(x=>x.id===row.querySelector('.transfer-product').value),qty:+row.querySelector('.transfer-qty').value}));const ids=items.map(i=>i.p?.id).filter(Boolean);if(ids.length!==new Set(ids).size){alert('O mesmo produto foi selecionado mais de uma vez. Junte as quantidades em um único item.');return}for(const item of items){if(!item.p||item.qty<=0){alert('Confira os produtos e as quantidades informadas.');return}if(item.p.warehouseId!==from){alert(`O produto ${item.p.name} não pertence ao armazém de origem.`);return}if(item.p.stock<item.qty){alert(`Estoque insuficiente para ${item.p.name}. Disponível: ${item.p.stock} ${item.p.unit}.`);return}}const fromName=db.warehouses.find(w=>w.id===from)?.name||'',toName=db.warehouses.find(w=>w.id===to)?.name||'',audit=[];for(const {p,qty} of items){let target=db.products.find(x=>x.warehouseId===to&&String(x.code).toLowerCase()===String(p.code).toLowerCase());if(!target){target={...p,id:uid(),warehouseId:to,stock:0,lots:[]};db.products.push(target)}p.stock-=qty;target.stock+=qty;const created=Date.now(),tr={id:uid(),date:today(),created,productId:p.id,productName:p.name,unit:p.unit,qty,fromWarehouseId:from,toWarehouseId:to,fromName,toName,note};db.transfers.push(tr);db.moves.push({id:uid(),warehouseId:from,type:'TRANSFERÊNCIA SAÍDA',productId:p.id,productName:p.name,qty,date:today(),created,destination:toName,note});db.moves.push({id:uid(),warehouseId:to,type:'TRANSFERÊNCIA ENTRADA',productId:target.id,productName:target.name,qty,date:today(),created,responsible:fromName,note});audit.push(`${p.name}: ${qty} ${p.unit}`)}save();recordAudit('TRANSFERENCIA_ESTOQUE',`${audit.join(', ')} | ${fromName} → ${toName}`);e.target.reset();resetTransferItems();refresh();alert(`${items.length} item(ns) transferido(s) com sucesso!`)})
+
+
+const PLANNING_COLUMNS=[
+ {id:'todo',label:'📥 A Fazer'},
+ {id:'inprogress',label:'🔄 Em andamento'},
+ {id:'waiting-material',label:'⏳ Aguardando material'},
+ {id:'approval',label:'👀 Aguardando aprovação'},
+ {id:'done',label:'✅ Concluído'}
+];
+function planningTasks(){db.planningTasks=Array.isArray(db.planningTasks)?db.planningTasks:[];return db.planningTasks}
+function planningWarehouseName(id){return db.warehouses.find(w=>w.id===id)?.name||'Sem armazém'}
+function planningMaterialShortages(task){return (task.materials||[]).map(m=>{const p=db.products.find(x=>x.id===m.productId);return {m,p,missing:!p||Number(p.stock||0)<Number(m.qty||0)}}).filter(x=>x.missing)}
+function planningChecklist(task){return Array.isArray(task.checklist)?task.checklist:[]}
+function planningProgress(task){const a=planningChecklist(task);return a.length?Math.round(a.filter(x=>x.done).length/a.length*100):0}
+function planningDueLabel(task){if(!task.dueDate)return'';const overdue=task.status!=='done'&&task.dueDate<today();return `${overdue?'⚠️ ':''}${fmtDate(task.dueDate)}`}
+function syncPlanningMaterialStatus(){
+ let changed=false;
+ planningTasks().forEach(t=>{
+  if(t.status==='done')return;
+  const shortage=planningMaterialShortages(t).length>0;
+  if(shortage&&t.status!=='waiting-material'){
+   t.statusBeforeMaterial=t.status||'todo';t.status='waiting-material';t.autoMaterialHold=true;changed=true;
+  }else if(!shortage&&t.status==='waiting-material'&&t.autoMaterialHold){
+   t.status=t.statusBeforeMaterial||'todo';t.autoMaterialHold=false;changed=true;
+  }
+ });
+ if(changed)save();
+}
+function renderPlanning(){
+ const board=document.getElementById('planningBoard');if(!board)return;
+ syncPlanningMaterialStatus();
+ const filter=document.getElementById('planningWarehouseFilter');
+ if(filter){const previous=filter.value;filter.innerHTML='<option value="">Todos os armazéns</option>'+db.warehouses.map(w=>`<option value="${w.id}">${esc(w.name)}</option>`).join('');if([...filter.options].some(o=>o.value===previous))filter.value=previous;}
+ const q=(document.getElementById('planningSearch')?.value||'').toLowerCase();const wid=filter?.value||'';
+ const tasks=planningTasks().filter(t=>(!wid||t.warehouseId===wid)&&(`${t.title} ${t.description||''} ${t.responsible||''} ${t.workSite||''}`).toLowerCase().includes(q));
+ const totals=Object.fromEntries(PLANNING_COLUMNS.map(c=>[c.id,tasks.filter(t=>t.status===c.id).length]));
+ const overdue=tasks.filter(t=>t.status!=='done'&&t.dueDate&&t.dueDate<today()).length;
+ const shortage=tasks.filter(t=>planningMaterialShortages(t).length).length;
+ const summary=document.getElementById('planningSummary');if(summary)summary.innerHTML=`<div class="card"><div class="label">A fazer</div><div class="value">${totals.todo||0}</div></div><div class="card"><div class="label">Em andamento</div><div class="value">${totals.inprogress||0}</div></div><div class="card"><div class="label">Atrasadas</div><div class="value">${overdue}</div></div><div class="card"><div class="label">Aguardando material</div><div class="value">${totals['waiting-material']||0}</div></div><div class="card"><div class="label">Concluídas</div><div class="value">${totals.done||0}</div></div>`;
+ board.innerHTML=PLANNING_COLUMNS.map(col=>`<div class="kanban-column" data-status="${col.id}" ondragover="planningDragOver(event)" ondragleave="planningDragLeave(event)" ondrop="planningDrop(event,'${col.id}')"><div class="kanban-head"><span>${col.label}</span><span class="kanban-count">${totals[col.id]||0}</span></div><div class="kanban-list">${tasks.filter(t=>t.status===col.id).map(planningCardHtml).join('')||'<div class="planning-empty">Nenhuma tarefa</div>'}</div></div>`).join('');
+ const completed=tasks.filter(t=>t.status==='done').sort((a,b)=>(b.completedAt||b.updatedAt||0)-(a.completedAt||a.updatedAt||0));
+ const completedList=document.getElementById('planningCompletedList');
+ const completedCount=document.getElementById('planningCompletedCount');
+ if(completedCount)completedCount.textContent=completed.length;
+ if(completedList)completedList.innerHTML=completed.length?completed.map(t=>`<div class="completed-planning-item"><h4>${esc(t.title)}</h4><div class="completed-planning-meta">${t.responsible?`👤 ${esc(t.responsible)} · `:''}${t.workSite?`🏗️ ${esc(t.workSite)} · `:''}${t.completedAt?`Concluído em ${new Date(t.completedAt).toLocaleString('pt-BR')}`:'Concluído'}</div><div class="task-card-actions"><button class="btn small secondary" onclick="openPlanningTaskModal('${t.id}')">Abrir</button><button class="btn small primary" onclick="changePlanningStatus('${t.id}','todo')">Reabrir</button></div></div>`).join(''):'<div class="planning-empty">Nenhum planejamento concluído ainda.</div>';
+}
+function planningCardHtml(t){
+ const shortages=planningMaterialShortages(t);const overdue=t.status!=='done'&&t.dueDate&&t.dueDate<today();const prog=planningProgress(t);const priority=t.priority||'medium';
+ return `<article class="task-card ${overdue?'overdue':''} ${shortages.length?'material-shortage':''}" draggable="true" ondragstart="planningDragStart(event,'${t.id}')" onclick="if(!event.target.closest('button'))openPlanningTaskModal('${t.id}')">
+  <div class="task-card-title">${esc(t.title)}</div>
+  <div class="task-meta"><span class="task-chip priority-${priority}">${({low:'Baixa',medium:'Média',high:'Alta',urgent:'Urgente'})[priority]||priority}</span>${t.responsible?`<span class="task-chip">👤 ${esc(t.responsible)}</span>`:''}${t.workSite?`<span class="task-chip">🏗️ ${esc(t.workSite)}</span>`:''}</div>
+  ${t.dueDate?`<div style="font-size:12px">📅 ${planningDueLabel(t)}</div>`:''}
+  ${(t.checklist||[]).length?`<div class="task-progress" title="Checklist ${prog}%"><span style="width:${prog}%"></span></div><div style="font-size:11px">✅ Checklist ${prog}%</div>`:''}
+  ${(t.materials||[]).length?`<div style="font-size:11px;margin-top:6px">📦 ${(t.materials||[]).length} material(is) ${shortages.length?`• <b>faltando ${shortages.length}</b>`:'• disponível'}</div>`:''}
+  <div class="task-card-actions"><button class="btn small secondary" onclick="event.stopPropagation();openPlanningTaskModal('${t.id}')">Abrir</button>${t.status!=='done'?`<button class="btn small primary" onclick="event.stopPropagation();changePlanningStatus('${t.id}','done')">Concluir</button>`:''}</div>
+ </article>`
+}
+let planningDraggedId='';
+function planningDragStart(e,id){planningDraggedId=id;e.dataTransfer.effectAllowed='move';e.dataTransfer.setData('text/plain',id)}
+function planningDragOver(e){e.preventDefault();e.currentTarget.classList.add('drag-over')}
+function planningDragLeave(e){e.currentTarget.classList.remove('drag-over')}
+function planningDrop(e,status){e.preventDefault();e.currentTarget.classList.remove('drag-over');const id=e.dataTransfer.getData('text/plain')||planningDraggedId;if(id)changePlanningStatus(id,status)}
+function changePlanningStatus(id,status){
+ const t=planningTasks().find(x=>x.id===id);if(!t||t.status===status)return;
+ if(status==='done'&&!t.stockDeductedAt){
+  const shortages=planningMaterialShortages(t);
+  if(shortages.length){t.statusBeforeMaterial=t.status;t.status='waiting-material';t.autoMaterialHold=true;save();refresh();alert('A tarefa não pode ser concluída porque faltam materiais no estoque. Ela foi movida para Aguardando material.');return}
+  if((t.materials||[]).length){
+   (t.materials||[]).forEach(m=>{const p=db.products.find(x=>x.id===m.productId);if(!p)return;p.stock=Number(p.stock||0)-Number(m.qty||0);db.moves.push({id:uid(),warehouseId:p.warehouseId,type:'SAÍDA',productId:p.id,productName:p.name,qty:Number(m.qty||0),date:today(),created:Date.now(),responsible:t.responsible||currentUser?.user_metadata?.name||'',destination:t.workSite||'Tarefa: '+t.title,note:'Baixa automática pelo Planejamento'});});
+   t.stockDeductedAt=new Date().toISOString();
+  }
+  t.completedAt=new Date().toISOString();
+ }
+ t.status=status;t.updatedAt=Date.now();if(status==='done')t.completedAt=Date.now();else if(t.completedAt)delete t.completedAt;t.autoMaterialHold=false;save();recordAudit('TAREFA_STATUS',`${t.title} → ${PLANNING_COLUMNS.find(c=>c.id===status)?.label||status}`);refresh();
+}
+function addPlanningMaterialRow(productId='',qty=1){
+ const wrap=document.getElementById('planningMaterialRows');if(!wrap)return;const row=document.createElement('div');row.className='material-row';row.innerHTML=`<div class="field"><label>Material</label><select class="planning-material-product"><option value="">Selecione...</option>${db.products.map(p=>`<option value="${p.id}" ${p.id===productId?'selected':''}>${esc(p.code)} — ${esc(p.name)} (${p.stock} ${esc(p.unit)})</option>`).join('')}</select></div><div class="field"><label>Qtd.</label><input class="planning-material-qty" type="number" min="0.01" step="0.01" value="${Number(qty)||1}"></div><button type="button" class="btn small danger" onclick="this.parentElement.remove()">Remover</button>`;wrap.appendChild(row)
+}
+function collectPlanningMaterials(){return [...document.querySelectorAll('#planningMaterialRows .material-row')].map(r=>({productId:r.querySelector('.planning-material-product').value,qty:Number(r.querySelector('.planning-material-qty').value||0)})).filter(x=>x.productId&&x.qty>0)}
+async function openPlanningTaskModal(id=''){
+ const task=id?planningTasks().find(x=>x.id===id):null;const isEdit=!!task;
+ document.getElementById('modalTitle').textContent=isEdit?'Tarefa do Planejamento':'Nova tarefa';
+ document.getElementById('modalBody').innerHTML=`<form id="planningTaskForm" class="form-grid">
+  <div class="field full"><label>Título</label><input id="ptTitle" required value="${esc(task?.title||'')}" placeholder="Ex.: Instalar tubulação do banheiro"></div>
+  <div class="field full"><label>Descrição</label><textarea id="ptDescription" rows="3" placeholder="Detalhes da atividade">${esc(task?.description||'')}</textarea></div>
+  <div class="field"><label>Responsável</label><input id="ptResponsible" value="${esc(task?.responsible||'')}" placeholder="Nome do funcionário"></div>
+  <div class="field"><label>Obra / local</label><input id="ptWorkSite" value="${esc(task?.workSite||'')}" placeholder="Ex.: Obra Centro"></div>
+  <div class="field"><label>Armazém</label><select id="ptWarehouse">${db.warehouses.map(w=>`<option value="${w.id}" ${(task?.warehouseId||activeWarehouseId)===w.id?'selected':''}>${esc(w.name)}</option>`).join('')}</select></div>
+  <div class="field"><label>Prioridade</label><select id="ptPriority"><option value="low">Baixa</option><option value="medium">Média</option><option value="high">Alta</option><option value="urgent">Urgente</option></select></div>
+  <div class="field"><label>Início</label><input id="ptStart" type="date" value="${esc(task?.startDate||today())}"></div>
+  <div class="field"><label>Entrega</label><input id="ptDue" type="date" value="${esc(task?.dueDate||'')}"></div>
+  <div class="field"><label>Status</label><select id="ptStatus">${PLANNING_COLUMNS.map(c=>`<option value="${c.id}" ${task?.status===c.id?'selected':''}>${c.label}</option>`).join('')}</select></div>
+  <div class="field"><label>Anexar foto/PDF</label><input id="ptFiles" type="file" multiple accept="image/*,.pdf"></div>
+  <div class="field full"><label>Checklist (uma linha por item)</label><textarea id="ptChecklist" class="checklist-editor" placeholder="Separar materiais\nExecutar serviço\nConferir acabamento">${esc((task?.checklist||[]).map(x=>(x.done?'[x] ':'[ ] ')+x.text).join('\n'))}</textarea></div>
+  <div class="field full"><div class="toolbar"><label><b>Materiais necessários</b></label><button type="button" class="btn small secondary" onclick="addPlanningMaterialRow()">+ Material</button></div><div id="planningMaterialRows"></div></div>
+  ${isEdit?`<div class="field full"><label>Comentários</label><div class="task-comments">${(task.comments||[]).map(c=>`<div class="task-comment"><b>${esc(c.author||'Usuário')}</b> • ${new Date(c.createdAt).toLocaleString('pt-BR')}<br>${esc(c.text)}</div>`).join('')||'<div class="empty">Nenhum comentário.</div>'}</div><div style="display:flex;gap:8px"><input id="ptNewComment" placeholder="Adicionar comentário"><button type="button" class="btn secondary" onclick="addPlanningComment('${task.id}')">Comentar</button></div></div>`:''}
+  ${isEdit&&(task.attachments||[]).length?`<div class="field full"><label>Anexos</label><div class="task-files">${(task.attachments||[]).map(a=>`<a class="btn small secondary" href="${a.data}" download="${esc(a.name)}">📎 ${esc(a.name)}</a>`).join('')}</div></div>`:''}
+  <div class="actions full"><button class="btn primary">${isEdit?'Salvar alterações':'Criar tarefa'}</button>${isEdit?`<button type="button" class="btn danger" onclick="deletePlanningTask('${task.id}')">Excluir tarefa</button>`:''}</div>
+ </form>`;
+ ptPriority.value=task?.priority||'medium';if(!task)ptStatus.value='todo';(task?.materials||[]).forEach(m=>addPlanningMaterialRow(m.productId,m.qty));
+ planningTaskForm.onsubmit=async e=>{e.preventDefault();const status=ptStatus.value;const oldStatus=task?.status;const checklist=ptChecklist.value.split(/\r?\n/).map(x=>x.trim()).filter(Boolean).map(line=>({text:line.replace(/^\[(x| )\]\s*/i,''),done:/^\[x\]/i.test(line)}));const attachments=[...(task?.attachments||[])];for(const f of [...ptFiles.files])attachments.push({id:uid(),name:f.name,type:f.type,data:await fileToDataUrl(f)});const data={title:ptTitle.value.trim(),description:ptDescription.value.trim(),responsible:ptResponsible.value.trim(),workSite:ptWorkSite.value.trim(),warehouseId:ptWarehouse.value,priority:ptPriority.value,startDate:ptStart.value,dueDate:ptDue.value,status,checklist,materials:collectPlanningMaterials(),attachments,updatedAt:Date.now()};if(task){Object.assign(task,data)}else{planningTasks().push({id:uid(),...data,comments:[],createdAt:Date.now(),createdBy:currentUser?.user_metadata?.name||currentUser?.email||''})}save();recordAudit(task?'TAREFA_EDITADA':'TAREFA_CRIADA',data.title);closeModal();if(task&&status==='done'&&oldStatus!=='done'){task.status=oldStatus;changePlanningStatus(task.id,'done')}else refresh();};
+ modal.classList.add('show')
+}
+function addPlanningComment(id){const t=planningTasks().find(x=>x.id===id);const input=document.getElementById('ptNewComment');if(!t||!input?.value.trim())return;t.comments=Array.isArray(t.comments)?t.comments:[];t.comments.push({id:uid(),text:input.value.trim(),author:currentUser?.user_metadata?.name||currentUser?.email||'Usuário',createdAt:Date.now()});save();recordAudit('TAREFA_COMENTARIO',t.title);closeModal();openPlanningTaskModal(id)}
+function deletePlanningTask(id){const t=planningTasks().find(x=>x.id===id);if(!t||!confirm('Excluir esta tarefa?'))return;db.planningTasks=planningTasks().filter(x=>x.id!==id);save();recordAudit('TAREFA_EXCLUIDA',t.title);closeModal();refresh()}
+function togglePlanningChecklist(taskId,index){const t=planningTasks().find(x=>x.id===taskId);if(!t||!t.checklist?.[index])return;t.checklist[index].done=!t.checklist[index].done;save();refresh()}
+
+function renderFinancial(){
+ if(!document.getElementById('finCost'))return;
+ const products=warehouseProducts();
+ const moves=warehouseMoves();
+ const stockValue=products.reduce((sum,p)=>sum+Number(p.stock||0)*Number(p.cost||0),0);
+ const entries=moves.filter(m=>m.type==='ENTRADA');
+ const exits=moves.filter(m=>m.type==='SAÍDA');
+ const moveValue=m=>Number(m.totalCost ?? (Number(m.qty||0)*Number(m.unitCost||db.products.find(p=>p.id===m.productId)?.cost||0)));
+ const purchased=entries.reduce((sum,m)=>sum+moveValue(m),0);
+ const consumed=exits.reduce((sum,m)=>sum+moveValue(m),0);
+ const monthKey=today().slice(0,7);
+ const monthConsumed=exits.filter(m=>String(m.date||'').slice(0,7)===monthKey).reduce((sum,m)=>sum+moveValue(m),0);
+ finCost.textContent=money(stockValue);finPurchased.textContent=money(purchased);finConsumed.textContent=money(consumed);finMonth.textContent=money(monthConsumed);
+ const byWork={};
+ exits.forEach(m=>{const work=(m.destination||m.sector||'Destino não informado').trim();if(!byWork[work])byWork[work]={value:0,items:0};byWork[work].value+=moveValue(m);byWork[work].items+=1});
+ const workRows=Object.entries(byWork).sort((a,b)=>b[1].value-a[1].value);
+ const stockRows=products.map(p=>({p,value:Number(p.stock||0)*Number(p.cost||0)})).sort((a,b)=>b.value-a.value);
+ financialTable.innerHTML=`<div class="panel"><h3>Custo de materiais por obra / destino</h3>${workRows.length?`<div class="table-wrap"><table class="table"><tr><th>Obra / destino</th><th>Movimentações</th><th>Custo dos materiais enviados</th></tr>${workRows.map(([name,data])=>`<tr><td><b>${esc(name)}</b></td><td>${data.items}</td><td>${money(data.value)}</td></tr>`).join('')}</table></div>`:'<div class="empty">Nenhuma saída para obra registrada.</div>'}</div><div class="panel" style="margin-top:18px"><h3>Valor dos materiais disponíveis</h3><div class="table-wrap"><table class="table"><tr><th>Produto</th><th>Quantidade disponível</th><th>Custo médio unitário</th><th>Valor em estoque</th></tr>${stockRows.map(r=>`<tr><td>${esc(r.p.code)} — ${esc(r.p.name)}</td><td>${r.p.stock} ${esc(r.p.unit)}</td><td>${money(r.p.cost)}</td><td>${money(r.value)}</td></tr>`).join('')}</table></div></div>`;
+}
+function printFinancial(){window.print()}
+
+
+async function installPWA(){if(deferredInstallPrompt){deferredInstallPrompt.prompt();await deferredInstallPrompt.userChoice;deferredInstallPrompt=null;document.getElementById('floatingInstall')?.remove()}else alert('No Android, abra o menu do navegador e toque em “Adicionar à tela inicial” ou “Instalar aplicativo”.')}
+if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./service-worker.js').catch(console.warn));
+window.addEventListener('DOMContentLoaded',prepareInviteRegistration);
+
+// A sincronização entre dispositivos é feita pelo Supabase Realtime.
+window.addEventListener('online',()=>setCloudStatus('☁️ Conectado'));
+window.addEventListener('offline',()=>setCloudStatus('⚠️ Sem internet'));
+</script>
+
+<script>
+document.addEventListener('click', function(event) {
+  const el = event.target.closest('button,a');
+  if (!el) return;
+  const text = (el.textContent || '').trim().toLowerCase();
+
+  if (text.includes('assinar mensal')) {
+    trackEvent('select_item', {item_list_name:'planos',currency:'BRL',value:20,items:[{item_id:'monthly',item_name:'Plano mensal',price:20}]});
+  } else if (text.includes('assinar anual')) {
+    trackEvent('select_item', {item_list_name:'planos',currency:'BRL',value:180,items:[{item_id:'annual',item_name:'Plano anual',price:180}]});
+  } else if (text.includes('já paguei')) {
+    trackEvent('payment_verification_click', {});
+  } else if (text.includes('esqueci minha senha')) {
+    trackEvent('password_reset_opened', {});
+  }
+});
+</script>
+
+</body>
+</html>

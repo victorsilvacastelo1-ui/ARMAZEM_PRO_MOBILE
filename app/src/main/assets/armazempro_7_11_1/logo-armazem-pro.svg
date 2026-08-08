@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 150" role="img" aria-labelledby="title desc">
+<title id="title">Armazém Pro</title>
+<desc id="desc">Logo horizontal do Armazém Pro com armazém e caixas</desc>
+<defs>
+  <linearGradient id="navy" x1="0" x2="1">
+    <stop offset="0" stop-color="#071426"/>
+    <stop offset="1" stop-color="#0d2748"/>
+  </linearGradient>
+  <linearGradient id="orange" x1="0" x2="1">
+    <stop offset="0" stop-color="#ffb000"/>
+    <stop offset="1" stop-color="#ff8a00"/>
+  </linearGradient>
+</defs>
+<rect width="760" height="150" rx="24" fill="none"/>
+<g transform="translate(10,10)">
+  <path d="M15 105V45L70 10l55 35v60" fill="none" stroke="#fff" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M8 106h125" stroke="#fff" stroke-width="10" stroke-linecap="square"/>
+  <rect x="44" y="63" width="28" height="28" rx="4" fill="url(#orange)"/>
+  <rect x="76" y="63" width="28" height="28" rx="4" fill="url(#orange)"/>
+  <rect x="60" y="32" width="28" height="28" rx="4" fill="url(#orange)"/>
+  <path d="M58 63v8M90 63v8M74 32v8" stroke="#071426" stroke-width="5"/>
+  <rect x="48" y="43" width="8" height="8" fill="#fff"/>
+  <rect x="61" y="43" width="8" height="8" fill="#fff"/>
+  <rect x="94" y="43" width="8" height="8" fill="#fff"/>
+  <rect x="107" y="43" width="8" height="8" fill="#fff"/>
+</g>
+<g transform="translate(165,18)">
+  <text x="0" y="72" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="68" letter-spacing="-2" fill="#fff">ARMAZÉM</text>
+  <text x="420" y="72" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="68" letter-spacing="-2" fill="url(#orange)">PRO</text>
+  <rect x="2" y="84" width="538" height="4" rx="2" fill="url(#orange)"/>
+  <text x="7" y="116" font-family="Arial, Helvetica, sans-serif" font-weight="600" font-size="18" letter-spacing="7" fill="#dbe7f6">GESTÃO DE ESTOQUE INTELIGENTE</text>
+</g>
+</svg>
