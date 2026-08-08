@@ -1,8 +1,0 @@
-<resources>
-    <color name="brand">#166534</color>
-    <color name="brand_dark">#14532D</color>
-    <color name="surface">#FFFFFF</color>
-    <color name="text_primary">#17201B</color>
-    <color name="muted">#647067</color>
-    <color name="divider">#E5E9E6</color>
-</resources>

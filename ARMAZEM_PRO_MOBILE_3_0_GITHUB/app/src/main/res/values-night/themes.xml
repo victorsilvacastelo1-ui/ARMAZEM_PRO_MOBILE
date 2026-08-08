@@ -1,9 +1,0 @@
-<resources>
-    <style name="Theme.ArmazemPro" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorPrimary">#22C55E</item>
-        <item name="colorPrimaryVariant">#14532D</item>
-        <item name="colorOnPrimary">#08120C</item>
-        <item name="android:fontFamily">sans</item>
-        <item name="android:statusBarColor">#0B1F12</item>
-    </style>
-</resources>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/nav_dashboard" android:icon="@android:drawable/ic_menu_view" android:title="Dashboard" />
-    <item android:id="@+id/nav_produtos" android:icon="@android:drawable/ic_menu_agenda" android:title="Produtos" />
-    <item android:id="@+id/nav_entradas" android:icon="@android:drawable/ic_input_add" android:title="Entradas" />
-    <item android:id="@+id/nav_saidas" android:icon="@android:drawable/ic_menu_send" android:title="Saídas" />
-    <item android:id="@+id/nav_mais" android:icon="@android:drawable/ic_menu_more" android:title="Mais" />
-</menu>
